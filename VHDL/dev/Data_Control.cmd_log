@@ -1,0 +1,1 @@
+vhdtdtfi -prj LCD_TEST_PARALLEL -o C:/Travail/LCD_TEST_PARALLEL/Data_Control.vhi -module Data_Control -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Timing_LCD.vhd -lib work ../EcranGraphiqueV1.1/Port_Parallele.vhd -lib work Data_Control.vhd 

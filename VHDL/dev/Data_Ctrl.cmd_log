@@ -1,0 +1,1 @@
+vhdtdtfi -prj LCD_TEST_PARALLEL -o C:/Travail/LCD_TEST_PARALLEL/Data_Ctrl.vhi -module Data_Ctrl -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ModeGraph.vhd -lib work Data_Ctrl.vhd 

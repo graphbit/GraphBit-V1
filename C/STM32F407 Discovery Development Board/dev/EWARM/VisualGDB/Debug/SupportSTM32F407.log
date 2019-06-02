@@ -1,0 +1,16 @@
+﻿  LCD.c
+  main.c
+  Parallel.c
+  C:/Google_Drive/Projet_Session_6-Controleur_Ecran/Logiciel/TestI2C/Src/main.c: In function 'main':
+C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Src\main.c(156,18): warning :  passing argument 1 of 'LCD_WriteText' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      LCD_WriteText(prayer, strlen(prayer), 0x01U, 0x00U);
+                    ^~~~~~
+  C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Src\main.c(40):
+  ..\Inc\LCD.h(214,13): note :  expected 'char *' but argument is of type 'const char *'
+   LCD_ERROR_T LCD_WriteText(char* pText, size_t textSize, uint8_t line, uint8_t column);
+               ^~~~~~~~~~~~~
+  Linking ../VisualGDB/Debug/SupportSTM32F407...
+  ------------------- Memory utilization report -------------------
+  Used FLASH: 38KB out of 1024KB (3%) [+3260]
+  Used SRAM: 10KB out of 128KB (8%) [+8824]
+  Used CCMRAM: 0 bytes out of 64KB (0%)

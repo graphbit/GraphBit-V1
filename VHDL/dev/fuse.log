@@ -1,0 +1,46 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top_isim_beh.exe -prj C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top_beh.prj work.ParallelTest_Top 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/MemVideo.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/uart_rx_57600.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/../EcranGraphiqueV1.1/Port_Parallele.vhd" into library work
+Parsing VHDL file "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture parallele of entity PARALLELE [parallele_default]
+Compiling architecture uart_rx of entity uart_rx [uart_rx_default]
+Compiling architecture behavioral of entity Mux_Comm [mux_comm_default]
+Compiling architecture old_mdgraph of entity OLD_MDGRAPH [old_mdgraph_default]
+Compiling architecture imp of entity rom_1024_8 [rom_1024_8_default]
+Compiling architecture old_mdtext of entity OLD_MDTEXT [old_mdtext_default]
+Compiling architecture behavioral of entity New_Data_Ctrl [new_data_ctrl_default]
+Compiling architecture behavioral of entity Timing_LCD [timing_lcd_default]
+Compiling package textio
+Compiling package vital_timing
+Compiling package ul_utils
+Compiling package blkmemdp_mem_init_file_pack_v6_3
+Compiling package blkmemdp_pkg_v6_3
+Compiling architecture behavioral of entity blkmemdp_v6_3 [\blkmemdp_v6_3(14,13,"0",9600,48...]
+Compiling architecture memvideo_a of entity MemVideo [memvideo_default]
+Compiling architecture dualport of entity DualPort [dualport_default]
+Compiling architecture behavioral of entity paralleltest_top
+Time Resolution for simulation is 1ps.
+Waiting for 14 sub-compilation(s) to finish...
+Compiled 33 VHDL Units
+Built simulation executable C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top_isim_beh.exe
+Fuse Memory Usage: 42088 KB
+Fuse CPU Usage: 795 ms

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Travail/LCD_TEST_PARALLEL/xst/projnav.tmp"
+set -xsthdpdir "C:/Travail/LCD_TEST_PARALLEL/xst"
+elaborate
+-ifn New_Data_Ctrl.prj
+-ifmt mixed

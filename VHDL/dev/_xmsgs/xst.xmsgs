@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">216</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">SUPP</arg>&apos; of component &apos;<arg fmt="%s" index="4">New_Data_Ctrl</arg>&apos;.
+</msg>
+
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">28</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+</msg>
+
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">29</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+</msg>
+
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">30</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+</msg>
+
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">31</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+</msg>
+
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">33</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+</msg>
+
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">34</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+</msg>
+
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">35</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">301</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;Mode_s&gt;, &lt;DataOut_T_s&gt;, &lt;Add_mem_T_s&gt;, &lt;WR_mem_T_s&gt;, &lt;CS_mem_T_s&gt;, &lt;DATA&gt;, &lt;DataOut_G_s&gt;, &lt;Add_mem_G_s&gt;, &lt;WR_mem_G_s&gt;, &lt;CS_mem_G_s&gt;, &lt;DINB&gt;</arg>
+</msg>
+
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">41</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd</arg>&quot; line <arg fmt="%d" index="2">95</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;stCur&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd</arg>&quot; line <arg fmt="%d" index="2">64</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MemVideo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">flag_pulse</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">Compte</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">half_bit_time</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000001101100011</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">clr</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">bit_time</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000011011000101</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">transflag_done</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">transflag</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">detect&lt;1&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd</arg>&quot; line <arg fmt="%d" index="2">118</arg>: The result of a <arg fmt="%d" index="3">9</arg>x<arg fmt="%d" index="4">7</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">14</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">detect&lt;1&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">cnt_adr</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd</arg>&quot; line <arg fmt="%d" index="2">141</arg>: The result of a <arg fmt="%d" index="3">9</arg>x<arg fmt="%d" index="4">10</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">17</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">SUPP</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">flag_v&lt;1&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">Clear_T_s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">Clear_G_s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">Add_mem_T_s&lt;13&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">Add_mem_G_s&lt;13&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ENA_T_s</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataIn_G_s</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dump_s</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DATA_DP</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">MWEB</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ENA_G_s</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Pixel_Read_s</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">CLKB</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">13</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">MADDRB</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DataIn_T_s</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">SUPPIN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">unconnectedVEEOn_s</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">unconnectedFlag</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">unconnectedDisplayOff_s</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">unconnectedA0</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">start_flag</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Inst_Timing_LCD</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">stNext_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Inst_MDGRAPH</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">stNext_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Inst_MDTEXT</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">stCur_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Inst_MDGRAPH</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">stCur_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Inst_MDTEXT</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">stNext_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Inst_MDGRAPH</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">stCur_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Inst_MDGRAPH</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mode_s_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Inst_Data_Ctrl</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3044" delta="new" >The ROM &lt;<arg fmt="%s" index="1">InstFont/Mrom_data_rom0000</arg>&gt; will be implemented as a read-only BLOCK RAM, absorbing the register: &lt;<arg fmt="%s" index="2">InstFont/data</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3225" delta="new" >The RAM &lt;<arg fmt="%s" index="1">InstFont/Mrom_data_rom0000</arg>&gt; will be implemented as BLOCK RAM
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mode_s_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">New_Data_Ctrl</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">start_flag</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Timing_LCD</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">stNext_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">OLD_MDGRAPH</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">stCur_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">OLD_MDGRAPH</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">stNext_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">OLD_MDGRAPH</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">stCur_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">OLD_MDGRAPH</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">stNext_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">OLD_MDTEXT</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">stCur_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">OLD_MDTEXT</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_graph_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDGRAPH</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">addr_font_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">data_in_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">adres_text_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDTEXT/adres_text_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ParallelTest_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ParallelTest_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/DataIn_T_s_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ParallelTest_Top</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDTEXT/detect_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ParallelTest_Top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Inst_Data_Ctrl/Inst_MDGRAPH/detect_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

@@ -1,0 +1,9 @@
+Storage Target: Xilinx Flash/PROM
+Storage Family: Platform Flash
+xcf02s          [2 M]
+FF
+LCD_TEST_PARALLEL
+C:\Travail\LCD_TEST_PARALLEL\
+
+MCS
+No

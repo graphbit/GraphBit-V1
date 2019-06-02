@@ -1,0 +1,3 @@
+vhdtdtfi -lib work ../EcranGraphiqueV1.1/Port_Parallele.vhd -prj LCD_TEST_PARALLEL -o PARALLELE.spl -module PARALLELE -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -prj LCD_TEST_PARALLEL -o C:/Travail/LCD_TEST_PARALLEL/PARALLELE.vhi -module PARALLELE -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../EcranGraphiqueV1.1/Port_Parallele.vhd 
+spl2sym -intstyle ise -family spartan3e PARALLELE.spl C:/Travail/LCD_TEST_PARALLEL/PARALLELE.sym 

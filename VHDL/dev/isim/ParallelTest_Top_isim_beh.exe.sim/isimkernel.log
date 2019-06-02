@@ -1,0 +1,29 @@
+Command line:
+   ParallelTest_Top_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52447
+
+Sat Jun 01 11:49:41 2019
+
+
+ Elaboration Time: 0.1404 sec
+
+ Current Memory Usage: 1325.28 Meg
+
+ Total Signals          : 254
+ Total Nets             : 603
+ Total Signal Drivers   : 148
+ Total Blocks           : 37
+ Total Primitive Blocks : 29
+ Total Processes        : 93
+ Total Traceable Variables  : 224
+ Total Scalar Nets and Variables : 10309
+Total Line Count : 777
+
+ Total Simulation Time: 277.666 sec
+
+ Current Memory Usage: 696.099 Meg
+
+Sat Jun 01 13:50:13 2019
+

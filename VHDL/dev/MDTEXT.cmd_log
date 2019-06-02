@@ -1,0 +1,1 @@
+vhdtdtfi -prj LCD_TEST_PARALLEL -o C:/Travail/LCD_TEST_PARALLEL/MDTEXT.vhi -module MDTEXT -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Fonts.vhd -lib work ModeText.vhd 

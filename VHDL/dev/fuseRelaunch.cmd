@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top_isim_beh.exe" -prj "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top_beh.prj" "work.ParallelTest_Top" 

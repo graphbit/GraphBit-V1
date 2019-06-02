@@ -1,0 +1,66 @@
+ISim log file
+Running: C:\Travail\LCD_TEST_PARALLEL\ParallelTest_Top_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /paralleltest_top/clk 0 -radix bin -value 1 -radix bin -time 5 ns -repeat 10 ns
+# run 100 ms
+at 330695 ns, Instance /paralleltest_top/Inst_Data_Ctrl/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# isim force add /paralleltest_top/cs_cpu 0 -radix bin
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 10us
+# isim force add /paralleltest_top/data_from_cpu 0000000 -radix bin
+# run 10 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 100us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 1 s
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 156 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 17 us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 121 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 52 us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 34 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 17 us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 104 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 17 us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 156 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 17 us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 156 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 17 us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 156 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 17 us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 156 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 17 us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 156 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 17 us
+# isim force add /paralleltest_top/rx 0 -radix bin
+# run 156 us
+# isim force add /paralleltest_top/rx 1 -radix bin
+# run 17 us

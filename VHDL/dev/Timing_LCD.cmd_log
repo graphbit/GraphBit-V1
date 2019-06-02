@@ -1,0 +1,1 @@
+vhdtdtfi -prj LCD_TEST_PARALLEL -o C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhi -module Timing_LCD -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Timing_LCD.vhd 
