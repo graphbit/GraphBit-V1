@@ -1,0 +1,4 @@
+"main.obj" 
+TO "DallasLib" 
+RAMSIZE(256) 
+XDATA( 0X0000-0X7FFF )

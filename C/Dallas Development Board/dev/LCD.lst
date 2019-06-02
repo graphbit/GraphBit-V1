@@ -1,0 +1,327 @@
+C51 COMPILER V9.53.0.0   LCD                                                               05/23/2019 13:16:46 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN LCD.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE src\LCD.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\inc) DEBUG OBJECTEXTEND PRIN
+                    -T(.\LCD.lst) TABS(2) OBJECT(LCD.obj)
+
+line level    source
+
+   1          #include "LCD.h"
+   2          /* --------------------------------------------------------------------------------------------- */
+   3          /* Private Defines */
+   4          
+   5          /* Added size to the I2C Send Buffer 
+   6           * The send buffer is of size (dataSize + LCD_I2C_SENDBUFFER_SIZEADD),
+   7           * where dataSize is taken from the arguments of the function LCD_Write_I2C, 
+   8           * and LCD_I2C_SENDBUFFER_SIZEADD is equal to :
+   9           * - 2 bytes for the packet size indicator 
+  10           * - 1 byte for the command 
+  11           * - 1 byte for the checksum */
+  12          #define LCD_I2C_SENDBUFFER_SIZEADD 0x04U
+  13          
+  14           /* Added size to the UART Send Buffer
+  15            * The send buffer is of size (dataSize + LCD_UART_SENDBUFFER_SIZEADD),
+  16            * where dataSize is taken from the arguments of the function LCD_Write_UART,
+  17            * and LCD_UART_SENDBUFFER_SIZEADD is equal to :
+  18            * - 2 bytes for the packet size indicator
+  19            * - 1 byte for the command
+  20            * - 1 byte for the checksum */
+  21          #define LCD_UART_SENDBUFFER_SIZEADD 0x04U
+  22          
+  23          /* Added size to the parallel send buffer 
+  24           * The send buffer is of size (dataSize + LCD_PARALLEL_SENDBUFFER_SIZEADD),
+  25           * where dataSize is taken from the arguments of the function LCD_Write_Parallel, 
+  26           * and LCD_PARALLEL_SENDBUFFER_SIZEADD is equal to :
+  27           * - 2 bytes for the packet size indicator 
+  28           * - 1 byte for the command
+  29           * - 1 byte for the checksum */
+  30          #define LCD_PARALLEL_SENDBUFFER_SIZEADD 0x04U
+  31          
+  32          /* Parallel Adress */
+  33          /* The following is implementation-defined behavior, and will only work on the 
+  34           * TSO Dallas development kit, 2007 and 2016 models. 
+  35           * This is the definitions of a pointer to an external address. */
+  36          /* Adress bit 15 points to external elements */
+  37          /* Adress decoder 74AHCT138 has CS2 as output #2 (Y2),
+  38           * so its inputs must be 010, so A10 at 0, A9 at 1 and A8 at 0 */ 
+  39          /* A15  A14  A13  A12  A11  A10  A9  A8  A7  A6  A5  A4  A3  A2  A1  A0
+  40           *  1    0    0    0    0    0   1   0   0   0   0   0   0   0   0   0
+  41           * 0x8200 points to CS2 */
+  42          /* volatile uint8_t __xdata* const P_Adress = (uint8_t __xdata*)0x8200 */
+  43          /* 0x8200 is an address in xdata to a uint8_t element 
+  44           * P_Adress is a pointer that will remain constant (so always pointing to
+  45           * the same address), pointing to an address in xdata to a uint8_t element 
+  46           * that can change anytime 
+  47           * We assign 0x8200 to P_Adress. In order to write to CS2, dereference the pointer */
+  48          /* Example : *P_Adress = 0x80U */ 
+  49          uint8_t xdata* const P_Adress = (uint8_t xdata*)0x8200U;
+  50          
+  51          
+  52          /* --------------------------------------------------------------------------------------------- */
+  53          /* Create and initialize the LCD structure */
+  54          LCD_STRUCT_T LCD_Struct =
+C51 COMPILER V9.53.0.0   LCD                                                               05/23/2019 13:16:46 PAGE 2   
+
+  55          {
+  56            NOT_INIT,   /* LCD_MODE_T Mode */
+  57            LCD_NOT_INIT, /* LCD_STATE_T State */
+  58            NO_ERROR,   /* LCD_ERROR_T Error */
+  59            NULL,     /* LCD_ARRAY_T Array */
+  60          };
+  61          
+  62          
+  63          /* --------------------------------------------------------------------------------------------- */
+  64          /* Private Function Declarations */
+  65          
+  66          static LCD_ERROR_T LCD_Write_Empty(const LCD_COMMAND_T Command, const uint8_t* pData, const size_t dataSiz
+             -e);
+  67          //static LCD_ERROR_T LCD_Write_I2C(const LCD_COMMAND_T Command, const uint8_t pData[], const size_t dataSi
+             -ze);
+  68          //static LCD_ERROR_T LCD_Write_UART(const LCD_COMMAND_T Command, const uint8_t pData[], const size_t dataS
+             -ize);
+  69          static LCD_ERROR_T LCD_Write_Parallel(const LCD_COMMAND_T Command, const uint8_t* pData, const size_t data
+             -Size);
+  70          LCD_ERROR_T(*LCD_Write)(const LCD_COMMAND_T Command, const uint8_t* pData, const size_t dataSize) = LCD_Wr
+             -ite_Empty;
+  71          
+  72          
+  73          /* Commands */
+  74          static LCD_ERROR_T LCD_Clear_Empty(void);
+  75          //static LCD_ERROR_T LCD_Clear_I2C(void);
+  76          //static LCD_ERROR_T LCD_Clear_UART(void);
+  77          //static LCD_ERROR_T LCD_Clear_Parallel(void);
+  78          LCD_ERROR_T(*LCD_Clear)(void) = LCD_Clear_Empty;
+  79          
+  80          /* Text functions */
+  81          
+  82          /* Graphic functions */
+  83          //LCD_ERROR_T LCD_FillLine(uint8_t* pArray, uint8_t StartPixel, uint8_t StopPixel);
+  84          
+  85          /* Array functions */
+  86          //static LCD_ERROR_T LCD_Create_Array_Struct(LCD_ARRAY_T* structArray, uint8_t lines, uint8_t columns, uin
+             -t8_t coordX, uint8_t coordY);
+  87          //static LCD_ERROR_T LCD_Delete_Array_Struct(LCD_ARRAY_T* structArray);
+  88          //static LCD_ERROR_T LCD_Create_Array(LCD_ARRAY_T* structArray);
+  89          //static LCD_ERROR_T LCD_Free_Array(LCD_ARRAY_T* structArray);
+  90          
+  91          /* Default LCD error handler */
+  92          static void LCD_Default_ErrorHandler(uint16_t lineNumber);
+*** ERROR C141 IN LINE 92 OF src\LCD.c: syntax error near 'lineNumber', expected ')'
+  93          void(*LCD_ErrorHandler)(uint16_t lineNumber) = LCD_Default_ErrorHandler;
+*** ERROR C141 IN LINE 93 OF src\LCD.c: syntax error near 'lineNumber', expected ')'
+  94          
+  95          /* --------------------------------------------------------------------------------------------- */
+  96          /* Public Functions Definitions */
+  97          
+  98          /* --------------------------------------------------------------------------------------------- */
+  99          /* Initialization functions */
+ 100          /* Contains : 
+ 101           *      - LCD_ERROR_T LCD_Init_I2C(I2C_HANDLER* hi2c, TIM_HANDLER* htim)          -- UNIMPLEMENTED
+ 102           *      - LCD_ERROR_T LCD_Init_UART(UART_HANDLER* hi2c, TIM_HANDLER* htim)  -- UNIMPLEMENTED
+ 103           *      - LCD_ERROR_T LCD_Init_Parallel(TIM_HANDLER* htim)                        -- IMPLEMENTATION
+ 104           * . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
+ 105          /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
+ 106          /*                                      LCD_Init_Parallel                                               
+ 107          * LCD_ERROR_T LCD_Init_Parallel(void)
+ 108          * Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+C51 COMPILER V9.53.0.0   LCD                                                               05/23/2019 13:16:46 PAGE 3   
+
+ 109          * Date : 2019-05-22
+ 110          * 
+ 111          * Initializes the LCD module in parallel mode.
+ 112          * 
+ 113          * Called by : none
+ 114          * Function calls : 
+ 115          *     - LCD_Clear()
+ 116          *     
+ 117          * Parameters : none
+ 118          * Returns: LCD_ERROR_T Init_I2C_Error
+ 119          *     - E_PARALLEL_INIT: Error during Parallel library initialization of the parallel bus
+ 120          *     
+ 121          * Example call : LCD_Init_Parallel();
+ 122          * . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
+ 123          LCD_ERROR_T LCD_Init_Parallel(void)
+ 124          {
+ 125   1        LCD_ERROR_T Init_Error = NO_ERROR;
+ 126   1        LCD_Struct.State = LCD_NOT_INIT;  /* Default state */
+ 127   1        LCD_Struct.Mode = PARALLEL_MODE;    
+ 128   1        
+ 129   1              /* Handle function pointers */
+ 130   1              LCD_Write = LCD_Write_Parallel;
+ 131   1              /* Clear the LCD */
+ 132   1              Init_Error = LCD_Clear();
+ 133   1      
+ 134   1              /* Module is ready to start operations */
+ 135   1              LCD_Struct.State = LCD_READY;
+ 136   1        return (Init_Error);
+ 137   1      }
+ 138          
+ 139          /* --------------------------------------------------------------------------------------------- */
+ 140          /* Private Functions Definitions */
+ 141          
+ 142          static LCD_ERROR_T LCD_Write_Empty(const LCD_COMMAND_T Command, const uint8_t* pData, const size_t dataSiz
+             -e)
+ 143          {
+ 144   1        return (E_UNIMPLEMENTED);
+ 145   1      }
+ 146          
+ 147          static LCD_ERROR_T LCD_Write_Parallel(const LCD_COMMAND_T Command, const uint8_t* pData, const size_t data
+             -Size)
+ 148          {
+ 149   1        LCD_ERROR_T P_Error = NO_ERROR;
+ 150   1        if (LCD_Struct.State == LCD_READY)
+ 151   1        {
+ 152   2          LCD_Struct.State = LCD_BUSY;
+ 153   2                /* Check if dataSize is too big */
+ 154   2                if ((dataSize + LCD_PARALLEL_SENDBUFFER_SIZEADD) > dataSize)
+ 155   2                {
+ 156   3                        /* Initialize data structure */
+ 157   3                        /* (Variable lenghts array are illegal in C89, make sure the compiler used is based on C
+             -99) */
+ 158   3                        size_t write_i = 0x00U;
+ 159   3                        uint8_t* Data = (uint8_t*)malloc((dataSize + LCD_PARALLEL_SENDBUFFER_SIZEADD) * sizeof(u
+             -int8_t));
+ 160   3                        uint8_t Checksum = (dataSize + LCD_PARALLEL_SENDBUFFER_SIZEADD);
+ 161   3                
+ 162   3                        /* Dynamic stack memory allocation, we must check if it's valid */
+ 163   3                        if ((&Data[0] != NULL) && (&Data[0] != 0))
+ 164   3                        {
+ 165   4                                memset(Data, 0x0000, (dataSize + LCD_PARALLEL_SENDBUFFER_SIZEADD));
+ 166   4                                size_t temp_dataSize = (dataSize + LCD_PARALLEL_SENDBUFFER_SIZEADD); 
+C51 COMPILER V9.53.0.0   LCD                                                               05/23/2019 13:16:46 PAGE 4   
+
+*** ERROR C141 IN LINE 166 OF src\LCD.c: syntax error near 'unsigned'
+*** ERROR C202 IN LINE 166 OF src\LCD.c: 'temp_dataSize': undefined identifier
+ 167   4                                /* The amount of data is the first and second bytes sent */
+ 168   4                                Data[0] = (uint8_t)((temp_dataSize & 0xFF00U) >> 8U);
+*** ERROR C202 IN LINE 168 OF src\LCD.c: 'temp_dataSize': undefined identifier
+ 169   4                                Data[1] = (uint8_t)(temp_dataSize & 0x00FFU);
+*** ERROR C202 IN LINE 169 OF src\LCD.c: 'temp_dataSize': undefined identifier
+ 170   4                                /* Command is the second byte sent */
+ 171   4                                Data[2] = Command;
+ 172   4                        
+ 173   4                                /* Check pointer value */
+ 174   4                                /* It is possible for pData to be a NULL pointer, but only if dataSize is equal 
+             -to 0 */
+ 175   4                                if (((pData != NULL) && (dataSize != 0)))
+ 176   4                                {
+ 177   5                                        /* Populating the array with pData */
+ 178   5                                        for (write_i = (LCD_PARALLEL_SENDBUFFER_SIZEADD - 0x01U); write_i <= (da
+             -taSize + (LCD_PARALLEL_SENDBUFFER_SIZEADD - 0x02U)); write_i++)
+ 179   5                                        {
+ 180   6                                                Data[write_i] = pData[(write_i - (LCD_PARALLEL_SENDBUFFER_SIZEAD
+             -D - 0x01U))];
+ 181   6                                                Checksum += Data[write_i];
+ 182   6                                        }
+ 183   5                                
+ 184   5                                        /* Calculating checksum's 2's complement value and placing it at the end
+             - of the array */
+ 185   5                                        Checksum = (uint8_t)((0xFF - Checksum) + 0x01U);
+ 186   5                                        Data[dataSize + (LCD_PARALLEL_SENDBUFFER_SIZEADD - 0x01U)] = Checksum;
+ 187   5                                        
+ 188   5                                        /* Sending data on the parallel bus */
+ 189   5                                        for (write_i = 0x00U; write_i < (dataSize + LCD_PARALLEL_SENDBUFFER_SIZE
+             -ADD); write_i++)
+ 190   5                                        {
+ 191   6                                                /* Send a byte */
+ 192   6                                                *P_Adress = Data[write_i];
+ 193   6                                        }
+ 194   5                                        /* End of normal behavior */
+ 195   5                                        free(Data);
+ 196   5                                        LCD_Struct.State = LCD_READY;
+ 197   5                                
+ 198   5                                }
+ 199   4                                else          /* (pData == NULL) && (dataSize != 0) */
+ 200   4                                {
+ 201   5                                        /* This functions accepts null pointers to a data buffer
+ 202   5                                                * But only if the datasize is equal to 0, indicating that 
+ 203   5                                                * we don't want to send any data beyond the command & checksum 
+ 204   5                                                * If the pointer is null but dataSize has a value, there was an 
+             -error */
+ 205   5                                        free(Data);
+ 206   5                                        P_Error = E_WRITE_ARRAY;
+ 207   5                                        LCD_Struct.Error = E_WRITE_ARRAY;
+ 208   5                                        LCD_ErrorHandler(__LINE__);
+ 209   5                                        assert(pData != NULL);
+ 210   5                                }
+ 211   4                        }
+ 212   3                        else            /* (&Data[0] == NULL) || (&Data[0] == 0) */
+ 213   3                        {
+ 214   4                                /* Array pointer is invalid */
+ 215   4                                P_Error = E_WRITE_ARRAY;
+ 216   4                                LCD_Struct.Error = E_WRITE_ARRAY;
+ 217   4                                LCD_ErrorHandler(__LINE__);
+ 218   4                                assert(&Data[0] != NULL);
+C51 COMPILER V9.53.0.0   LCD                                                               05/23/2019 13:16:46 PAGE 5   
+
+ 219   4                                assert(&Data[0] != 0);
+ 220   4                        }
+ 221   3                }
+ 222   2                else            /* (dataSize + LCD_PARALLEL_SENDBUFFER_SIZEADD) > dataSize*/
+ 223   2                {
+ 224   3                        /* The data exceeds the data size limit (65535 - LCD_PARALLEL_SENDBUFFER_SIZEADD)*/
+ 225   3                        /* This if instruction may seem weird. But in the case of an overflow, the 
+ 226   3                                * result of the addition would be lower than the initial value of dataSize */
+ 227   3                        P_Error = E_WRITE_SIZE;
+ 228   3                        LCD_Struct.Error = E_WRITE_SIZE;
+ 229   3                        LCD_ErrorHandler(__LINE__);
+ 230   3                }
+ 231   2        }
+ 232   1        else              /* LCD_Struct.State != LCD_READY */
+ 233   1        {
+ 234   2                /* The module isn't ready to write */
+ 235   2                switch (LCD_Struct.State) /* Check its state */
+ 236   2                {
+ 237   3                case LCD_BUSY:
+ 238   3                        /* Module is currently performing operations, try later */
+ 239   3                        P_Error = E_PARALLEL_WRITE_S_BUSY;
+ 240   3                        LCD_Struct.Error = E_PARALLEL_WRITE_S_BUSY;
+ 241   3                        LCD_ErrorHandler(__LINE__);
+ 242   3                        break;
+ 243   3                case LCD_FAILURE:
+ 244   3                        /* Module has critically failed */
+ 245   3                        P_Error = E_PARALLEL_WRITE_S_FAILURE;
+ 246   3                        LCD_Struct.Error = E_PARALLEL_WRITE_S_FAILURE;
+ 247   3                        LCD_ErrorHandler(__LINE__);
+ 248   3                        break;
+ 249   3                default:
+ 250   3                        /* You should never get here */
+ 251   3                        LCD_Struct.State = LCD_FAILURE;
+ 252   3                        P_Error = E_PARALLEL_WRITE_S_FAILURE;
+ 253   3                        LCD_Struct.Error = E_PARALLEL_WRITE_S_FAILURE;
+ 254   3                        LCD_ErrorHandler(__LINE__);
+ 255   3                        break;
+ 256   3                }
+ 257   2        }
+ 258   1        
+ 259   1        return (P_Error);
+ 260   1      }
+ 261          
+ 262          
+ 263          
+ 264          static LCD_ERROR_T LCD_Clear_Empty(void)
+ 265          {
+ 266   1        return (E_UNIMPLEMENTED);
+ 267   1      }
+ 268          /* Error handler */
+ 269          
+ 270          void LCD_Default_ErrorHandler(uint16_t lineNumber)
+*** ERROR C141 IN LINE 270 OF src\LCD.c: syntax error near 'lineNumber', expected ')'
+ 271          {
+ 272   1        //printf("Error at line %d : ", lineNumber);
+ 273   1        switch (LCD_Struct.Error)
+ 274   1        {
+ 275   2        case NO_ERROR:
+ 276   2          break;
+ 277   2          /* Everything else to be implemented */
+ 278   2        default:
+ 279   2          break;
+C51 COMPILER V9.53.0.0   LCD                                                               05/23/2019 13:16:46 PAGE 6   
+
+ 280   2        }
+ 281   1        //printf("\n");
+ 282   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  7 ERROR(S)

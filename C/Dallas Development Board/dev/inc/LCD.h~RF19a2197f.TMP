@@ -1,0 +1,30 @@
+#pragma once
+/* --------------------------------------------------------------------------------------------- */
+/* Includes */
+#include <assert.h>						/* For the assert() macro of the standard library */
+#include <stdlib.h>						/* For dynamic heap memory allocation */
+#include <stdbool.h>					/* For boolean type declaration */
+#include <stdint.h>						/* For standard integer type redeclaration */
+#include <string.h>						/* For character arrays in text mode */
+
+#ifndef NDEBUG
+#include <stdio.h>						/* For the printf library used to display error messages */
+#else
+#define printf(__e, ...)((void)0)			/* Disable printf and stdio in production code */
+#endif
+
+/* --------------------------------------------------------------------------------------------- */
+/* Definitions */
+/* Text */
+#define LCD_TEXT_MAX_LINES			20U
+#define LCD_TEXT_MAX_COLUMNS		30U
+/* I2C */
+#define LCD_I2C_ADRESS				0x52U
+
+/* Array */
+#define LCD_ARRAY_MAX_ATTEMPTS		3U
+#define LCD_ARRAY_MAX_COORDX		239U
+#define LCD_ARRAY_MAX_COORDY		159U
+#define LCD_X_SIZE		            30U
+#define LCD_Y_SIZE					160U
+

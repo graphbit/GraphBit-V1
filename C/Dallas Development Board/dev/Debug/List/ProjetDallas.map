@@ -1,0 +1,1046 @@
+Error[e46]: Undefined external "__write" referred in ?putchar ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.4\8051\LIB\DLIB\dl-pli-nlpd-2e16inc.r51 )
+################################################################################
+#                                                                              #
+#      IAR Universal Linker V5.4.1.30                                          #
+#                                                                              #
+#           Link time     =  23/May/2019  11:39:43                             #
+#           Target CPU    =  x51                                               #
+#           List file     =  "C:\Google_Drive\Projet_Session_6-Controleur_Ecra #
+#                            n\Logiciel\Librairie Dallas\Debug\List\ProjetDall #
+#                            as.map"                                           #
+#           Output file 1 =  "C:\Google_Drive\Projet_Session_6-Controleur_Ecra #
+#                            n\Logiciel\Librairie Dallas\Debug\Exe\ProjetDalla #
+#                            s.txt"                                            #
+#                            Format: intel-extended                            #
+#           Command line  =  "-IC:\Program Files (x86)\IAR Systems\Embedded Wo #
+#                            rkbench 6.4\8051\CONFIG\"                         #
+#                            -D_NR_OF_BANKS=0 -D_CODEBANK_END=0                #
+#                            -D_CODEBANK_START=0                               #
+#                            "C:\Google_Drive\Projet_Session_6-Controleur_Ecra #
+#                            n\Logiciel\Librairie Dallas\Debug\Obj\LCD.r51"    #
+#                            "C:\Google_Drive\Projet_Session_6-Controleur_Ecra #
+#                            n\Logiciel\Librairie Dallas\Debug\Obj\main.r51"   #
+#                            -o                                                #
+#                            "C:\Google_Drive\Projet_Session_6-Controleur_Ecra #
+#                            n\Logiciel\Librairie Dallas\Debug\Exe\ProjetDalla #
+#                            s.txt"                                            #
+#                            -Fintel-extended -l                               #
+#                            "C:\Google_Drive\Projet_Session_6-Controleur_Ecra #
+#                            n\Logiciel\Librairie Dallas\Debug\List\ProjetDall #
+#                            as.map"                                           #
+#                            -xms                                              #
+#                            "-IC:\Program Files (x86)\IAR Systems\Embedded Wo #
+#                            rkbench 6.4\8051\LIB\"                            #
+#                            -f                                                #
+#                            "C:\Google_Drive\Projet_Session_6-Controleur_Ecra #
+#                            n\Logiciel\Librairie Dallas\lnk51ew_DS89C450.xcl" #
+#                            (-D_IDATA0_START=0x00 -D_IDATA0_END=0xFF          #
+#                            -D_PDATA0_START=0x0F01 -D_PDATA0_END=0x0FFF       #
+#                            -D_IXDATA0_START=0x0001 -D_IXDATA0_END=0x0FFF     #
+#                            -D_XDATA0_START=0x8100 -D_XDATA0_END=0xFFFF       #
+#                            -D_CODE0_START=0x0000 -D_CODE0_END=0xFFFF         #
+#                            -D?REGISTER_BANK=0x0 -D_REGISTER_BANK_START=0x0   #
+#                            -D?PBANK_NUMBER=0x00 -D_BREG_START=0x00           #
+#                            -D?VB=0x20 -D?ESP=0x9B -Z(BIT)BREG=_BREG_START    #
+#                            -Z(BIT)BIT_N=0-7F                                 #
+#                            -Z(DATA)REGISTERS+8=_REGISTER_BANK_START          #
+#                            -Z(DATA)BDATA_Z,BDATA_N,BDATA_I=20-2F             #
+#                            -Z(DATA)VREG+_NR_OF_VIRTUAL_REGISTERS=08-7F       #
+#                            -Z(DATA)PSP,XSP=08-7F -Z(DATA)DOVERLAY=08-7F      #
+#                            -Z(DATA)DATA_I,DATA_Z,DATA_N=08-7F                #
+#                            -U(IDATA)0-7F=(DATA)0-7F                          #
+#                            -Z(IDATA)IDATA_I,IDATA_Z,IDATA_N=08-_IDATA0_END   #
+#                            -Z(IDATA)ISTACK+_IDATA_STACK_SIZE#08-_IDATA0_END  #
+#                            -Z(IDATA)IOVERLAY=08-FF -Z(CODE)INTVEC=0          #
+#                            -Z(CODE)CSTART=_CODE0_START-_CODE0_END            #
+#                            -Z(CODE)BIT_ID,BDATA_ID,DATA_ID,IDATA_ID,IXDATA_I #
+#                            D,PDATA_ID,XDATA_ID=_CODE0_START-_CODE0_END       #
+#                            -Z(CODE)HUGE_ID=_CODE0_START-_CODE0_END           #
+#                            -Z(CODE)RCODE,DIFUNCT=_CODE0_START-_CODE0_END     #
+#                            -P(CODE)CODE_C,CODE_N,NEAR_CODE=_CODE0_START-_COD #
+#                            E0_END                                            #
+#                            -Z(CODE)CHECKSUM#_CODE0_END                       #
+#                            -Z(XDATA)PDATA_Z,PDATA_I=_PDATA0_START-_PDATA0_EN #
+#                            D                                                 #
+#                            -P(XDATA)PDATA_N=_PDATA0_START-_PDATA0_END        #
+#                            -Z(XDATA)PSTACK+_PDATA_STACK_SIZE=_PDATA0_START-_ #
+#                            PDATA0_END                                        #
+#                            -Z(XDATA)EXT_STACK+_EXTENDED_STACK_SIZE=_EXTENDED #
+#                            _STACK_START                                      #
+#                            -Z(XDATA)XSTACK+_XDATA_STACK_SIZE=_XDATA0_START-_ #
+#                            XDATA0_END                                        #
+#                            -Z(XDATA)IXDATA_Z,IXDATA_I=_IXDATA0_START-_IXDATA #
+#                            0_END                                             #
+#                            -P(XDATA)IXDATA_N=_IXDATA0_START-_IXDATA0_END     #
+#                            -Z(XDATA)XDATA_Z,XDATA_I=_XDATA0_START-_XDATA0_EN #
+#                            D                                                 #
+#                            -P(XDATA)XDATA_N=_XDATA0_START-_XDATA0_END        #
+#                            -Z(XDATA)XDATA_HEAP+_XDATA_HEAP_SIZE=_XDATA0_STAR #
+#                            T-_XDATA0_END                                     #
+#                            -Z(CONST)XDATA_ROM_C=_XDATA0_START-_XDATA0_END    #
+#                            -Z(CODE)FAR22_ID=[_CODE0_START-_CODE0_END]/10000  #
+#                            -Z(CODE)FAR_ID=[_CODE0_START-_CODE0_END]/10000    #
+#                            -cx51) -D?DPMASK=0x01                             #
+#                            -D_NR_OF_VIRTUAL_REGISTERS=8 -D?DPS=0x86          #
+#                            -D?PBANK=0xA0 -D?DPL1=0x84 -D?DPH1=0x85 -s        #
+#                            __program_start                                   #
+#                            "C:\Program Files (x86)\IAR Systems\Embedded Work #
+#                            bench 6.4\8051\LIB\DLIB\dl-pli-nlpd-2e16inc.r51"  #
+#                            -D_IDATA_STACK_SIZE=0x40                          #
+#                            -D_EXTENDED_STACK_START=0x00                      #
+#                            -D_EXTENDED_STACK_SIZE=0x00                       #
+#                            -D_PDATA_STACK_SIZE=0x80                          #
+#                            -D_XDATA_STACK_SIZE=0xEFF                         #
+#                            -D_XDATA_HEAP_SIZE=0xFF -D_FAR_HEAP_SIZE=0xFFF    #
+#                            -D_HUGE_HEAP_SIZE=0xFFF                           #
+#                            -D_FAR22_HEAP_SIZE=0xFFF                          #
+#                                                                              #
+#                           Copyright (C) 1987-2012 IAR Systems AB.            #
+################################################################################
+
+
+
+
+
+                ****************************************
+                *                                      *
+                *           CROSS REFERENCE            *
+                *                                      *
+                ****************************************
+
+       Program entry at : CODE      0000004E  Relocatable, from module : CSTARTUP
+
+
+
+
+                ****************************************
+                *                                      *
+                *            RUNTIME MODEL             *
+                *                                      *
+                ****************************************
+
+  __Heap_Handler             = Basic
+  __SystemLibrary            = DLib
+  __calling_convention       = pdata_reentrant
+  __code_model               = near
+  __core                     = plain
+  __data_model               = large
+  __dlib_file_descriptor     = 0
+  __dlib_full_locale_support = 0
+  __dptr_size                = 16
+  __dptr_visibility          = separate
+  __extended_stack           = disabled
+  __location_for_constants   = data
+  __number_of_dptrs          = 2
+  __rt_version               = 1
+
+                ****************************************
+                *                                      *
+                *    AUTOMATIC SYMBOL REDIRECTIONS     *
+                *                                      *
+                ****************************************
+
+                  There are no automatic symbol redirections.
+
+
+
+                ****************************************
+                *                                      *
+                *              MODULE MAP              *
+                *                                      *
+                ****************************************
+
+
+  DEFINED ABSOLUTE ENTRIES
+    *************************************************************************
+
+  DEFINED ABSOLUTE ENTRIES
+  PROGRAM MODULE, NAME : ?ABS_ENTRY_MOD
+
+Absolute parts
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _FAR22_HEAP_SIZE        00000FFF 
+           _HUGE_HEAP_SIZE         00000FFF 
+           _FAR_HEAP_SIZE          00000FFF 
+           _XDATA_HEAP_SIZE        000000FF 
+           _XDATA_STACK_SIZE       00000EFF 
+           _PDATA_STACK_SIZE       00000080 
+           _EXTENDED_STACK_SIZE    00000000 
+           _EXTENDED_STACK_START   00000000 
+           _IDATA_STACK_SIZE       00000040 
+           ?DPH1                   00000085        ?PSTACK_RESTORE_DPTRS_1 (?PSTACK_RESTORE_DPTR)
+                                                   ?PSTACK_SAVE_DPTRS_1 (?PSTACK_SAVE_DPTR)
+                                                   LCD_Write_Parallel (LCD)
+                                                   __iar_ReportAssert (?_ReportAssert)
+                                                   __xdata_free (?xxmemxfree)
+                                                   __xdata_malloc (?xxmemxmalloc)
+                                                   free (LCD)
+                                                   out (?_ReportAssert)
+           ?DPL1                   00000084        ?PSTACK_RESTORE_DPTRS_1 (?PSTACK_RESTORE_DPTR)
+                                                   ?PSTACK_SAVE_DPTRS_1 (?PSTACK_SAVE_DPTR)
+                                                   LCD_Write_Parallel (LCD)
+                                                   __iar_ReportAssert (?_ReportAssert)
+                                                   __xdata_free (?xxmemxfree)
+                                                   __xdata_malloc (?xxmemxmalloc)
+                                                   free (LCD)
+                                                   out (?_ReportAssert)
+           ?PBANK                  000000A0        ?RESET_PDATA_BANK (CSTARTUP)
+                                                   __taabi_assert (?xassert)
+                                                   putchar (?putchar)
+           ?DPS                    00000086        ?FUNC_ENTER_PDATA (?FUNC_ENTER_PDATA)
+                                                   ?FUNC_LEAVE_PDATA (?FUNC_LEAVE_PDATA)
+                                                   ?RESET_DPS (CSTARTUP)
+                                                   LCD_Clear_Empty (LCD)
+                                                   LCD_Default_ErrorHandler (LCD)
+                                                   LCD_Init_Parallel (LCD)
+                                                   LCD_Write_Empty (LCD)
+                                                   LCD_Write_Parallel (LCD)
+                                                   __iar_EmptyStepPoint (?xassert)
+                                                   __low_level_init (?low_level_init)
+                                                   __xdata_GetMemChunk (?xgetmemchunk)
+                                                   __xdata_findmem (?xxmemxmalloc)
+                                                   __xdata_free (?xxmemxfree)
+                                                   __xdata_malloc (?xxmemxmalloc)
+                                                   free (LCD)
+                                                   main (main)
+                                                   memset (?memset)
+                                                   out (?_ReportAssert)
+           _NR_OF_VIRTUAL_REGISTERS
+                                   00000008 
+           ?DPMASK                 00000001        ?FUNC_ENTER_PDATA (?FUNC_ENTER_PDATA)
+                                                   ?FUNC_LEAVE_PDATA (?FUNC_LEAVE_PDATA)
+                                                   ?RESET_DPS (CSTARTUP)
+           ?ESP                    0000009B 
+           ?VB                     00000020        ?FUNC_ENTER_PDATA (?FUNC_ENTER_PDATA)
+                                                   ?FUNC_LEAVE_PDATA (?FUNC_LEAVE_PDATA)
+           _BREG_START             00000000 
+           ?PBANK_NUMBER           00000000 
+           _REGISTER_BANK_START    00000000 
+           ?REGISTER_BANK          00000000        Segment part 6 (CSTARTUP)
+           _CODE0_END              0000FFFF 
+           _CODE0_START            00000000 
+           _XDATA0_END             0000FFFF 
+           _XDATA0_START           00008100 
+           _IXDATA0_END            00000FFF 
+           _IXDATA0_START          00000001 
+           _PDATA0_END             00000FFF 
+           _PDATA0_START           00000F01 
+           _IDATA0_END             000000FF 
+           _IDATA0_START           00000000 
+           _CODEBANK_START         00000000 
+           _CODEBANK_END           00000000 
+           _NR_OF_BANKS            00000000 
+    *************************************************************************
+
+  FILE NAME : C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\Librairie Dallas\Debug\Obj\LCD.r51
+  PROGRAM MODULE, NAME : LCD
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 0000024C - 00000262 (0x17 bytes), align: 0
+  Segment part 24.            Intra module refs:   LCD_Write_Parallel
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           free                    0000024C 
+               calls direct
+               PSTACK = 00000014 ( 00000000 )
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000263 - 00000277 (0x15 bytes), align: 0
+  Segment part 25.            Intra module refs:   LCD_Write_Parallel
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           malloc                  00000263 
+               calls direct
+               PSTACK = 00000014 ( 00000006 )
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 000093C6 - 000093D3 (0xe bytes), align: 0
+  Segment part 6.             Intra module refs:   LCD_Write_Parallel
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 000093D4 - 00009429 (0x56 bytes), align: 0
+  Segment part 8.             Intra module refs:   LCD_Write_Parallel
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000942A - 0000943A (0x11 bytes), align: 0
+  Segment part 10.            Intra module refs:   LCD_Write_Parallel
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000943B - 00009448 (0xe bytes), align: 0
+  Segment part 12.            Intra module refs:   LCD_Write_Parallel
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00009449 - 0000944A (0x2 bytes), align: 0
+  Segment part 14.            Intra module refs:   LCD_Write_Parallel
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P_Adress                00009449 
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000944B - 0000944F (0x5 bytes), align: 0
+  Segment part 16.            Intra module refs:   LCD_Default_ErrorHandler
+                                                   LCD_Init_Parallel
+                                                   LCD_Write_Parallel
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           LCD_Struct              0000944B 
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00009450 - 00009451 (0x2 bytes), align: 0
+  Segment part 18.            Intra module refs:   LCD_Init_Parallel
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           LCD_Write               00009450        main (main)
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00009452 - 00009453 (0x2 bytes), align: 0
+  Segment part 20.            Intra module refs:   LCD_Init_Parallel
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           LCD_Clear               00009452 
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00009454 - 00009455 (0x2 bytes), align: 0
+  Segment part 22.            Intra module refs:   LCD_Write_Parallel
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           LCD_ErrorHandler        00009454 
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000278 - 000002C6 (0x4f bytes), align: 0
+  Segment part 26.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           LCD_Init_Parallel       00000278        main (main)
+               PSTACK = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 000002C7 - 000002CE (0x8 bytes), align: 0
+  Segment part 27.            Intra module refs:   Segment part 19
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           LCD_Write_Empty         000002C7 
+               is indirectly called
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 000002CF - 00000652 (0x384 bytes), align: 0
+  Segment part 28.            Intra module refs:   LCD_Init_Parallel
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           LCD_Write_Parallel      000002CF 
+               calls direct, is indirectly called
+               PSTACK = 00000000 ( 00000016 )
+               ISTACK = 00000000 ( 00000001 )
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000653 - 00000658 (0x6 bytes), align: 0
+  Segment part 29.            Intra module refs:   Segment part 21
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           LCD_Clear_Empty         00000653 
+               is indirectly called
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000659 - 00000663 (0xb bytes), align: 0
+  Segment part 30.            Intra module refs:   Segment part 23
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           LCD_Default_ErrorHandler
+                                   00000659 
+               is indirectly called
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 00000066 - 00000073 (0xe bytes), align: 0
+  Segment part 7.             Intra module refs:   Segment part 6
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 00000074 - 000000C9 (0x56 bytes), align: 0
+  Segment part 9.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000CA - 000000DA (0x11 bytes), align: 0
+  Segment part 11.            Intra module refs:   Segment part 10
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000DB - 000000E8 (0xe bytes), align: 0
+  Segment part 13.            Intra module refs:   Segment part 12
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000E9 - 000000EA (0x2 bytes), align: 0
+  Segment part 15.            Intra module refs:   P_Adress
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000EB - 000000EF (0x5 bytes), align: 0
+  Segment part 17.            Intra module refs:   LCD_Struct
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000F0 - 000000F1 (0x2 bytes), align: 0
+  Segment part 19.            Intra module refs:   LCD_Write
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000F2 - 000000F3 (0x2 bytes), align: 0
+  Segment part 21.            Intra module refs:   LCD_Clear
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000F4 - 000000F5 (0x2 bytes), align: 0
+  Segment part 23.            Intra module refs:   LCD_ErrorHandler
+
+    *************************************************************************
+
+  FILE NAME : C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\Librairie Dallas\Debug\Obj\main.r51
+  PROGRAM MODULE, NAME : main
+
+  SEGMENTS IN THE MODULE
+  ======================
+XDATA_Z
+  Relative segment, address: XDATA 00008100 - 000093BF (0x12c0 bytes), align: 0
+  Segment part 6.             Intra module refs:   main
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           table                   00008100 
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000B58 - 00000B96 (0x3f bytes), align: 0
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           main                    00000B58        ?call_main (?cmain)
+               calls direct
+               PSTACK = 00000000 ( 00000002 )
+
+    *************************************************************************
+
+  FILE NAME : C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.4\8051\LIB\DLIB\dl-pli-nlpd-2e16inc.r51
+  LIBRARY MODULE, NAME : ?cexit
+
+  SEGMENTS IN THE MODULE
+  ======================
+CSTART
+  Relative segment, address: CODE 00000003, align: 0
+  Segment part 5.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _exit                   00000003        exit (?exit)
+               calls direct
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 00000003 - 00000005 (0x3 bytes), align: 0
+  Segment part 10.            Intra module refs:   _exit
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?cmain
+
+  SEGMENTS IN THE MODULE
+  ======================
+CSTART
+  Relative segment, address: CODE 00000006, align: 0
+  Segment part 5.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?cmain                  00000006        Segment part 14 (CSTARTUP)
+               calls direct
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 00000006 - 0000000E (0x9 bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __low_level_init_call   00000006        __low_level_init (?low_level_init)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 0000000F - 0000001E (0x10 bytes), align: 0
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __INIT_XDATA_Z          0000000F        Segment part 6 (?xgetmemchunk)
+                                                   __xdata_Aldata (?xxmemxmalloc)
+                                                   table (main)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 0000001F - 00000047 (0x29 bytes), align: 0
+  Segment part 33.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __INIT_XDATA_I          0000001F        LCD_Clear (LCD)
+                                                   LCD_ErrorHandler (LCD)
+                                                   LCD_Struct (LCD)
+                                                   LCD_Write (LCD)
+                                                   P_Adress (LCD)
+                                                   Segment part 10 (?_ReportAssert)
+                                                   Segment part 10 (LCD)
+                                                   Segment part 12 (?_ReportAssert)
+                                                   Segment part 12 (LCD)
+                                                   Segment part 14 (?_ReportAssert)
+                                                   Segment part 6 (?_ReportAssert)
+                                                   Segment part 6 (LCD)
+                                                   Segment part 8 (?_ReportAssert)
+                                                   Segment part 8 (LCD)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 00000048, align: 0
+  Segment part 37.            Intra module refs:   __low_level_init_call
+    -------------------------------------------------------------------------
+DIFUNCT
+  Relative segment, address: CODE 0000024C, align: 0
+  Segment part 38. ROOT.
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 00000048 - 0000004D (0x6 bytes), align: 0
+  Segment part 40.            Intra module refs:   ?cmain
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?call_main              00000048 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : CSTARTUP
+
+  SEGMENTS IN THE MODULE
+  ======================
+REGISTERS
+  Relative segment, address: DATA 00000000, align: 0
+  Segment part 0.             Intra module refs:   Segment part 6
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?REGISTERS              00000000 
+    -------------------------------------------------------------------------
+ISTACK
+  Relative segment, address: IDATA 000000C0, align: 0
+  Segment part 1.             Intra module refs:   Segment part 6
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ISTACK_START           000000C0 
+    -------------------------------------------------------------------------
+PSTACK
+  Relative segment, address: XDATA 00000F01, align: 0
+  Segment part 2.             Intra module refs:   ?RESET_PSP
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PSTACK_START           00000F01 
+    -------------------------------------------------------------------------
+INTVEC
+  Common segment, address: CODE 00000000 - 00000002 (0x3 bytes), align: 0
+  Segment part 5. ROOT.       Intra module refs:   Segment part 6
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 0000004E - 00000053 (0x6 bytes), align: 0
+  Segment part 6. ROOT.       Intra module refs:   Segment part 5
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __program_start         0000004E        Absolute parts (?ABS_ENTRY_MOD)
+           ?RESET_SP               00000051 
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 00000054 - 00000056 (0x3 bytes), align: 0
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?RESET_PSP              00000054        ?PSP (VIRTUAL_REGISTERS)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 00000057 - 00000059 (0x3 bytes), align: 0
+  Segment part 11.            Intra module refs:   ?RESET_PSP
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?RESET_PDATA_BANK       00000057 
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 0000005A - 0000005C (0x3 bytes), align: 0
+  Segment part 12.            Intra module refs:   Absolute parts
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?RESET_DPS              0000005A 
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 0000005D - 0000005F (0x3 bytes), align: 0
+  Segment part 14.            Intra module refs:   Absolute parts
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : VIRTUAL_REGISTERS
+
+  SEGMENTS IN THE MODULE
+  ======================
+BREG
+  Relative segment, address: BIT 00000020.0 - 00000020.7 (0x8 bits), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?B0                     00000020.0      Absolute parts (CSTARTUP)
+    -------------------------------------------------------------------------
+VREG
+  Relative segment, address: DATA 00000008, align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?V0                     00000008        ?FUNC_ENTER_PDATA (?FUNC_ENTER_PDATA)
+                                                   ?FUNC_LEAVE_PDATA (?FUNC_LEAVE_PDATA)
+                                                   LCD_Write_Parallel (LCD)
+                                                   __iar_ReportAssert (?_ReportAssert)
+                                                   __taabi_assert (?xassert)
+                                                   __xdata_findmem (?xxmemxmalloc)
+                                                   __xdata_free (?xxmemxfree)
+                                                   __xdata_malloc (?xxmemxmalloc)
+                                                   main (main)
+                                                   putchar (?putchar)
+    -------------------------------------------------------------------------
+PSP
+  Relative segment, address: DATA 00000010 - 00000010 (0x1 bytes), align: 0
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PSP                    00000010        ?FUNC_ENTER_PDATA (?FUNC_ENTER_PDATA)
+                                                   ?FUNC_LEAVE_PDATA (?FUNC_LEAVE_PDATA)
+                                                   ?PUSH_PSTACK_I (?PUSH_PSTACK_I)
+                                                   ?RESET_PSP (CSTARTUP)
+                                                   LCD_Init_Parallel (LCD)
+                                                   LCD_Write_Parallel (LCD)
+                                                   __iar_ReportAssert (?_ReportAssert)
+                                                   __taabi_assert (?xassert)
+                                                   __xdata_findmem (?xxmemxmalloc)
+                                                   __xdata_free (?xxmemxfree)
+                                                   __xdata_malloc (?xxmemxmalloc)
+                                                   main (main)
+                                                   memset (?memset)
+                                                   out (?_ReportAssert)
+                                                   putchar (?putchar)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?MOVE_LONG8_PDATA_IDATA
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000122 - 0000012E (0xd bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?MOVE_LONG8_PDATA_IDATA
+                                   00000122        ?PUSH_PSTACK_I (?PUSH_PSTACK_I)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?S_DIV_MOD
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 0000012F - 0000016F (0x41 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?S_DIV_MOD              00000168        __taabi_assert (?xassert)
+    -------------------------------------------------------------------------
+RCODE
+  Relative segment, address: CODE 00000170 - 000001C8 (0x59 bytes), align: 0
+  Segment part 1.             Intra module refs:   ?S_DIV_MOD
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?US_DIV_MOD             00000170 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?CALL_IND
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000001C9 - 000001CA (0x2 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?CALL_IND               000001C9        LCD_Init_Parallel (LCD)
+                                                   LCD_Write_Parallel (LCD)
+                                                   main (main)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?FUNC_ENTER_PDATA
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000001CB - 000001FE (0x34 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?FUNC_ENTER_PDATA       000001CB        LCD_Init_Parallel (LCD)
+                                                   LCD_Write_Parallel (LCD)
+                                                   __iar_ReportAssert (?_ReportAssert)
+                                                   __taabi_assert (?xassert)
+                                                   __xdata_findmem (?xxmemxmalloc)
+                                                   __xdata_free (?xxmemxfree)
+                                                   __xdata_malloc (?xxmemxmalloc)
+                                                   malloc (LCD)
+                                                   out (?_ReportAssert)
+                                                   putchar (?putchar)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?FUNC_LEAVE_PDATA
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000001FF - 00000226 (0x28 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?FUNC_LEAVE_PDATA       000001FF        LCD_Init_Parallel (LCD)
+                                                   LCD_Write_Parallel (LCD)
+                                                   __iar_ReportAssert (?_ReportAssert)
+                                                   __taabi_assert (?xassert)
+                                                   __xdata_findmem (?xxmemxmalloc)
+                                                   __xdata_free (?xxmemxfree)
+                                                   __xdata_malloc (?xxmemxmalloc)
+                                                   malloc (LCD)
+                                                   out (?_ReportAssert)
+                                                   putchar (?putchar)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?PSTACK_SAVE_DPTR
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000227 - 0000022E (0x8 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PSTACK_SAVE_DPTRS_1    00000227        LCD_Init_Parallel (LCD)
+                                                   LCD_Write_Parallel (LCD)
+                                                   __iar_ReportAssert (?_ReportAssert)
+                                                   __xdata_findmem (?xxmemxmalloc)
+                                                   __xdata_free (?xxmemxfree)
+                                                   __xdata_malloc (?xxmemxmalloc)
+                                                   out (?_ReportAssert)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?PSTACK_RESTORE_DPTR
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 0000022F - 00000236 (0x8 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PSTACK_RESTORE_DPTRS_1
+                                   0000022F        LCD_Init_Parallel (LCD)
+                                                   LCD_Write_Parallel (LCD)
+                                                   __iar_ReportAssert (?_ReportAssert)
+                                                   __xdata_findmem (?xxmemxmalloc)
+                                                   __xdata_free (?xxmemxfree)
+                                                   __xdata_malloc (?xxmemxmalloc)
+                                                   out (?_ReportAssert)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?PUSH_PSTACK_I
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000237 - 0000023A (0x4 bytes), align: 0
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PUSH_PSTACK_I_TWO      00000237        LCD_Write_Parallel (LCD)
+                                                   __taabi_assert (?xassert)
+                                                   main (main)
+                                                   putchar (?putchar)
+    -------------------------------------------------------------------------
+RCODE
+  Relative segment, address: CODE 0000023B - 0000024B (0x11 bytes), align: 0
+  Segment part 5.             Intra module refs:   ?PUSH_PSTACK_I_TWO
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PUSH_PSTACK_I          0000023B 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?low_level_init
+
+  SEGMENTS IN THE MODULE
+  ======================
+CSTART
+  Relative segment, address: CODE 00000060 - 00000065 (0x6 bytes), align: 0
+  Segment part 6. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __low_level_init        00000060        __low_level_init_call (?cmain)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?abort
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000BF5 - 00000BFC (0x8 bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           abort                   00000BF5        __taabi_assert (?xassert)
+               calls direct
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?exit
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000BFD - 00000C00 (0x4 bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           exit                    00000BFD        ?call_main (?cmain)
+               calls direct
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?memset
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000BCD - 00000BF4 (0x28 bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           memset                  00000BCD        LCD_Write_Parallel (LCD)
+                                                   main (main)
+               is indirectly called
+               PSTACK = 00000002 ( 00000000 )
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?putchar
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000B06 - 00000B57 (0x52 bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           putchar                 00000B06        out (?_ReportAssert)
+               calls direct
+               PSTACK = 00000000 ( 0000000A )
+               ISTACK = 00000000 ( 00000001 )
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?xassert
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000A6B - 00000A6E (0x4 bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __iar_EmptyStepPoint    00000A6B        LCD_Write_Parallel (LCD)
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000A6F - 00000B05 (0x97 bytes), align: 0
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __taabi_assert          00000A6F        LCD_Write_Parallel (LCD)
+               calls direct
+               PSTACK = 00000002 ( 0000001A )
+               ISTACK = 00000000 ( 00000001 )
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?xgetmemchunk
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000B97 - 00000BCC (0x36 bytes), align: 0
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __xdata_GetMemChunk     00000B97        __xdata_findmem (?xxmemxmalloc)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 000093C0 - 000093C1 (0x2 bytes), align: 0
+  Segment part 6.             Intra module refs:   __xdata_GetMemChunk
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?_ReportAssert
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 000009BB - 000009EB (0x31 bytes), align: 0
+  Segment part 16.            Intra module refs:   __iar_ReportAssert
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           out                     000009BB 
+               calls direct
+               PSTACK = 0000000B ( 00000009 )
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 000009EC - 00000A6A (0x7f bytes), align: 0
+  Segment part 17.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __iar_ReportAssert      000009EC        __taabi_assert (?xassert)
+               calls direct
+               PSTACK = 00000004 ( 0000000B )
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000F6 - 00000102 (0xd bytes), align: 0
+  Segment part 7.             Intra module refs:   Segment part 6
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 00000103 - 00000107 (0x5 bytes), align: 0
+  Segment part 9.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 00000108 - 00000109 (0x2 bytes), align: 0
+  Segment part 11.            Intra module refs:   Segment part 10
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 0000010A - 0000010B (0x2 bytes), align: 0
+  Segment part 13.            Intra module refs:   Segment part 12
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 0000010C - 00000121 (0x16 bytes), align: 0
+  Segment part 15.            Intra module refs:   Segment part 14
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00009456 - 00009462 (0xd bytes), align: 0
+  Segment part 6.             Intra module refs:   __iar_ReportAssert
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00009463 - 00009467 (0x5 bytes), align: 0
+  Segment part 8.             Intra module refs:   __iar_ReportAssert
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00009468 - 00009469 (0x2 bytes), align: 0
+  Segment part 10.            Intra module refs:   __iar_ReportAssert
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000946A - 0000946B (0x2 bytes), align: 0
+  Segment part 12.            Intra module refs:   __iar_ReportAssert
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000946C - 00009481 (0x16 bytes), align: 0
+  Segment part 14.            Intra module refs:   __iar_ReportAssert
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?__exit
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000C01 - 00000C02 (0x2 bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __exit                  00000C01        Segment part 10 (?cexit)
+                                                   abort (?abort)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?xxmemxfree
+
+  SEGMENTS IN THE MODULE
+  ======================
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 0000084F - 000009BA (0x16c bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __xdata_free            0000084F        __xdata_findmem (?xxmemxmalloc)
+                                                   free (LCD)
+               PSTACK = 00000000 ( 0000000B )
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?xxmemxmalloc
+
+  SEGMENTS IN THE MODULE
+  ======================
+XDATA_Z
+  Relative segment, address: XDATA 000093C2 - 000093C5 (0x4 bytes), align: 0
+  Segment part 6.             Intra module refs:   __xdata_findmem
+                                                   __xdata_malloc
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __xdata_Aldata          000093C2        __xdata_free (?xxmemxfree)
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000664 - 0000071A (0xb7 bytes), align: 0
+  Segment part 8.             Intra module refs:   __xdata_malloc
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           __xdata_findmem         00000664 
+               calls direct
+               PSTACK = 0000000B ( 00000009 )
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 0000071B - 0000071E (0x4 bytes), align: 0
+  Segment part 9.             Intra module refs:   __xdata_findmem
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 0000071F - 00000726 (0x8 bytes), align: 0
+  Segment part 10.            Intra module refs:   Segment part 9
+                                                   __xdata_malloc
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000727 - 0000072F (0x9 bytes), align: 0
+  Segment part 11.            Intra module refs:   __xdata_findmem
+    -------------------------------------------------------------------------
+<NEAR_CODE> 1 (was NEAR_CODE)
+  Relative segment, address: CODE 00000730 - 0000084E (0x11f bytes), align: 0
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __xdata_malloc          00000730        malloc (LCD)
+               calls direct
+               PSTACK = 00000000 ( 0000000B )
+
+
+
+
+                ****************************************
+                *                                      *
+                *      SEGMENTS IN ADDRESS ORDER       *
+                *                                      *
+                ****************************************
+
+
+SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
+=======              =====    =============   ===========     ====  ====  =====
+INTVEC               CODE          00000000 - 00000002           3   com    0
+CSTART               CODE          00000003 - 00000065          63   rel    0
+BIT_ID               CODE               00000066                     dse    0
+PDATA_ID             CODE               00000066                     dse    0
+IXDATA_ID            CODE               00000066                     dse    0
+BDATA_ID             CODE               00000066                     dse    0
+DATA_ID              CODE               00000066                     dse    0
+IDATA_ID             CODE               00000066                     dse    0
+XDATA_ID             CODE          00000066 - 00000121          BC   rel    0
+RCODE                CODE          00000122 - 0000024B         12A   rel    0
+DIFUNCT              CODE               0000024C                     rel    0
+<NEAR_CODE> 1        CODE          0000024C - 00000C02         9B7   rel    0
+REGISTERS            DATA          00000000 - 00000007           8   rel    0
+VREG                 DATA          00000008 - 0000000F           8   rel    0
+PSP                  DATA          00000010 - 00000010           1   rel    0
+BREG                 BIT        00000020.0  -  00000020.7        8   rel    0
+PDATA_Z              XDATA              00000F01                     dse    0
+PSTACK               XDATA         00000F01 - 00000F80          80   rel    0
+XDATA_Z              XDATA         00008100 - 000093C5        12C6   rel    0
+XDATA_I              XDATA         000093C6 - 00009481          BC   rel    0
+XDATA_HEAP           XDATA         00009482 - 00009580          FF   dse    0
+ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
+
+                ****************************************
+                *                                      *
+                *        END OF CROSS REFERENCE        *
+                *                                      *
+                ****************************************
+
+ 3 075 bytes of CODE  memory
+    17 bytes of DATA  memory
+ 5 377 bytes of XDATA memory
+    64 bytes of IDATA memory
+     8 bits  of BIT   memory
+
+Errors: 1
+Warnings: none
+
