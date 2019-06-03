@@ -142,11 +142,21 @@ namespace GraphBit_LCD_Plotter
             OpenFileDialog OpenFile1 = new OpenFileDialog(); // creating an openfile dialog object
             OpenFile1.Filter = "All Files(*.*)|*.*";    // We take every format of image
             OpenFile1.RestoreDirectory = true;
-
+            _Imagefile.Width = Convert.ToInt32(tbWidth.Text);
+            _Imagefile.Height = Convert.ToInt32(tbHeight.Text);
             if (OpenFile1.ShowDialog() == DialogResult.OK && OpenFile1.FileName.Length > 0)
             {
                 _Imagefile.Filepath = OpenFile1.FileName;   /* Getting the path of the specified file */
                 target_gif = Image.FromFile(_Imagefile.Filepath);
+            }
+            Image[] ImgArray = _Imagefile.getFrames(target_gif);
+            List<Byte[]> serialArray = _Imagefile.ConvertGif(ImgArray,ImgArray.Length);
+
+            for (int i = 0; i < serialArray.Count; i++)
+            {
+                //serialPort1.Write(serialArray[i], 0, serialArray[i].Length);
+                _Imagefile.SerialArray = serialArray[i];
+                btnSend_Click(sender, e);
             }
         }
     }

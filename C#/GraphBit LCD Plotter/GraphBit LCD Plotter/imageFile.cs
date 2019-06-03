@@ -15,7 +15,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Threading;
 using System.Text;
-
+using System.Collections.Generic;
 
 namespace GraphBit_LCD_Plotter
 {
@@ -104,6 +104,18 @@ namespace GraphBit_LCD_Plotter
 
             }
 
+        }
+        public List<byte[]> ConvertGif(Image[] frames, int length)
+        {
+            List<byte[]> SerialFrames = new List<byte[]>();
+            Bitmap CurrentFrame;
+            for(int i = 0; i < length; i++)
+            {
+                CurrentFrame = new Bitmap((Bitmap)frames[i], new Size(Width, Height));
+                BlackNWhite(CurrentFrame);
+                SerialFrames.Add(serialArray);
+            }
+            return SerialFrames;
         }
         /// <summary>
         ///  Converting a bitmap to a real black and white image
