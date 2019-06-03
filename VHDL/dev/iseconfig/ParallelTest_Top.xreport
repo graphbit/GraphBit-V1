@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-05-31T16:51:07</DateModified>
+  <DateModified>2019-06-01T15:52:52</DateModified>
   <ModuleName>ParallelTest_Top</ModuleName>
-  <SummaryTimeStamp>2019-05-28T22:22:54</SummaryTimeStamp>
+  <SummaryTimeStamp>2019-05-31T16:55:35</SummaryTimeStamp>
   <SavedFilePath>C:/Travail/LCD_TEST_PARALLEL/iseconfig/ParallelTest_Top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Travail/LCD_TEST_PARALLEL\</ImplementationReportsDirectory>
   <DateInitialized>2019-05-05T13:37:54</DateInitialized>

@@ -114,8 +114,9 @@ Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd" in Library wor
 Architecture old_mdtext of Entity old_mdtext is up to date.
 Compiling vhdl file "C:/Travail/EcranGraphiqueV1.1/Port_Parallele.vhd" in Library work.
 Architecture parallele of Entity parallele is up to date.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/uart_rx_57600.vhd" in Library work.
-Architecture uart_rx of Entity uart_rx is up to date.
+Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd" in Library work.
+Entity <new_uart_rx> compiled.
+Entity <new_uart_rx> (Architecture <new_uart_rx>) compiled.
 Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd" in Library work.
 Architecture behavioral of Entity mux_comm is up to date.
 Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd" in Library work.
@@ -135,7 +136,7 @@ Analyzing hierarchy for entity <ParallelTest_Top> in library <work> (architectur
 
 Analyzing hierarchy for entity <PARALLELE> in library <work> (architecture <parallele>).
 
-Analyzing hierarchy for entity <UART_RX> in library <work> (architecture <uart_rx>).
+Analyzing hierarchy for entity <NEW_UART_RX> in library <work> (architecture <new_uart_rx>).
 
 Analyzing hierarchy for entity <Mux_Comm> in library <work> (architecture <behavioral>).
 
@@ -172,8 +173,6 @@ Analyzing Entity <ParallelTest_Top> in library <work> (Architecture <behavioral>
 WARNING:Xst:753 - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 216: Unconnected output port 'SUPP' of component 'New_Data_Ctrl'.
 INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 28: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 29: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
-INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 30: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
-INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 31: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 33: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 34: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 35: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
@@ -182,8 +181,8 @@ Entity <ParallelTest_Top> analyzed. Unit <ParallelTest_Top> generated.
 Analyzing Entity <PARALLELE> in library <work> (Architecture <parallele>).
 Entity <PARALLELE> analyzed. Unit <PARALLELE> generated.
 
-Analyzing Entity <UART_RX> in library <work> (Architecture <uart_rx>).
-Entity <UART_RX> analyzed. Unit <UART_RX> generated.
+Analyzing Entity <NEW_UART_RX> in library <work> (Architecture <new_uart_rx>).
+Entity <NEW_UART_RX> analyzed. Unit <NEW_UART_RX> generated.
 
 Analyzing Entity <Mux_Comm> in library <work> (Architecture <behavioral>).
 Entity <Mux_Comm> analyzed. Unit <Mux_Comm> generated.
@@ -191,14 +190,13 @@ Entity <Mux_Comm> analyzed. Unit <Mux_Comm> generated.
 Analyzing Entity <New_Data_Ctrl> in library <work> (Architecture <behavioral>).
 WARNING:Xst:819 - "C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd" line 301: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <Mode_s>, <DataOut_T_s>, <Add_mem_T_s>, <WR_mem_T_s>, <CS_mem_T_s>, <DATA>, <DataOut_G_s>, <Add_mem_G_s>, <WR_mem_G_s>, <CS_mem_G_s>, <DINB>
-INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd" line 41: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 Entity <New_Data_Ctrl> analyzed. Unit <New_Data_Ctrl> generated.
 
 Analyzing Entity <OLD_MDGRAPH> in library <work> (Architecture <old_mdgraph>).
 Entity <OLD_MDGRAPH> analyzed. Unit <OLD_MDGRAPH> generated.
 
 Analyzing Entity <OLD_MDTEXT> in library <work> (Architecture <old_mdtext>).
-WARNING:Xst:819 - "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd" line 95: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd" line 96: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <stCur>
 Entity <OLD_MDTEXT> analyzed. Unit <OLD_MDTEXT> generated.
 
@@ -230,40 +228,56 @@ WARNING:Xst:1780 - Signal <Compte> is never used or assigned. This unconnected s
 Unit <PARALLELE> synthesized.
 
 
-Synthesizing Unit <UART_RX>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/uart_rx_57600.vhd".
-WARNING:Xst:653 - Signal <half_bit_time> is used but never assigned. This sourceless signal will be automatically connected to value 0000001101100011.
+Synthesizing Unit <NEW_UART_RX>.
+    Related source file is "C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd".
 WARNING:Xst:653 - Signal <clr> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:653 - Signal <bit_time> is used but never assigned. This sourceless signal will be automatically connected to value 0000011011000101.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 5                                              |
-    | Transitions        | 9                                              |
-    | Inputs             | 4                                              |
-    | Outputs            | 5                                              |
+    | States             | 11                                             |
+    | Transitions        | 26                                             |
+    | Inputs             | 14                                             |
+    | Outputs            | 11                                             |
     | Clock              | mclk                      (rising_edge)        |
     | Reset              | clr                       (positive)           |
     | Reset type         | asynchronous                                   |
-    | Reset State        | mark                                           |
-    | Power Up State     | mark                                           |
+    | Reset State        | mark0d                                         |
+    | Power Up State     | mark0d                                         |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 1-bit register for signal <rdrf>.
     Found 16-bit register for signal <baud_count>.
-    Found 16-bit adder for signal <baud_count$share0000> created at line 76.
+    Found 16-bit adder for signal <baud_count$share0000> created at line 86.
+    Found 16-bit register for signal <baud_count0D>.
+    Found 16-bit adder for signal <baud_count0D$share0000> created at line 86.
     Found 4-bit register for signal <bit_count>.
-    Found 4-bit adder for signal <bit_count$addsub0000> created at line 174.
+    Found 4-bit adder for signal <bit_count$addsub0000> created at line 201.
+    Found 11-bit register for signal <bit_count0D>.
+    Found 11-bit adder for signal <bit_count0D$addsub0000> created at line 120.
+    Found 16-bit register for signal <bit_time>.
+    Found 16-bit register for signal <half_bit_time>.
+    Found 864-bit register for signal <rx0D>.
     Found 8-bit register for signal <rxbuff>.
-    Found 16-bit comparator greatequal for signal <state$cmp_ge0000> created at line 152.
-    Found 16-bit comparator greatequal for signal <state$cmp_ge0001> created at line 160.
-    Found 5-bit comparator less for signal <state$cmp_lt0000> created at line 162.
+    Found 8-bit register for signal <rxdata115200>.
+    Found 8-bit register for signal <rxdata19200>.
+    Found 8-bit register for signal <rxdata230400>.
+    Found 8-bit register for signal <rxdata460800>.
+    Found 8-bit register for signal <rxdata57600>.
+    Found 8-bit register for signal <rxdata921600>.
+    Found 8-bit register for signal <rxdata9600>.
+    Found 16-bit comparator greatequal for signal <state$cmp_ge0000> created at line 98.
+    Found 16-bit comparator greatequal for signal <state$cmp_ge0001> created at line 106.
+    Found 16-bit comparator greatequal for signal <state$cmp_ge0002> created at line 179.
+    Found 16-bit comparator greatequal for signal <state$cmp_ge0003> created at line 187.
+    Found 12-bit comparator less for signal <state$cmp_lt0000> created at line 108.
+    Found 5-bit comparator less for signal <state$cmp_lt0001> created at line 189.
+INFO:Xst:738 - HDL ADVISOR - 864 flip-flops were inferred for signal <rx0D>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred  29 D-type flip-flop(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred   3 Comparator(s).
-Unit <UART_RX> synthesized.
+	inferred 1008 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <NEW_UART_RX> synthesized.
 
 
 Synthesizing Unit <Mux_Comm>.
@@ -350,23 +364,23 @@ Synthesizing Unit <OLD_MDTEXT>.
 WARNING:Xst:1780 - Signal <detect<1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <cnt_adr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <stCur>.
-WARNING:Xst:643 - "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd" line 141: The result of a 9x10-bit multiplication is partially used. Only the 17 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-    Found 1-bit register for signal <WR_TEXT>.
-    Found 9x10-bit multiplier for signal <$mult0000> created at line 141.
-    Found 9-bit subtractor for signal <$sub0000> created at line 141.
+WARNING:Xst:643 - "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd" line 142: The result of a 9x10-bit multiplication is partially used. Only the 17 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 9x10-bit multiplier for signal <$mult0000> created at line 142.
+    Found 9-bit subtractor for signal <$sub0000> created at line 142.
     Found 32-bit register for signal <addr_font>.
     Found 32-bit adder for signal <addr_font$addsub0000>.
     Found 32-bit register for signal <adres_text>.
-    Found 18-bit adder for signal <adres_text$add0000> created at line 141.
-    Found 32-bit adder for signal <adres_text$share0000> created at line 125.
+    Found 18-bit adder for signal <adres_text$add0000> created at line 142.
+    Found 32-bit adder for signal <adres_text$share0000> created at line 126.
     Found 8-bit register for signal <colonne>.
     Found 1-bit register for signal <data_flag>.
     Found 8-bit register for signal <data_in>.
     Found 1-bit register for signal <detect<0>>.
     Found 8-bit register for signal <ligne>.
-    Found 9-bit subtractor for signal <mult0000$addsub0000> created at line 141.
+    Found 9-bit subtractor for signal <mult0000$addsub0000> created at line 142.
     Found 19-bit register for signal <stCur>.
     Found 19-bit register for signal <stNext>.
+    Found 1-bit register for signal <wr_text_s>.
     Summary:
 	inferred 129 D-type flip-flop(s).
 	inferred   5 Adder/Subtractor(s).
@@ -421,7 +435,7 @@ WARNING:Xst:737 - Found 8-bit latch for signal <DataIn_T_s>. Latches may be gene
     Found 16-bit register for signal <RxByteNb_v>.
     Found 16-bit comparator not equal for signal <State_s$cmp_ne0000> created at line 203.
     Found 16-bit subtractor for signal <State_s$sub0000> created at line 203.
-    Found 16-bit up counter for signal <timeout_v>.
+    Found 18-bit up counter for signal <timeout_v>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 Counter(s).
@@ -451,9 +465,10 @@ Macro Statistics
 # Multipliers                                          : 2
  9x10-bit multiplier                                   : 1
  9x7-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 18
+# Adders/Subtractors                                   : 20
+ 11-bit adder                                          : 1
  15-bit adder                                          : 1
- 16-bit adder                                          : 2
+ 16-bit adder                                          : 3
  16-bit subtractor                                     : 1
  18-bit adder                                          : 1
  32-bit adder                                          : 5
@@ -463,23 +478,25 @@ Macro Statistics
  9-bit subtractor                                      : 4
 # Counters                                             : 7
  14-bit up counter                                     : 1
- 16-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
  23-bit up counter                                     : 1
  32-bit up counter                                     : 4
-# Registers                                            : 74
- 1-bit register                                        : 52
- 16-bit register                                       : 2
+# Registers                                            : 949
+ 1-bit register                                        : 916
+ 11-bit register                                       : 1
+ 16-bit register                                       : 5
  19-bit register                                       : 2
  32-bit register                                       : 4
  4-bit register                                        : 2
- 8-bit register                                        : 12
+ 8-bit register                                        : 19
 # Latches                                              : 10
  1-bit latch                                           : 5
  13-bit latch                                          : 1
  8-bit latch                                           : 4
-# Comparators                                          : 6
+# Comparators                                          : 9
+ 12-bit comparator less                                : 1
  16-bit comparator equal                               : 1
- 16-bit comparator greatequal                          : 2
+ 16-bit comparator greatequal                          : 4
  16-bit comparator not equal                           : 1
  5-bit comparator less                                 : 1
  8-bit comparator lessequal                            : 1
@@ -503,20 +520,39 @@ Optimizing FSM <Inst_Data_Ctrl/State_s/FSM> on signal <State_s[1:6]> with one-ho
  dataloop | 010000
 ----------------------
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <Inst_uart_rx/state/FSM> on signal <state[1:3]> with gray encoding.
--------------------
- State | Encoding
--------------------
- mark  | 000
- start | 001
- delay | 011
- shift | 010
- stop  | 110
--------------------
+Optimizing FSM <Inst_uart_rx/state/FSM> on signal <state[1:11]> with one-hot encoding.
+------------------------
+ State   | Encoding
+------------------------
+ mark0d  | 00000000001
+ start0d | 00000000010
+ delay0d | 00000000100
+ shift0d | 00000001000
+ stop0d  | 00000010000
+ test0d  | 00000100000
+ mark    | 00001000000
+ start   | 00010000000
+ delay   | 00100000000
+ shift   | 01000000000
+ stop    | 10000000000
+------------------------
 Reading core <MemVideo.ngc>.
 Loading core <MemVideo> for timing and area information for instance <InstMemVideo>.
+INFO:Xst:2261 - The FF/Latch <rxdata9600_1> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata19200_3> 
+INFO:Xst:2261 - The FF/Latch <rxdata460800_0> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata921600_1> 
+INFO:Xst:2261 - The FF/Latch <rxdata230400_0> in Unit <Inst_uart_rx> is equivalent to the following 2 FFs/Latches, which will be removed : <rxdata460800_1> <rxdata921600_3> 
+INFO:Xst:2261 - The FF/Latch <rxdata460800_2> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata921600_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata115200_0> in Unit <Inst_uart_rx> is equivalent to the following 3 FFs/Latches, which will be removed : <rxdata230400_1> <rxdata460800_3> <rxdata921600_7> 
+INFO:Xst:2261 - The FF/Latch <bit_time_14> in Unit <Inst_uart_rx> is equivalent to the following 4 FFs/Latches, which will be removed : <bit_time_15> <half_bit_time_13> <half_bit_time_14> <half_bit_time_15> 
+INFO:Xst:2261 - The FF/Latch <rxdata230400_2> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata460800_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_0> in Unit <Inst_uart_rx> is equivalent to the following 3 FFs/Latches, which will be removed : <rxdata115200_1> <rxdata230400_3> <rxdata460800_7> 
+INFO:Xst:2261 - The FF/Latch <rxdata115200_2> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata230400_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_1> in Unit <Inst_uart_rx> is equivalent to the following 2 FFs/Latches, which will be removed : <rxdata115200_3> <rxdata230400_7> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_2> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_3> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_7> 
 WARNING:Xst:1426 - The value init of the FF/Latch start_flag hinder the constant cleaning in the block Inst_Timing_LCD.
    You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <bit_time_14> has a constant value of 0 in block <Inst_uart_rx>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <stNext_6> has a constant value of 0 in block <Inst_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <stNext_18> has a constant value of 0 in block <Inst_MDTEXT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stCur_6> has a constant value of 0 in block <Inst_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
@@ -554,9 +590,10 @@ Macro Statistics
 # Multipliers                                          : 2
  9x10-bit multiplier                                   : 1
  9x7-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 18
+# Adders/Subtractors                                   : 20
+ 11-bit adder                                          : 1
  15-bit adder                                          : 1
- 16-bit adder                                          : 2
+ 16-bit adder                                          : 3
  16-bit subtractor                                     : 1
  18-bit adder                                          : 1
  32-bit adder                                          : 5
@@ -566,18 +603,19 @@ Macro Statistics
  9-bit subtractor                                      : 4
 # Counters                                             : 6
  14-bit up counter                                     : 1
- 16-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
  23-bit up counter                                     : 1
  32-bit up counter                                     : 3
-# Registers                                            : 354
- Flip-Flops                                            : 354
+# Registers                                            : 1341
+ Flip-Flops                                            : 1341
 # Latches                                              : 10
  1-bit latch                                           : 5
  13-bit latch                                          : 1
  8-bit latch                                           : 4
-# Comparators                                          : 6
+# Comparators                                          : 9
+ 12-bit comparator less                                : 1
  16-bit comparator equal                               : 1
- 16-bit comparator greatequal                          : 2
+ 16-bit comparator greatequal                          : 4
  16-bit comparator not equal                           : 1
  5-bit comparator less                                 : 1
  8-bit comparator lessequal                            : 1
@@ -587,8 +625,34 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1293 - FF/Latch <bit_time_14> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bit_time_15> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <half_bit_time_13> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <half_bit_time_14> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <half_bit_time_15> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1426 - The value init of the FF/Latch start_flag hinder the constant cleaning in the block Timing_LCD.
    You should achieve better results by setting this init to 1.
+INFO:Xst:2261 - The FF/Latch <rxdata57600_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_3> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_7> 
+INFO:Xst:2261 - The FF/Latch <bit_time_5> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_4> 
+INFO:Xst:2261 - The FF/Latch <bit_time_4> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_3> 
+INFO:Xst:2261 - The FF/Latch <bit_time_3> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_2> 
+INFO:Xst:2261 - The FF/Latch <rxdata230400_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata460800_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata9600_1> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata19200_3> 
+INFO:Xst:2261 - The FF/Latch <bit_time_11> in Unit <NEW_UART_RX> is equivalent to the following 3 FFs/Latches, which will be removed : <bit_time_13> <half_bit_time_10> <half_bit_time_12> 
+INFO:Xst:2261 - The FF/Latch <bit_time_12> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_11> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_0> in Unit <NEW_UART_RX> is equivalent to the following 3 FFs/Latches, which will be removed : <rxdata115200_1> <rxdata230400_3> <rxdata460800_7> 
+INFO:Xst:2261 - The FF/Latch <bit_time_10> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_9> 
+INFO:Xst:2261 - The FF/Latch <bit_time_9> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_8> 
+INFO:Xst:2261 - The FF/Latch <rxdata115200_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata230400_5> 
+INFO:Xst:2261 - The FF/Latch <bit_time_8> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_7> 
+INFO:Xst:2261 - The FF/Latch <bit_time_7> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_6> 
+INFO:Xst:2261 - The FF/Latch <bit_time_6> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_1> in Unit <NEW_UART_RX> is equivalent to the following 2 FFs/Latches, which will be removed : <rxdata115200_3> <rxdata230400_7> 
+INFO:Xst:2261 - The FF/Latch <rxdata460800_0> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata921600_1> 
+INFO:Xst:2261 - The FF/Latch <rxdata230400_0> in Unit <NEW_UART_RX> is equivalent to the following 2 FFs/Latches, which will be removed : <rxdata460800_1> <rxdata921600_3> 
+INFO:Xst:2261 - The FF/Latch <rxdata460800_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata921600_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata115200_0> in Unit <NEW_UART_RX> is equivalent to the following 3 FFs/Latches, which will be removed : <rxdata230400_1> <rxdata460800_3> <rxdata921600_7> 
 WARNING:Xst:1293 - FF/Latch <stNext_6> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stCur_6> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stNext_7> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
@@ -657,7 +721,7 @@ WARNING:Xst:2677 - Node <adres_text_31> of sequential type is unconnected in blo
 
 Optimizing unit <ParallelTest_Top> ...
 
-Optimizing unit <UART_RX> ...
+Optimizing unit <NEW_UART_RX> ...
 
 Optimizing unit <Mux_Comm> ...
 
@@ -675,13 +739,38 @@ WARNING:Xst:2677 - Node <Inst_Data_Ctrl/DataIn_T_s_7> of sequential type is unco
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <Inst_Data_Ctrl/Inst_MDTEXT/detect_0> in Unit <ParallelTest_Top> is equivalent to the following FF/Latch, which will be removed : <Inst_Data_Ctrl/Inst_MDGRAPH/detect_0> 
-Found area constraint ratio of 100 (+ 5) on block ParallelTest_Top, actual ratio is 54.
+Found area constraint ratio of 100 (+ 5) on block ParallelTest_Top, actual ratio is 113.
+Optimizing block <ParallelTest_Top> to meet ratio 100 (+ 5) of 960 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <ParallelTest_Top>, final ratio is 112.
 FlipFlop Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 has been replicated 1 time(s)
 FlipFlop Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
 Processing Unit <ParallelTest_Top> :
+	Found 4-bit shift register for signal <Inst_uart_rx/rx0D_15>.
+	Found 4-bit shift register for signal <Inst_uart_rx/rx0D_19>.
+	Found 4-bit shift register for signal <Inst_uart_rx/rx0D_23>.
+	Found 4-bit shift register for signal <Inst_uart_rx/rx0D_27>.
+	Found 7-bit shift register for signal <Inst_uart_rx/rx0D_31>.
+	Found 8-bit shift register for signal <Inst_uart_rx/rx0D_38>.
+	Found 8-bit shift register for signal <Inst_uart_rx/rx0D_47>.
+	Found 8-bit shift register for signal <Inst_uart_rx/rx0D_55>.
+	Found 13-bit shift register for signal <Inst_uart_rx/rx0D_63>.
+	Found 17-bit shift register for signal <Inst_uart_rx/rx0D_76>.
+	Found 16-bit shift register for signal <Inst_uart_rx/rx0D_95>.
+	Found 16-bit shift register for signal <Inst_uart_rx/rx0D_111>.
+	Found 14-bit shift register for signal <Inst_uart_rx/rx0D_127>.
+	Found 48-bit shift register for signal <Inst_uart_rx/rx0D_141>.
+	Found 40-bit shift register for signal <Inst_uart_rx/rx0D_189>.
+	Found 54-bit shift register for signal <Inst_uart_rx/rx0D_229>.
+	Found 48-bit shift register for signal <Inst_uart_rx/rx0D_286>.
+	Found 45-bit shift register for signal <Inst_uart_rx/rx0D_334>.
+	Found 77-bit shift register for signal <Inst_uart_rx/rx0D_382>.
+	Found 114-bit shift register for signal <Inst_uart_rx/rx0D_459>.
+	Found 96-bit shift register for signal <Inst_uart_rx/rx0D_573>.
+	Found 96-bit shift register for signal <Inst_uart_rx/rx0D_669>.
+	Found 99-bit shift register for signal <Inst_uart_rx/rx0D_765>.
 	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_2>.
 	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_3>.
 	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_4>.
@@ -704,10 +793,25 @@ Unit <ParallelTest_Top> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 405
- Flip-Flops                                            : 405
-# Shift Registers                                      : 16
+# Registers                                            : 520
+ Flip-Flops                                            : 520
+# Shift Registers                                      : 39
+ 114-bit shift register                                : 1
+ 13-bit shift register                                 : 1
+ 14-bit shift register                                 : 1
+ 16-bit shift register                                 : 2
+ 17-bit shift register                                 : 1
  2-bit shift register                                  : 16
+ 4-bit shift register                                  : 4
+ 40-bit shift register                                 : 1
+ 45-bit shift register                                 : 1
+ 48-bit shift register                                 : 2
+ 54-bit shift register                                 : 1
+ 7-bit shift register                                  : 1
+ 77-bit shift register                                 : 1
+ 8-bit shift register                                  : 3
+ 96-bit shift register                                 : 2
+ 99-bit shift register                                 : 1
 
 =========================================================================
 
@@ -736,31 +840,31 @@ Design Statistics
 # IOs                              : 23
 
 Cell Usage :
-# BELS                             : 1664
+# BELS                             : 1936
 #      GND                         : 2
-#      INV                         : 67
-#      LUT1                        : 194
-#      LUT2                        : 156
-#      LUT2_L                      : 2
-#      LUT3                        : 136
+#      INV                         : 68
+#      LUT1                        : 219
+#      LUT2                        : 219
+#      LUT2_L                      : 1
+#      LUT3                        : 131
 #      LUT3_D                      : 1
-#      LUT3_L                      : 1
-#      LUT4                        : 339
+#      LUT4                        : 444
 #      LUT4_D                      : 3
-#      LUT4_L                      : 8
+#      LUT4_L                      : 1
 #      MULT_AND                    : 11
-#      MUXCY                       : 373
-#      MUXF5                       : 45
+#      MUXCY                       : 425
+#      MUXF5                       : 56
 #      VCC                         : 2
-#      XORCY                       : 324
-# FlipFlops/Latches                : 474
+#      XORCY                       : 353
+# FlipFlops/Latches                : 748
 #      FD                          : 32
 #      FD_1                        : 18
-#      FDC                         : 24
-#      FDCE                        : 8
-#      FDE                         : 176
+#      FDC                         : 58
+#      FDCE                        : 168
+#      FDE                         : 253
 #      FDE_1                       : 32
-#      FDR                         : 67
+#      FDP                         : 1
+#      FDR                         : 69
 #      FDR_1                       : 1
 #      FDRE                        : 32
 #      FDS                         : 24
@@ -769,8 +873,10 @@ Cell Usage :
 # RAMS                             : 4
 #      RAMB16_S4_S9                : 3
 #      RAMB16_S9                   : 1
-# Shift Registers                  : 16
+# Shift Registers                  : 76
 #      SRL16                       : 16
+#      SRL16E                      : 23
+#      SRLC16E                     : 37
 # Clock Buffers                    : 3
 #      BUFG                        : 3
 # IO Buffers                       : 22
@@ -785,11 +891,11 @@ Device utilization summary:
 
 Selected Device : 3s100etq144-4 
 
- Number of Slices:                      495  out of    960    51%  
- Number of Slice Flip Flops:            473  out of   1920    24%  
- Number of 4 input LUTs:                923  out of   1920    48%  
-    Number used as logic:               907
-    Number used as Shift registers:      16
+ Number of Slices:                      705  out of    960    73%  
+ Number of Slice Flip Flops:            747  out of   1920    38%  
+ Number of 4 input LUTs:               1163  out of   1920    60%  
+    Number used as logic:              1087
+    Number used as Shift registers:      76
  Number of IOs:                          23
  Number of bonded IOBs:                  22  out of    108    20%  
     IOB Flip Flops:                       1
@@ -818,7 +924,7 @@ Clock Information:
 -----------------------------------------------------------------------------+---------------------------------------------------------------+-------+
 Clock Signal                                                                 | Clock buffer(FF name)                                         | Load  |
 -----------------------------------------------------------------------------+---------------------------------------------------------------+-------+
-CLK                                                                          | IBUF+BUFG                                                     | 357   |
+CLK                                                                          | IBUF+BUFG                                                     | 691   |
 Inst_Timing_LCD/SHIFT1                                                       | BUFG                                                          | 85    |
 Inst_Data_Ctrl/CLKB                                                          | NONE(Inst_DualPort/InstMemVideo/BU69)                         | 5     |
 Inst_Data_Ctrl/Mode_s_01                                                     | BUFG                                                          | 49    |
@@ -831,18 +937,18 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+--------------------------------+-------+
-Control Signal                     | Buffer(FF name)                | Load  |
------------------------------------+--------------------------------+-------+
-N0(XST_GND:G)                      | NONE(Inst_uart_rx/baud_count_0)| 32    |
------------------------------------+--------------------------------+-------+
+-----------------------------------+----------------------------------+-------+
+Control Signal                     | Buffer(FF name)                  | Load  |
+-----------------------------------+----------------------------------+-------+
+N0(XST_GND:G)                      | NONE(Inst_uart_rx/baud_count0D_0)| 227   |
+-----------------------------------+----------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 29.504ns (Maximum Frequency: 33.894MHz)
-   Minimum input arrival time before clock: 2.712ns
+   Minimum period: 29.056ns (Maximum Frequency: 34.416MHz)
+   Minimum input arrival time before clock: 4.106ns
    Maximum output required time after clock: 8.112ns
    Maximum combinational path delay: No path found
 
@@ -852,10 +958,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 29.504ns (frequency: 33.894MHz)
-  Total number of paths / destination ports: 236523 / 631
+  Clock period: 29.056ns (frequency: 34.416MHz)
+  Total number of paths / destination ports: 243211 / 1262
 -------------------------------------------------------------------------
-Delay:               14.752ns (Levels of Logic = 21)
+Delay:               14.528ns (Levels of Logic = 20)
   Source:            Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 (FF)
   Destination:       Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12 (FF)
   Source Clock:      CLK rising
@@ -865,7 +971,7 @@ Delay:               14.752ns (Levels of Logic = 21)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              9   0.591   0.855  Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 (Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0)
+     FDE:C->Q             12   0.591   0.996  Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 (Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0)
      LUT3_D:I2->O         16   0.704   1.069  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<0>21 (Inst_Data_Ctrl/Inst_MDGRAPH/N8)
      LUT3:I2->O            1   0.704   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_not0000<4>1 (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_not0000<4>)
      MUXCY:S->O            1   0.464   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<4> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<4>)
@@ -884,13 +990,12 @@ Delay:               14.752ns (Levels of Logic = 21)
      LUT2:I1->O            2   0.704   0.447  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<11>1 (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<11>_mand)
      MULT_AND:I1->LO       0   0.741   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<11>_mand (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<11>_mand1)
      MUXCY:DI->O           0   0.888   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<11> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<11>)
-     XORCY:CI->O           1   0.804   0.499  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_xor<12> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_share0000<12>)
-     LUT3:I1->O            1   0.704   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12>1 (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12>1)
-     MUXF5:I1->O           1   0.321   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12>_f5 (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12>)
+     XORCY:CI->O           1   0.804   0.420  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_xor<12> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_share0000<12>)
+     MUXF5:S->O            1   0.739   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12>)
      FD_1:D                    0.308          Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12
     ----------------------------------------
-    Total                     14.752ns (10.181ns logic, 4.571ns route)
-                                       (69.0% logic, 31.0% route)
+    Total                     14.528ns (9.895ns logic, 4.633ns route)
+                                       (68.1% logic, 31.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_Timing_LCD/SHIFT1'
@@ -924,10 +1029,10 @@ Delay:               5.780ns (Levels of Logic = 9)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_Data_Ctrl/Mode_s_01'
-  Clock period: 3.027ns (frequency: 330.326MHz)
+  Clock period: 2.987ns (frequency: 334.808MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               3.027ns (Levels of Logic = 1)
+Delay:               2.987ns (Levels of Logic = 1)
   Source:            Inst_Data_Ctrl/Dump_s (LATCH)
   Destination:       Inst_Data_Ctrl/Dump_s (LATCH)
   Source Clock:      Inst_Data_Ctrl/Mode_s_01 rising
@@ -937,38 +1042,39 @@ Delay:               3.027ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q              26   0.676   1.339  Inst_Data_Ctrl/Dump_s (Inst_Data_Ctrl/Dump_s)
-     LUT3:I1->O            1   0.704   0.000  Inst_Data_Ctrl/Dump_s_mux00021 (Inst_Data_Ctrl/Dump_s_mux0002)
+     LD:G->Q              37   0.676   1.299  Inst_Data_Ctrl/Dump_s (Inst_Data_Ctrl/Dump_s)
+     LUT3:I2->O            1   0.704   0.000  Inst_Data_Ctrl/Dump_s_mux00021 (Inst_Data_Ctrl/Dump_s_mux0002)
      LD:D                      0.308          Inst_Data_Ctrl/Dump_s
     ----------------------------------------
-    Total                      3.027ns (1.688ns logic, 1.339ns route)
-                                       (55.8% logic, 44.2% route)
+    Total                      2.987ns (1.688ns logic, 1.299ns route)
+                                       (56.5% logic, 43.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 11 / 11
+  Total number of paths / destination ports: 15 / 15
 -------------------------------------------------------------------------
-Offset:              2.712ns (Levels of Logic = 2)
+Offset:              4.106ns (Levels of Logic = 3)
   Source:            RX (PAD)
-  Destination:       Inst_uart_rx/state_FSM_FFd3 (FF)
+  Destination:       Inst_uart_rx/state_FSM_FFd5 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RX to Inst_uart_rx/state_FSM_FFd3
+  Data Path: RX to Inst_uart_rx/state_FSM_FFd5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.218   0.447  RX_IBUF (RX_IBUF)
-     MUXF5:S->O            1   0.739   0.000  Inst_uart_rx/state_FSM_FFd3-In_f5 (Inst_uart_rx/state_FSM_FFd3-In)
-     FDC:D                     0.308          Inst_uart_rx/state_FSM_FFd3
+     IBUF:I->O             6   1.218   0.748  RX_IBUF (RX_IBUF)
+     LUT3:I1->O            1   0.704   0.424  Inst_uart_rx/state_FSM_FFd5-In2 (Inst_uart_rx/state_FSM_FFd5-In2)
+     LUT4:I3->O            1   0.704   0.000  Inst_uart_rx/state_FSM_FFd5-In22 (Inst_uart_rx/state_FSM_FFd5-In)
+     FDC:D                     0.308          Inst_uart_rx/state_FSM_FFd5
     ----------------------------------------
-    Total                      2.712ns (2.265ns logic, 0.447ns route)
-                                       (83.5% logic, 16.5% route)
+    Total                      4.106ns (2.934ns logic, 1.172ns route)
+                                       (71.5% logic, 28.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              4.880ns (Levels of Logic = 1)
+Offset:              4.914ns (Levels of Logic = 1)
   Source:            Inst_Mux_Comm/FLAG_COM (FF)
   Destination:       SUPP (PAD)
   Source Clock:      CLK rising
@@ -977,11 +1083,11 @@ Offset:              4.880ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             15   0.591   1.017  Inst_Mux_Comm/FLAG_COM (Inst_Mux_Comm/FLAG_COM)
+     FDR:C->Q             17   0.591   1.051  Inst_Mux_Comm/FLAG_COM (Inst_Mux_Comm/FLAG_COM)
      OBUF:I->O                 3.272          SUPP_OBUF (SUPP)
     ----------------------------------------
-    Total                      4.880ns (3.863ns logic, 1.017ns route)
-                                       (79.2% logic, 20.8% route)
+    Total                      4.914ns (3.863ns logic, 1.051ns route)
+                                       (78.6% logic, 21.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_Timing_LCD/SHIFT1'
@@ -1008,14 +1114,14 @@ Offset:              8.112ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.84 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.72 secs
  
 --> 
 
-Total memory usage is 301224 kilobytes
+Total memory usage is 319720 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  115 (   0 filtered)
-Number of infos    :   13 (   0 filtered)
+Number of warnings :  120 (   0 filtered)
+Number of infos    :   44 (   0 filtered)
 

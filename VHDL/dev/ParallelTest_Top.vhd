@@ -94,7 +94,7 @@ COMPONENT PARALLELE
 		);
 	END COMPONENT;
 	
-COMPONENT UART_RX
+COMPONENT NEW_UART_RX
 	PORT(
 		RxD : IN std_logic;
 		mclk : IN std_logic;          
@@ -194,7 +194,7 @@ Inst_PARALLELE: PARALLELE PORT MAP(
 		FLAG_PARALLELE => Flag_Parallel
 	);
 	
-Inst_uart_rx: uart_rx PORT MAP(
+Inst_uart_rx: new_UART_RX PORT MAP(
 		RxD => RX,
 		mclk => CLK,
 		rdrf => Flag_UART,

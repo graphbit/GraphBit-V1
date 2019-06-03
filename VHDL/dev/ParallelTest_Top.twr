@@ -45,16 +45,16 @@ Setup/Hold to clock CLK
                 |Max Setup to|Max Hold to |                  | Clock  |
 Source          | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ----------------+------------+------------+------------------+--------+
-CS_CPU          |    0.420(R)|    0.841(R)|CLK_IBUF          |   0.000|
-DATA_FROM_CPU<0>|    0.887(R)|    0.468(R)|CLK_IBUF          |   0.000|
-DATA_FROM_CPU<1>|    0.828(R)|    0.515(R)|CLK_IBUF          |   0.000|
-DATA_FROM_CPU<2>|    0.474(R)|    0.799(R)|CLK_IBUF          |   0.000|
-DATA_FROM_CPU<3>|    0.489(R)|    0.787(R)|CLK_IBUF          |   0.000|
-DATA_FROM_CPU<4>|    0.867(R)|    0.485(R)|CLK_IBUF          |   0.000|
-DATA_FROM_CPU<5>|    0.790(R)|    0.546(R)|CLK_IBUF          |   0.000|
-DATA_FROM_CPU<6>|    0.578(R)|    0.718(R)|CLK_IBUF          |   0.000|
-DATA_FROM_CPU<7>|    0.526(R)|    0.760(R)|CLK_IBUF          |   0.000|
-RX              |    1.603(R)|    0.944(R)|CLK_IBUF          |   0.000|
+CS_CPU          |    0.418(R)|    0.841(R)|CLK_IBUF          |   0.000|
+DATA_FROM_CPU<0>|    0.707(R)|    0.612(R)|CLK_IBUF          |   0.000|
+DATA_FROM_CPU<1>|    0.752(R)|    0.576(R)|CLK_IBUF          |   0.000|
+DATA_FROM_CPU<2>|    0.889(R)|    0.465(R)|CLK_IBUF          |   0.000|
+DATA_FROM_CPU<3>|    0.791(R)|    0.544(R)|CLK_IBUF          |   0.000|
+DATA_FROM_CPU<4>|    0.579(R)|    0.717(R)|CLK_IBUF          |   0.000|
+DATA_FROM_CPU<5>|    0.540(R)|    0.748(R)|CLK_IBUF          |   0.000|
+DATA_FROM_CPU<6>|    0.595(R)|    0.704(R)|CLK_IBUF          |   0.000|
+DATA_FROM_CPU<7>|    0.915(R)|    0.449(R)|CLK_IBUF          |   0.000|
+RX              |    2.044(R)|    0.808(R)|CLK_IBUF          |   0.000|
 ----------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -63,8 +63,8 @@ Clock CLK to Pad
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
 LATCH       |    6.035(R)|CLK_IBUF          |   0.000|
-SHIFT       |    7.743(R)|CLK_IBUF          |   0.000|
-SUPP        |    9.059(R)|CLK_IBUF          |   0.000|
+SHIFT       |    7.983(R)|CLK_IBUF          |   0.000|
+SUPP        |    9.155(R)|CLK_IBUF          |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -72,18 +72,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |   14.162|    1.962|   13.623|   10.430|
+CLK            |   15.066|    2.653|   13.242|   10.313|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri May 31 17:49:53 2019 
+Analysis completed Sat Jun 01 16:22:49 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 169 MB
+Peak Memory Usage: 174 MB
 
 
 

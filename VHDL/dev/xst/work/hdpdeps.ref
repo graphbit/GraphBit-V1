@@ -1,10 +1,10 @@
-V3 57
+V3 63
 FL C:/Travail/EcranGraphiqueV1.1/Port_Parallele.vhd 2019/05/24.09:18:08 P.20131013
-EN work/PARALLELE 1559339367 FL C:/Travail/EcranGraphiqueV1.1/Port_Parallele.vhd \
+EN work/PARALLELE 1559420531 FL C:/Travail/EcranGraphiqueV1.1/Port_Parallele.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/PARALLELE/PARALLELE 1559339368 \
-      FL C:/Travail/EcranGraphiqueV1.1/Port_Parallele.vhd EN work/PARALLELE 1559339367
+AR work/PARALLELE/PARALLELE 1559420532 \
+      FL C:/Travail/EcranGraphiqueV1.1/Port_Parallele.vhd EN work/PARALLELE 1559420531
 FL C:/Travail/LCD_TEST_PARALLEL/Data_Ctrl.vhd 2019/05/14.14:30:43 P.20131013
 EN work/Data_Ctrl 1557864048 FL C:/Travail/LCD_TEST_PARALLEL/Data_Ctrl.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
@@ -13,28 +13,28 @@ AR work/Data_Ctrl/Behavioral 1557864049 \
       FL C:/Travail/LCD_TEST_PARALLEL/Data_Ctrl.vhd EN work/Data_Ctrl 1557864048 \
       CP MDGRAPH
 FL C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd 2019/05/24.17:47:19 P.20131013
-EN work/DualPort 1559339377 FL C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd \
+EN work/DualPort 1559420541 FL C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DualPort/DualPort 1559339378 \
-      FL C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd EN work/DualPort 1559339377 \
+AR work/DualPort/DualPort 1559420542 \
+      FL C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd EN work/DualPort 1559420541 \
       CP MemVideo
 FL C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd 2017/05/17.09:45:08 P.20131013
-EN work/rom_1024_8 1559339359 FL C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd \
+EN work/rom_1024_8 1559420523 FL C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/rom_1024_8/imp 1559339360 \
-      FL C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd EN work/rom_1024_8 1559339359
+AR work/rom_1024_8/imp 1559420524 \
+      FL C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd EN work/rom_1024_8 1559420523
 FL C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd 2019/05/30.11:39:56 P.20131013
-EN work/OLD_MDGRAPH 1559339363 FL C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd \
+EN work/OLD_MDGRAPH 1559420527 FL C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/OLD_MDGRAPH/OLD_MDGRAPH 1559339364 \
-      FL C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd EN work/OLD_MDGRAPH 1559339363
+AR work/OLD_MDGRAPH/OLD_MDGRAPH 1559420528 \
+      FL C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd EN work/OLD_MDGRAPH 1559420527
 FL C:/Travail/LCD_TEST_PARALLEL/MemVideo.vhd 2019/05/02.08:46:40 P.20131013
-EN work/MemVideo 1559339361 FL C:/Travail/LCD_TEST_PARALLEL/MemVideo.vhd \
+EN work/MemVideo 1559420525 FL C:/Travail/LCD_TEST_PARALLEL/MemVideo.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/MemVideo/MemVideo_a 1559339362 \
-      FL C:/Travail/LCD_TEST_PARALLEL/MemVideo.vhd EN work/MemVideo 1559339361
+AR work/MemVideo/MemVideo_a 1559420526 \
+      FL C:/Travail/LCD_TEST_PARALLEL/MemVideo.vhd EN work/MemVideo 1559420525
 FL C:/Travail/LCD_TEST_PARALLEL/ModeGraph.vhd 2019/05/14.14:28:43 P.20131013
 EN work/MDGRAPH 1559230933 FL C:/Travail/LCD_TEST_PARALLEL/ModeGraph.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
@@ -49,44 +49,53 @@ AR work/MDTEXT/MDTEXT 1558970679 \
       FL C:/Travail/LCD_TEST_PARALLEL/ModeText.vhd EN work/MDTEXT 1558970678 \
       CP rom_1024_8
 FL C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd 2019/05/29.08:48:39 P.20131013
-EN work/Mux_Comm 1559339371 FL C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd \
+EN work/Mux_Comm 1559420535 FL C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/Mux_Comm/Behavioral 1559339372 \
-      FL C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd EN work/Mux_Comm 1559339371
-FL C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd 2019/05/31.17:07:11 P.20131013
-EN work/New_Data_Ctrl 1559339373 \
+AR work/Mux_Comm/Behavioral 1559420536 \
+      FL C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd EN work/Mux_Comm 1559420535
+FL C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd 2019/06/01.15:46:42 P.20131013
+EN work/New_Data_Ctrl 1559420537 \
       FL C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/New_Data_Ctrl/Behavioral 1559339374 \
-      FL C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd EN work/New_Data_Ctrl 1559339373 \
+AR work/New_Data_Ctrl/Behavioral 1559420538 \
+      FL C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd EN work/New_Data_Ctrl 1559420537 \
       CP OLD_MDGRAPH CP OLD_MDTEXT
 FL C:/Travail/LCD_TEST_PARALLEL/New_MemVideo.vhd 2019/05/17.10:38:42 P.20131013
 AR work/New_MemVideo/MemVideo_a 1558103752 \
       FL C:/Travail/LCD_TEST_PARALLEL/New_MemVideo.vhd EN work/New_MemVideo 1558103751
-FL C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd 2019/05/27.11:38:22 P.20131013
-EN work/OLD_MDTEXT 1559339365 FL C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd \
+FL C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd 2019/06/01.11:46:36 P.20131013
+EN work/OLD_MDTEXT 1559420529 FL C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/OLD_MDTEXT/OLD_MDTEXT 1559339366 \
-      FL C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd EN work/OLD_MDTEXT 1559339365 \
+AR work/OLD_MDTEXT/OLD_MDTEXT 1559420530 \
+      FL C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd EN work/OLD_MDTEXT 1559420529 \
       CP rom_1024_8
-FL C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd 2019/05/31.17:49:15 P.20131013
-EN work/ParallelTest_Top 1559339379 \
+FL C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd 2019/06/01.16:22:00 P.20131013
+EN work/ParallelTest_Top 1559420543 \
       FL C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd PB ieee/std_logic_1164 1381692176
-AR work/ParallelTest_Top/Behavioral 1559339380 \
+AR work/ParallelTest_Top/Behavioral 1559420544 \
       FL C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd \
-      EN work/ParallelTest_Top 1559339379 CP PARALLELE CP uart_rx CP Mux_Comm \
+      EN work/ParallelTest_Top 1559420543 CP PARALLELE CP new_UART_RX CP Mux_Comm \
       CP New_Data_Ctrl CP Timing_LCD CP DualPort
-FL C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd 2019/05/24.11:26:20 P.20131013
-EN work/Timing_LCD 1559339375 FL C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd \
+FL C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd 2019/06/01.11:49:34 P.20131013
+EN work/Timing_LCD 1559420539 FL C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/NUMERIC_STD 1381692181 PB ieee/std_logic_arith 1381692177
-AR work/Timing_LCD/Behavioral 1559339376 \
-      FL C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd EN work/Timing_LCD 1559339375
-FL C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd 2019/05/30.11:41:13 P.20131013
-FL C:/Travail/LCD_TEST_PARALLEL/uart_rx_57600.vhd 2019/05/31.16:54:31 P.20131013
-EN work/uart_rx 1559339369 FL C:/Travail/LCD_TEST_PARALLEL/uart_rx_57600.vhd \
+AR work/Timing_LCD/Behavioral 1559420540 \
+      FL C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd EN work/Timing_LCD 1559420539
+FL C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd 2019/05/31.16:52:47 P.20131013
+EN work/new_uart_rx 1559420533 FL C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/uart_rx/uart_rx 1559339370 \
-      FL C:/Travail/LCD_TEST_PARALLEL/uart_rx_57600.vhd EN work/uart_rx 1559339369
+AR work/new_uart_rx/new_uart_rx 1559420534 \
+      FL C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd EN work/new_uart_rx 1559420533
+FL C:/Travail/LCD_TEST_PARALLEL/uart_rx_57600.vhd 2019/05/31.16:54:31 P.20131013
+EN work/uart_rx 1559415708 FL C:/Travail/LCD_TEST_PARALLEL/uart_rx_57600.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/uart_rx/uart_rx 1559415709 \
+      FL C:/Travail/LCD_TEST_PARALLEL/uart_rx_57600.vhd EN work/uart_rx 1559415708
+FL C:/Travail/LCD_TEST_PARALLEL/uart_rx_all.vhd 2019/06/01.14:35:54 P.20131013
+EN work/uart_rx_auto 1559418415 FL C:/Travail/LCD_TEST_PARALLEL/uart_rx_all.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/uart_rx_auto/uart_rx_auto 1559418416 \
+      FL C:/Travail/LCD_TEST_PARALLEL/uart_rx_all.vhd EN work/uart_rx_auto 1559418415

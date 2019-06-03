@@ -109,6 +109,11 @@
     <transform xil_pn:end_ts="1559404174" xil_pn:in_ck="-3645025832664130680" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1559404174">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../EcranGraphiqueV1.1/Port_Parallele.vhd"/>
       <outfile xil_pn:name="DualPort.vhd"/>
       <outfile xil_pn:name="Fonts.vhd"/>
@@ -139,6 +144,11 @@
     <transform xil_pn:end_ts="1559404174" xil_pn:in_ck="-3645025832664130680" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1559404174">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../EcranGraphiqueV1.1/Port_Parallele.vhd"/>
       <outfile xil_pn:name="DualPort.vhd"/>
       <outfile xil_pn:name="Fonts.vhd"/>
@@ -157,6 +167,9 @@
     <transform xil_pn:end_ts="1559404179" xil_pn:in_ck="-3645025832664130680" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1008303298360296231" xil_pn:start_ts="1559404174">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ParallelTest_Top_beh.prj"/>
       <outfile xil_pn:name="ParallelTest_Top_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -166,6 +179,9 @@
     <transform xil_pn:end_ts="1559404179" xil_pn:in_ck="-5872337966118512190" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8965719063787470426" xil_pn:start_ts="1559404179">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ParallelTest_Top_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
     </transform>
@@ -193,13 +209,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1559339369" xil_pn:in_ck="-3645025832664130680" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="7920924217172055967" xil_pn:start_ts="1559339357">
+    <transform xil_pn:end_ts="1559420538" xil_pn:in_ck="-2418146870379971179" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="7920924217172055967" xil_pn:start_ts="1559420521">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="ParallelTest_Top.lso"/>
@@ -220,23 +234,19 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1559339374" xil_pn:in_ck="3088763812756784677" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1995013876329580783" xil_pn:start_ts="1559339369">
+    <transform xil_pn:end_ts="1559420543" xil_pn:in_ck="3088763812756784677" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1995013876329580783" xil_pn:start_ts="1559420538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="ParallelTest_Top.bld"/>
       <outfile xil_pn:name="ParallelTest_Top.ngd"/>
       <outfile xil_pn:name="ParallelTest_Top_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1559339378" xil_pn:in_ck="3088763812756784678" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="7557559725430926307" xil_pn:start_ts="1559339374">
+    <transform xil_pn:end_ts="1559420548" xil_pn:in_ck="3088763812756784678" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="7557559725430926307" xil_pn:start_ts="1559420543">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ParallelTest_Top.pcf"/>
       <outfile xil_pn:name="ParallelTest_Top_map.map"/>
       <outfile xil_pn:name="ParallelTest_Top_map.mrp"/>
@@ -247,11 +257,10 @@
       <outfile xil_pn:name="ParallelTest_Top_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1559339394" xil_pn:in_ck="4558641698842507327" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1559339378">
+    <transform xil_pn:end_ts="1559420570" xil_pn:in_ck="4558641698842507327" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1559420548">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="ParallelTest_Top.ncd"/>
       <outfile xil_pn:name="ParallelTest_Top.pad"/>
       <outfile xil_pn:name="ParallelTest_Top.par"/>
@@ -263,11 +272,10 @@
       <outfile xil_pn:name="ParallelTest_Top_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1559339406" xil_pn:in_ck="3088763812756784546" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2969983391363831627" xil_pn:start_ts="1559339394">
+    <transform xil_pn:end_ts="1559420579" xil_pn:in_ck="3088763812756784546" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2969983391363831627" xil_pn:start_ts="1559420570">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="ParallelTest_Top.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="paralleltest_top.bgn"/>
@@ -281,7 +289,6 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
@@ -290,15 +297,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1559339394" xil_pn:in_ck="3088763812756784546" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1559339391">
+    <transform xil_pn:end_ts="1559420570" xil_pn:in_ck="3088763812756784546" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1559420567">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="ParallelTest_Top.twr"/>
       <outfile xil_pn:name="ParallelTest_Top.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
