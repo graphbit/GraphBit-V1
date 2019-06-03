@@ -15,10 +15,7 @@
   <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="../EcranGraphiqueV1.1/Port_Parallele.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="10"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="10"/>
-    </file>
+    <file xil_pn:name="../EcranGraphiqueV1.1/Port_Parallele.vhd" xil_pn:type="FILE_VHDL"/>
     <file xil_pn:name="ParallelTest_Top.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="11"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="11"/>

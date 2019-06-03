@@ -115,7 +115,7 @@ begin
 
 
 pDataAnalysis : process(CLK) is  
-variable timeout_v : integer range 0 to 50000 := 0;
+variable timeout_v : integer range 0 to 200000 := 0;
 variable RxByteNb_v : std_logic_vector(15 downto 0) := x"0000";
 variable flag_v : std_logic_vector(1 downto 0) := "00";
 begin
@@ -274,8 +274,8 @@ begin
 			Data_Clk <= '0';
 			
 			-- Handle timeout
-			-- 50000 * 10ns = 500us timeout
-			if (timeout_v = 50000) then
+			-- 200000 * 10ns = 2ms timeout
+			if (timeout_v = 200000) then
 				Count_s <= x"0000";
 				State_s <= size0;
 				Mode_s <= none;

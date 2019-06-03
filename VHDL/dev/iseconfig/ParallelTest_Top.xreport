@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-06-01T15:52:52</DateModified>
+  <DateModified>2019-06-03T09:28:44</DateModified>
   <ModuleName>ParallelTest_Top</ModuleName>
   <SummaryTimeStamp>2019-05-31T16:55:35</SummaryTimeStamp>
-  <SavedFilePath>C:/Travail/LCD_TEST_PARALLEL/iseconfig/ParallelTest_Top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Travail/LCD_TEST_PARALLEL\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/GitHub/GraphBitV1/VHDL/dev/iseconfig/ParallelTest_Top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/GitHub/GraphBitV1/VHDL/dev\</ImplementationReportsDirectory>
   <DateInitialized>2019-05-05T13:37:54</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
