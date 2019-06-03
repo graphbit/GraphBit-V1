@@ -29,7 +29,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ParallelTest_Top is
+entity GraphBit is
     Port ( DATA_FROM_CPU : in  STD_LOGIC_VECTOR (7 downto 0);
 			  RX : in STD_LOGIC;
            --A0_CPU : in  STD_LOGIC;
@@ -78,9 +78,9 @@ entity ParallelTest_Top is
 --		attribute loc of DF : signal is "P76";
 --		attribute loc of LED : signal is "P2, P3, P4, P5, P7, P8, P14, P15";
 			  
-end ParallelTest_Top;
+end GraphBit;
 
-architecture Behavioral of ParallelTest_Top is
+architecture Behavioral of GraphBit is
 
 COMPONENT PARALLELE
 	PORT(

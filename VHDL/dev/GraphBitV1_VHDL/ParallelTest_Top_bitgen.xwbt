@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\GitHub\GraphBitV1\VHDL\dev\GraphBitV1_VHDL\ParallelTest_Top.ncd
+OUTFILE=C:\GitHub\GraphBitV1\VHDL\dev\GraphBitV1_VHDL\ParallelTest_Top.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4tq144
+WORKINGDIR=C:\GitHub\GraphBitV1\VHDL\dev\GraphBitV1_VHDL
+LICENSE=WebPack
+USER_INFO=211691792_0_0_059

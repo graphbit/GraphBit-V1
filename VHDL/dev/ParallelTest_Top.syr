@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: ParallelTest_Top.prj
 
@@ -104,30 +104,46 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/ParallelTest_Top is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd".
+WARNING:HDLParsers:3607 - Unit work/ParallelTest_Top/Behavioral is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd".
+WARNING:HDLParsers:3607 - Unit work/DualPort is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd".
+WARNING:HDLParsers:3607 - Unit work/DualPort/DualPort is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd".
+WARNING:HDLParsers:3607 - Unit work/Mux_Comm is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/Mux_Comm.vhd".
+WARNING:HDLParsers:3607 - Unit work/Mux_Comm/Behavioral is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/Mux_Comm.vhd".
+WARNING:HDLParsers:3607 - Unit work/New_Data_Ctrl is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd".
+WARNING:HDLParsers:3607 - Unit work/New_Data_Ctrl/Behavioral is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd".
+WARNING:HDLParsers:3607 - Unit work/Timing_LCD is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd".
+WARNING:HDLParsers:3607 - Unit work/Timing_LCD/Behavioral is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd".
+WARNING:HDLParsers:3607 - Unit work/new_uart_rx is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/uart_rx.vhd".
+WARNING:HDLParsers:3607 - Unit work/new_uart_rx/new_uart_rx is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/uart_rx.vhd".
+WARNING:HDLParsers:3607 - Unit work/OLD_MDGRAPH is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd".
+WARNING:HDLParsers:3607 - Unit work/OLD_MDGRAPH/OLD_MDGRAPH is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd".
+WARNING:HDLParsers:3607 - Unit work/MemVideo is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/MemVideo.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/MemVideo.vhd".
+WARNING:HDLParsers:3607 - Unit work/MemVideo/MemVideo_a is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/MemVideo.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/MemVideo.vhd".
+WARNING:HDLParsers:3607 - Unit work/OLD_MDTEXT is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd".
+WARNING:HDLParsers:3607 - Unit work/OLD_MDTEXT/OLD_MDTEXT is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd".
+WARNING:HDLParsers:3607 - Unit work/rom_1024_8 is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/Fonts.vhd".
+WARNING:HDLParsers:3607 - Unit work/rom_1024_8/imp is now defined in a different file.  It was defined in "C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd", and is now defined in "C:/GitHub/GraphBitV1/VHDL/src/Fonts.vhd".
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/Fonts.vhd" in Library work.
 Architecture imp of Entity rom_1024_8 is up to date.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/MemVideo.vhd" in Library work.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/MemVideo.vhd" in Library work.
 Architecture memvideo_a of Entity memvideo is up to date.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd" in Library work.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd" in Library work.
 Architecture old_mdgraph of Entity old_mdgraph is up to date.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd" in Library work.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd" in Library work.
 Architecture old_mdtext of Entity old_mdtext is up to date.
-Compiling vhdl file "C:/Travail/EcranGraphiqueV1.1/Port_Parallele.vhd" in Library work.
-Architecture parallele of Entity parallele is up to date.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd" in Library work.
-Entity <new_uart_rx> compiled.
-Entity <new_uart_rx> (Architecture <new_uart_rx>) compiled.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd" in Library work.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/uart_rx.vhd" in Library work.
+Architecture new_uart_rx of Entity new_uart_rx is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/Mux_Comm.vhd" in Library work.
 Architecture behavioral of Entity mux_comm is up to date.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd" in Library work.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd" in Library work.
 Architecture behavioral of Entity new_data_ctrl is up to date.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd" in Library work.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd" in Library work.
 Architecture behavioral of Entity timing_lcd is up to date.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd" in Library work.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd" in Library work.
 Architecture dualport of Entity dualport is up to date.
-Compiling vhdl file "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" in Library work.
-Entity <paralleltest_top> compiled.
-Entity <paralleltest_top> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" in Library work.
+Architecture behavioral of Entity paralleltest_top is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -170,12 +186,12 @@ Analyzing Entity <ParallelTest_Top> in library <work> (Architecture <behavioral>
     Set user-defined property "LOC =  P103" for signal <DISP> in unit <ParallelTest_Top>.
     Set user-defined property "LOC =  P32" for signal <SUPP> in unit <ParallelTest_Top>.
     Set user-defined property "LOC =  P35" for signal <SUPPIN> in unit <ParallelTest_Top>.
-WARNING:Xst:753 - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 216: Unconnected output port 'SUPP' of component 'New_Data_Ctrl'.
-INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 28: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
-INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 29: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
-INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 33: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
-INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 34: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
-INFO:Xst:1739 - HDL ADVISOR - "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd" line 35: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+WARNING:Xst:753 - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 216: Unconnected output port 'SUPP' of component 'New_Data_Ctrl'.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 28: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 29: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 33: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 34: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 35: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 Entity <ParallelTest_Top> analyzed. Unit <ParallelTest_Top> generated.
 
 Analyzing Entity <PARALLELE> in library <work> (Architecture <parallele>).
@@ -188,7 +204,7 @@ Analyzing Entity <Mux_Comm> in library <work> (Architecture <behavioral>).
 Entity <Mux_Comm> analyzed. Unit <Mux_Comm> generated.
 
 Analyzing Entity <New_Data_Ctrl> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd" line 301: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd" line 301: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <Mode_s>, <DataOut_T_s>, <Add_mem_T_s>, <WR_mem_T_s>, <CS_mem_T_s>, <DATA>, <DataOut_G_s>, <Add_mem_G_s>, <WR_mem_G_s>, <CS_mem_G_s>, <DINB>
 Entity <New_Data_Ctrl> analyzed. Unit <New_Data_Ctrl> generated.
 
@@ -196,7 +212,7 @@ Analyzing Entity <OLD_MDGRAPH> in library <work> (Architecture <old_mdgraph>).
 Entity <OLD_MDGRAPH> analyzed. Unit <OLD_MDGRAPH> generated.
 
 Analyzing Entity <OLD_MDTEXT> in library <work> (Architecture <old_mdtext>).
-WARNING:Xst:819 - "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd" line 96: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd" line 96: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <stCur>
 Entity <OLD_MDTEXT> analyzed. Unit <OLD_MDTEXT> generated.
 
@@ -207,7 +223,7 @@ Analyzing Entity <Timing_LCD> in library <work> (Architecture <behavioral>).
 Entity <Timing_LCD> analyzed. Unit <Timing_LCD> generated.
 
 Analyzing Entity <DualPort> in library <work> (Architecture <dualport>).
-WARNING:Xst:2211 - "C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd" line 64: Instantiating black box module <MemVideo>.
+WARNING:Xst:2211 - "C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd" line 64: Instantiating black box module <MemVideo>.
 Entity <DualPort> analyzed. Unit <DualPort> generated.
 
 
@@ -229,7 +245,7 @@ Unit <PARALLELE> synthesized.
 
 
 Synthesizing Unit <NEW_UART_RX>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/uart_rx.vhd".
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/uart_rx.vhd".
 WARNING:Xst:653 - Signal <clr> is used but never assigned. This sourceless signal will be automatically connected to value 0.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
@@ -281,7 +297,7 @@ Unit <NEW_UART_RX> synthesized.
 
 
 Synthesizing Unit <Mux_Comm>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/Mux_Comm.vhd".
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Mux_Comm.vhd".
     Found 1-bit register for signal <FLAG_COM>.
     Found 8-bit register for signal <Dout_s>.
     Found 1-bit register for signal <oldFlag_s>.
@@ -291,7 +307,7 @@ Unit <Mux_Comm> synthesized.
 
 
 Synthesizing Unit <Timing_LCD>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/Timing_LCD.vhd".
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd".
     Register <VEE_ON> equivalent to <start_flag> has been removed
     Found 1-bit register for signal <SHIFT>.
     Found 1-bit register for signal <LATCH>.
@@ -311,12 +327,12 @@ Unit <Timing_LCD> synthesized.
 
 
 Synthesizing Unit <OLD_MDGRAPH>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd".
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd".
 WARNING:Xst:1780 - Signal <transflag_done> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <transflag> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <detect<1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <stCur>.
-WARNING:Xst:643 - "C:/Travail/LCD_TEST_PARALLEL/MDGRAPH.vhd" line 118: The result of a 9x7-bit multiplication is partially used. Only the 14 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd" line 118: The result of a 9x7-bit multiplication is partially used. Only the 14 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 1-bit register for signal <WR_GRAPH>.
     Found 1-bit register for signal <CS_GRAPH>.
     Found 9x7-bit multiplier for signal <$mult0000> created at line 118.
@@ -345,7 +361,7 @@ Unit <OLD_MDGRAPH> synthesized.
 
 
 Synthesizing Unit <rom_1024_8>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/Fonts.vhd".
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Fonts.vhd".
     Found 1024x8-bit ROM for signal <data$rom0000> created at line 156.
     Found 8-bit register for signal <data>.
     Summary:
@@ -355,16 +371,16 @@ Unit <rom_1024_8> synthesized.
 
 
 Synthesizing Unit <DualPort>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/DualPort.vhd".
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd".
 Unit <DualPort> synthesized.
 
 
 Synthesizing Unit <OLD_MDTEXT>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd".
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd".
 WARNING:Xst:1780 - Signal <detect<1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <cnt_adr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <stCur>.
-WARNING:Xst:643 - "C:/Travail/LCD_TEST_PARALLEL/Old_MDTEXT.vhd" line 142: The result of a 9x10-bit multiplication is partially used. Only the 17 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd" line 142: The result of a 9x10-bit multiplication is partially used. Only the 17 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 9x10-bit multiplier for signal <$mult0000> created at line 142.
     Found 9-bit subtractor for signal <$sub0000> created at line 142.
     Found 32-bit register for signal <addr_font>.
@@ -389,7 +405,7 @@ Unit <OLD_MDTEXT> synthesized.
 
 
 Synthesizing Unit <New_Data_Ctrl>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/New_Data_Ctrl.vhd".
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd".
 WARNING:Xst:1305 - Output <SUPP> is never assigned. Tied to value 0000.
 WARNING:Xst:1780 - Signal <flag_v<1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <Clear_T_s> is used but never assigned. This sourceless signal will be automatically connected to value 0.
@@ -446,7 +462,7 @@ Unit <New_Data_Ctrl> synthesized.
 
 
 Synthesizing Unit <ParallelTest_Top>.
-    Related source file is "C:/Travail/LCD_TEST_PARALLEL/ParallelTest_Top.vhd".
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd".
 WARNING:Xst:647 - Input <SUPPIN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:646 - Signal <unconnectedVEEOn_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <unconnectedFlag> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -1114,14 +1130,14 @@ Offset:              8.112ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.72 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.44 secs
  
 --> 
 
-Total memory usage is 319720 kilobytes
+Total memory usage is 318696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  120 (   0 filtered)
+Number of warnings :  140 (   0 filtered)
 Number of infos    :   44 (   0 filtered)
 

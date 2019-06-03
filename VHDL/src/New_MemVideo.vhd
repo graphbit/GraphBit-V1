@@ -48,7 +48,7 @@ ENTITY MemVideo IS
 	clkb: IN std_logic;
 	dinb: IN std_logic_VECTOR(7 downto 0);
 	douta: OUT std_logic_VECTOR(3 downto 0);
-	doutb: OUT std_logic_VECTOR(7 downto 0);
+	doutb: OUT std_logic_VECTOR(7 downto 0); 
 	ena: IN std_logic;
 	web: IN std_logic);
 END MemVideo;

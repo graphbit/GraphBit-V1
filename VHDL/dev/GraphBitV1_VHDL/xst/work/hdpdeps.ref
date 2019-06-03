@@ -1,0 +1,76 @@
+V3 46
+FL C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd 2019/05/24.17:47:19 P.20131013
+EN work/DualPort 1559586079 FL C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/DualPort/DualPort 1559586080 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd EN work/DualPort 1559586079 \
+      CP MemVideo
+FL C:/GitHub/GraphBitV1/VHDL/src/Fonts.vhd 2017/05/17.09:45:08 P.20131013
+EN work/rom_1024_8 1559586061 FL C:/GitHub/GraphBitV1/VHDL/src/Fonts.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/rom_1024_8/imp 1559586062 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/Fonts.vhd EN work/rom_1024_8 1559586061
+FL C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd 2019/06/03.14:20:32 P.20131013
+EN work/GraphBit 1559586081 FL C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/GraphBit/Behavioral 1559586082 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd EN work/GraphBit 1559586081 \
+      CP PARALLELE CP new_UART_RX CP Mux_Comm CP New_Data_Ctrl CP Timing_LCD \
+      CP DualPort
+FL C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd 2019/05/30.11:39:56 P.20131013
+EN work/OLD_MDGRAPH 1559586065 FL C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/OLD_MDGRAPH/OLD_MDGRAPH 1559586066 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd EN work/OLD_MDGRAPH 1559586065
+FL C:/GitHub/GraphBitV1/VHDL/src/Mux_Comm.vhd 2019/05/29.08:48:39 P.20131013
+EN work/Mux_Comm 1559586073 FL C:/GitHub/GraphBitV1/VHDL/src/Mux_Comm.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Mux_Comm/Behavioral 1559586074 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/Mux_Comm.vhd EN work/Mux_Comm 1559586073
+FL C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd 2019/06/01.15:46:42 P.20131013
+EN work/New_Data_Ctrl 1559586075 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/New_Data_Ctrl/Behavioral 1559586076 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd EN work/New_Data_Ctrl 1559586075 \
+      CP OLD_MDGRAPH CP OLD_MDTEXT
+FL C:/GitHub/GraphBitV1/VHDL/src/New_MemVideo.vhd 2019/06/03.14:18:58 P.20131013
+EN work/MemVideo 1559586063 FL C:/GitHub/GraphBitV1/VHDL/src/New_MemVideo.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/MemVideo/MemVideo_a 1559586064 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/New_MemVideo.vhd EN work/MemVideo 1559586063
+FL C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd 2019/06/01.11:46:36 P.20131013
+EN work/OLD_MDTEXT 1559586067 FL C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/OLD_MDTEXT/OLD_MDTEXT 1559586068 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd EN work/OLD_MDTEXT 1559586067 \
+      CP rom_1024_8
+FL C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd 2019/06/01.16:22:00 P.20131013
+EN work/ParallelTest_Top 1559585961 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ParallelTest_Top/Behavioral 1559585962 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd \
+      EN work/ParallelTest_Top 1559585961 CP PARALLELE CP new_UART_RX CP Mux_Comm \
+      CP New_Data_Ctrl CP Timing_LCD CP DualPort
+FL C:/GitHub/GraphBitV1/VHDL/src/Port_Parallele.vhd 2019/05/24.09:18:08 P.20131013
+EN work/PARALLELE 1559586069 FL C:/GitHub/GraphBitV1/VHDL/src/Port_Parallele.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/PARALLELE/PARALLELE 1559586070 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/Port_Parallele.vhd EN work/PARALLELE 1559586069
+FL C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd 2019/06/01.11:49:34 P.20131013
+EN work/Timing_LCD 1559586077 FL C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181 PB ieee/std_logic_arith 1381692177
+AR work/Timing_LCD/Behavioral 1559586078 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd EN work/Timing_LCD 1559586077
+FL C:/GitHub/GraphBitV1/VHDL/src/uart_rx.vhd 2019/05/31.16:52:47 P.20131013
+EN work/new_uart_rx 1559586071 FL C:/GitHub/GraphBitV1/VHDL/src/uart_rx.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/new_uart_rx/new_uart_rx 1559586072 \
+      FL C:/GitHub/GraphBitV1/VHDL/src/uart_rx.vhd EN work/new_uart_rx 1559586071

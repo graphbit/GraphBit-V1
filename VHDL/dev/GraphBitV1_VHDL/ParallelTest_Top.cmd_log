@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/GitHub/GraphBitV1/VHDL/dev/GraphBitV1_VHDL/ParallelTest_Top.xst" -ofn "C:/GitHub/GraphBitV1/VHDL/dev/GraphBitV1_VHDL/ParallelTest_Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-4 ParallelTest_Top.ngc ParallelTest_Top.ngd  
+xst -intstyle ise -ifn "C:/GitHub/GraphBitV1/VHDL/dev/GraphBitV1_VHDL/ParallelTest_Top.xst" -ofn "C:/GitHub/GraphBitV1/VHDL/dev/GraphBitV1_VHDL/ParallelTest_Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-4 ParallelTest_Top.ngc ParallelTest_Top.ngd  
+map -intstyle ise -p xc3s100e-tq144-4 -cm area -ir off -pr off -c 100 -o ParallelTest_Top_map.ncd ParallelTest_Top.ngd ParallelTest_Top.pcf 
+par -w -intstyle ise -ol high -t 1 ParallelTest_Top_map.ncd ParallelTest_Top.ncd ParallelTest_Top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ParallelTest_Top.twx ParallelTest_Top.ncd -o ParallelTest_Top.twr ParallelTest_Top.pcf 
+bitgen -intstyle ise -f ParallelTest_Top.ut ParallelTest_Top.ncd 

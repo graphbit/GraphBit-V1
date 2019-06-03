@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LQ2267-15::  Sat Jun 01 16:22:29 2019
+LQ2267-15::  Mon Jun 03 10:49:37 2019
 
 par -w -intstyle ise -ol high -t 1 ParallelTest_Top_map.ncd
 ParallelTest_Top.ncd ParallelTest_Top.pcf 
@@ -65,13 +65,13 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:54c25271) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:54c25271) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:54c25271) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:54c25271) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:54c25271) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:54c25271) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
@@ -102,7 +102,7 @@ Phase 10.5  Local Placement Optimization
 Phase 10.5  Local Placement Optimization (Checksum:16c8162f) REAL time: 8 secs 
 
 Total REAL time to Placer completion: 8 secs 
-Total CPU  time to Placer completion: 8 secs 
+Total CPU  time to Placer completion: 7 secs 
 Writing design to file ParallelTest_Top.ncd
 
 
@@ -139,7 +139,7 @@ WARNING:Route:455 - CLK Net:Inst_Data_Ctrl/CLKB may have excessive skew because
       3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 
 Total REAL time to Router completion: 15 secs 
-Total CPU time to Router completion: 15 secs 
+Total CPU time to Router completion: 14 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -213,10 +213,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 16 secs 
-Total CPU time to PAR completion: 15 secs 
+Total REAL time to PAR completion: 15 secs 
+Total CPU time to PAR completion: 14 secs 
 
-Peak Memory Usage:  339 MB
+Peak Memory Usage:  332 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

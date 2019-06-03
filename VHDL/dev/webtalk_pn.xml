@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sat Jun 01 16:22:29 2019">
+<application name="pn" timeStamp="Mon Jun 03 10:49:36 2019">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="00E0DE67C7064AF5A28A55AE75BAA97B" type="project"/>
-<property name="ProjectIteration" value="124" type="project"/>
-<property name="ProjectFile" value="C:/Travail/LCD_TEST_PARALLEL/LCD_TEST_PARALLEL.xise" type="project"/>
+<property name="ProjectIteration" value="125" type="project"/>
+<property name="ProjectFile" value="C:/GitHub/GraphBitV1/VHDL/dev/LCD_TEST_PARALLEL.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2019-05-05T12:43:18" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -26,7 +26,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2019-05-05T12:43:18" type="design"/>
 <property name="PROP_intWbtProjectID" value="00E0DE67C7064AF5A28A55AE75BAA97B" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="124" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="125" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_selectedSimRootSourceNode_behav" value="work.ParallelTest_Top" type="process"/>

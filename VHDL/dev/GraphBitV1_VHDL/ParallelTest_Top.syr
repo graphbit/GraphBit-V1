@@ -1,0 +1,1127 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: ParallelTest_Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ParallelTest_Top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ParallelTest_Top"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-tq144
+
+---- Source Options
+Top Module Name                    : ParallelTest_Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/Fonts.vhd" in Library work.
+Architecture imp of Entity rom_1024_8 is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/New_MemVideo.vhd" in Library work.
+Entity <memvideo> compiled.
+Entity <memvideo> (Architecture <memvideo_a>) compiled.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd" in Library work.
+Architecture old_mdgraph of Entity old_mdgraph is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd" in Library work.
+Architecture old_mdtext of Entity old_mdtext is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/Port_Parallele.vhd" in Library work.
+Architecture parallele of Entity parallele is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/uart_rx.vhd" in Library work.
+Architecture new_uart_rx of Entity new_uart_rx is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/Mux_Comm.vhd" in Library work.
+Architecture behavioral of Entity mux_comm is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd" in Library work.
+Architecture behavioral of Entity new_data_ctrl is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd" in Library work.
+Architecture behavioral of Entity timing_lcd is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd" in Library work.
+Architecture dualport of Entity dualport is up to date.
+Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" in Library work.
+Architecture behavioral of Entity paralleltest_top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ParallelTest_Top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PARALLELE> in library <work> (architecture <parallele>).
+
+Analyzing hierarchy for entity <NEW_UART_RX> in library <work> (architecture <new_uart_rx>).
+
+Analyzing hierarchy for entity <Mux_Comm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <New_Data_Ctrl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Timing_LCD> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DualPort> in library <work> (architecture <dualport>).
+
+Analyzing hierarchy for entity <OLD_MDGRAPH> in library <work> (architecture <old_mdgraph>).
+
+Analyzing hierarchy for entity <OLD_MDTEXT> in library <work> (architecture <old_mdtext>).
+
+Analyzing hierarchy for entity <rom_1024_8> in library <work> (architecture <imp>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ParallelTest_Top> in library <work> (Architecture <behavioral>).
+    Set user-defined property "LOC =  P2  P3  P4  P5  P14  P15  P16  P17" for signal <DATA_FROM_CPU> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P126" for signal <RX> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P22" for signal <CS_CPU> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P54" for signal <CLK> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P94  P93  P92  P91" for signal <DATA_OUT> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P98" for signal <SHIFT> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P105" for signal <LATCH> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P106" for signal <FRM> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P104" for signal <DF> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P112" for signal <SHDN> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P103" for signal <DISP> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P32" for signal <SUPP> in unit <ParallelTest_Top>.
+    Set user-defined property "LOC =  P35" for signal <SUPPIN> in unit <ParallelTest_Top>.
+WARNING:Xst:753 - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 216: Unconnected output port 'SUPP' of component 'New_Data_Ctrl'.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 28: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 29: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 33: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 34: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd" line 35: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+Entity <ParallelTest_Top> analyzed. Unit <ParallelTest_Top> generated.
+
+Analyzing Entity <PARALLELE> in library <work> (Architecture <parallele>).
+Entity <PARALLELE> analyzed. Unit <PARALLELE> generated.
+
+Analyzing Entity <NEW_UART_RX> in library <work> (Architecture <new_uart_rx>).
+Entity <NEW_UART_RX> analyzed. Unit <NEW_UART_RX> generated.
+
+Analyzing Entity <Mux_Comm> in library <work> (Architecture <behavioral>).
+Entity <Mux_Comm> analyzed. Unit <Mux_Comm> generated.
+
+Analyzing Entity <New_Data_Ctrl> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd" line 301: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Mode_s>, <DataOut_T_s>, <Add_mem_T_s>, <WR_mem_T_s>, <CS_mem_T_s>, <DATA>, <DataOut_G_s>, <Add_mem_G_s>, <WR_mem_G_s>, <CS_mem_G_s>, <DINB>
+Entity <New_Data_Ctrl> analyzed. Unit <New_Data_Ctrl> generated.
+
+Analyzing Entity <OLD_MDGRAPH> in library <work> (Architecture <old_mdgraph>).
+Entity <OLD_MDGRAPH> analyzed. Unit <OLD_MDGRAPH> generated.
+
+Analyzing Entity <OLD_MDTEXT> in library <work> (Architecture <old_mdtext>).
+WARNING:Xst:819 - "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd" line 96: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <stCur>
+Entity <OLD_MDTEXT> analyzed. Unit <OLD_MDTEXT> generated.
+
+Analyzing Entity <rom_1024_8> in library <work> (Architecture <imp>).
+Entity <rom_1024_8> analyzed. Unit <rom_1024_8> generated.
+
+Analyzing Entity <Timing_LCD> in library <work> (Architecture <behavioral>).
+Entity <Timing_LCD> analyzed. Unit <Timing_LCD> generated.
+
+Analyzing Entity <DualPort> in library <work> (Architecture <dualport>).
+WARNING:Xst:2211 - "C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd" line 64: Instantiating black box module <MemVideo>.
+Entity <DualPort> analyzed. Unit <DualPort> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <PARALLELE>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Port_Parallele.vhd".
+WARNING:Xst:1780 - Signal <flag_pulse> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Compte> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <FLAG_PARALLELE>.
+    Found 2-bit register for signal <CSClean>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <PARALLELE> synthesized.
+
+
+Synthesizing Unit <NEW_UART_RX>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/uart_rx.vhd".
+WARNING:Xst:653 - Signal <clr> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 26                                             |
+    | Inputs             | 14                                             |
+    | Outputs            | 11                                             |
+    | Clock              | mclk                      (rising_edge)        |
+    | Reset              | clr                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | mark0d                                         |
+    | Power Up State     | mark0d                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <rdrf>.
+    Found 16-bit register for signal <baud_count>.
+    Found 16-bit adder for signal <baud_count$share0000> created at line 86.
+    Found 16-bit register for signal <baud_count0D>.
+    Found 16-bit adder for signal <baud_count0D$share0000> created at line 86.
+    Found 4-bit register for signal <bit_count>.
+    Found 4-bit adder for signal <bit_count$addsub0000> created at line 201.
+    Found 11-bit register for signal <bit_count0D>.
+    Found 11-bit adder for signal <bit_count0D$addsub0000> created at line 120.
+    Found 16-bit register for signal <bit_time>.
+    Found 16-bit register for signal <half_bit_time>.
+    Found 864-bit register for signal <rx0D>.
+    Found 8-bit register for signal <rxbuff>.
+    Found 8-bit register for signal <rxdata115200>.
+    Found 8-bit register for signal <rxdata19200>.
+    Found 8-bit register for signal <rxdata230400>.
+    Found 8-bit register for signal <rxdata460800>.
+    Found 8-bit register for signal <rxdata57600>.
+    Found 8-bit register for signal <rxdata921600>.
+    Found 8-bit register for signal <rxdata9600>.
+    Found 16-bit comparator greatequal for signal <state$cmp_ge0000> created at line 98.
+    Found 16-bit comparator greatequal for signal <state$cmp_ge0001> created at line 106.
+    Found 16-bit comparator greatequal for signal <state$cmp_ge0002> created at line 179.
+    Found 16-bit comparator greatequal for signal <state$cmp_ge0003> created at line 187.
+    Found 12-bit comparator less for signal <state$cmp_lt0000> created at line 108.
+    Found 5-bit comparator less for signal <state$cmp_lt0001> created at line 189.
+INFO:Xst:738 - HDL ADVISOR - 864 flip-flops were inferred for signal <rx0D>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 1008 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <NEW_UART_RX> synthesized.
+
+
+Synthesizing Unit <Mux_Comm>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Mux_Comm.vhd".
+    Found 1-bit register for signal <FLAG_COM>.
+    Found 8-bit register for signal <Dout_s>.
+    Found 1-bit register for signal <oldFlag_s>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <Mux_Comm> synthesized.
+
+
+Synthesizing Unit <Timing_LCD>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd".
+    Register <VEE_ON> equivalent to <start_flag> has been removed
+    Found 1-bit register for signal <SHIFT>.
+    Found 1-bit register for signal <LATCH>.
+    Found 1-bit register for signal <FRM>.
+    Found 14-bit up counter for signal <addra>.
+    Found 32-bit up counter for signal <clkDiv>.
+    Found 23-bit up counter for signal <clkStart>.
+    Found 1-bit register for signal <DF_s>.
+    Found 32-bit up counter for signal <latch_counter>.
+    Found 32-bit up counter for signal <shift_counter>.
+    Found 32-bit up counter for signal <shift_data>.
+    Found 1-bit register for signal <start_flag>.
+    Summary:
+	inferred   6 Counter(s).
+	inferred   5 D-type flip-flop(s).
+Unit <Timing_LCD> synthesized.
+
+
+Synthesizing Unit <OLD_MDGRAPH>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd".
+WARNING:Xst:1780 - Signal <transflag_done> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <transflag> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <detect<1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <stCur>.
+WARNING:Xst:643 - "C:/GitHub/GraphBitV1/VHDL/src/MDGRAPH.vhd" line 118: The result of a 9x7-bit multiplication is partially used. Only the 14 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 1-bit register for signal <WR_GRAPH>.
+    Found 1-bit register for signal <CS_GRAPH>.
+    Found 9x7-bit multiplier for signal <$mult0000> created at line 118.
+    Found 9-bit subtractor for signal <$sub0000> created at line 118.
+    Found 32-bit register for signal <adres_graph>.
+    Found 32-bit adder for signal <adres_graph$add0000>.
+    Found 15-bit adder for signal <adres_graph$add0001> created at line 118.
+    Found 32-bit adder for signal <adres_graph$addsub0000>.
+    Found 32-bit adder for signal <adres_graph$share0000> created at line 101.
+    Found 8-bit register for signal <colonne>.
+    Found 1-bit register for signal <data_flag>.
+    Found 8-bit register for signal <data_in>.
+    Found 8-bit register for signal <data_ready>.
+    Found 1-bit register for signal <detect<0>>.
+    Found 8-bit register for signal <ligne>.
+    Found 9-bit subtractor for signal <mult0000$addsub0000> created at line 118.
+    Found 32-bit register for signal <pixel_position>.
+    Found 32-bit subtractor for signal <pixel_position$sub0000> created at line 124.
+    Found 8-bit register for signal <stCur>.
+    Found 8-bit register for signal <stNext>.
+    Summary:
+	inferred 116 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+Unit <OLD_MDGRAPH> synthesized.
+
+
+Synthesizing Unit <rom_1024_8>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Fonts.vhd".
+    Found 1024x8-bit ROM for signal <data$rom0000> created at line 156.
+    Found 8-bit register for signal <data>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <rom_1024_8> synthesized.
+
+
+Synthesizing Unit <DualPort>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd".
+Unit <DualPort> synthesized.
+
+
+Synthesizing Unit <OLD_MDTEXT>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd".
+WARNING:Xst:1780 - Signal <detect<1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cnt_adr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <stCur>.
+WARNING:Xst:643 - "C:/GitHub/GraphBitV1/VHDL/src/Old_MDTEXT.vhd" line 142: The result of a 9x10-bit multiplication is partially used. Only the 17 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 9x10-bit multiplier for signal <$mult0000> created at line 142.
+    Found 9-bit subtractor for signal <$sub0000> created at line 142.
+    Found 32-bit register for signal <addr_font>.
+    Found 32-bit adder for signal <addr_font$addsub0000>.
+    Found 32-bit register for signal <adres_text>.
+    Found 18-bit adder for signal <adres_text$add0000> created at line 142.
+    Found 32-bit adder for signal <adres_text$share0000> created at line 126.
+    Found 8-bit register for signal <colonne>.
+    Found 1-bit register for signal <data_flag>.
+    Found 8-bit register for signal <data_in>.
+    Found 1-bit register for signal <detect<0>>.
+    Found 8-bit register for signal <ligne>.
+    Found 9-bit subtractor for signal <mult0000$addsub0000> created at line 142.
+    Found 19-bit register for signal <stCur>.
+    Found 19-bit register for signal <stNext>.
+    Found 1-bit register for signal <wr_text_s>.
+    Summary:
+	inferred 129 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+Unit <OLD_MDTEXT> synthesized.
+
+
+Synthesizing Unit <New_Data_Ctrl>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd".
+WARNING:Xst:1305 - Output <SUPP> is never assigned. Tied to value 0000.
+WARNING:Xst:1780 - Signal <flag_v<1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Clear_T_s> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <Clear_G_s> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <Add_mem_T_s<13>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Add_mem_G_s<13>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_1> for signal <State_s>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 7                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Clock enable       | State_s$not0000           (positive)           |
+    | Power Up State     | size0                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <ENA_T_s>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <DataIn_G_s>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dump_s>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <DATA_DP>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MWEB>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ENA_G_s>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <Pixel_Read_s>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <CLKB>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 13-bit latch for signal <MADDRB>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <DataIn_T_s>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Using one-hot encoding for signal <Mode_s>.
+    Found 8-bit register for signal <Checksum_s>.
+    Found 8-bit adder for signal <Checksum_s$share0000> created at line 127.
+    Found 16-bit register for signal <Count_s>.
+    Found 16-bit adder for signal <Count_s$share0000> created at line 127.
+    Found 1-bit register for signal <Data_Clk>.
+    Found 16-bit comparator equal for signal <Data_Clk$cmp_eq0000> created at line 203.
+    Found 1-bit register for signal <flag_v<0>>.
+    Found 8-bit register for signal <Line_s>.
+    Found 8-bit adder for signal <Line_s$share0000>.
+    Found 4-bit register for signal <Mode_s>.
+    Found 8-bit register for signal <Row_s>.
+    Found 8-bit adder for signal <Row_s$add0000> created at line 242.
+    Found 8-bit comparator lessequal for signal <Row_s$cmp_le0000> created at line 237.
+    Found 16-bit register for signal <RxByteNb_v>.
+    Found 16-bit comparator not equal for signal <State_s$cmp_ne0000> created at line 203.
+    Found 16-bit subtractor for signal <State_s$sub0000> created at line 203.
+    Found 18-bit up counter for signal <timeout_v>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  62 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <New_Data_Ctrl> synthesized.
+
+
+Synthesizing Unit <ParallelTest_Top>.
+    Related source file is "C:/GitHub/GraphBitV1/VHDL/src/ParallelTest_Top.vhd".
+WARNING:Xst:647 - Input <SUPPIN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <unconnectedVEEOn_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <unconnectedFlag> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <unconnectedDisplayOff_s> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <unconnectedA0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <ParallelTest_Top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 1024x8-bit ROM                                        : 1
+# Multipliers                                          : 2
+ 9x10-bit multiplier                                   : 1
+ 9x7-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 20
+ 11-bit adder                                          : 1
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 1
+ 18-bit adder                                          : 1
+ 32-bit adder                                          : 5
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 9-bit subtractor                                      : 4
+# Counters                                             : 7
+ 14-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
+ 32-bit up counter                                     : 4
+# Registers                                            : 949
+ 1-bit register                                        : 916
+ 11-bit register                                       : 1
+ 16-bit register                                       : 5
+ 19-bit register                                       : 2
+ 32-bit register                                       : 4
+ 4-bit register                                        : 2
+ 8-bit register                                        : 19
+# Latches                                              : 10
+ 1-bit latch                                           : 5
+ 13-bit latch                                          : 1
+ 8-bit latch                                           : 4
+# Comparators                                          : 9
+ 12-bit comparator less                                : 1
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greatequal                          : 4
+ 16-bit comparator not equal                           : 1
+ 5-bit comparator less                                 : 1
+ 8-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <Inst_Data_Ctrl/State_s/FSM> on signal <State_s[1:6]> with one-hot encoding.
+----------------------
+ State    | Encoding
+----------------------
+ size0    | 000001
+ size1    | 000010
+ cmd      | 000100
+ getrow   | 100000
+ getline  | 001000
+ dataloop | 010000
+----------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Inst_uart_rx/state/FSM> on signal <state[1:11]> with one-hot encoding.
+------------------------
+ State   | Encoding
+------------------------
+ mark0d  | 00000000001
+ start0d | 00000000010
+ delay0d | 00000000100
+ shift0d | 00000001000
+ stop0d  | 00000010000
+ test0d  | 00000100000
+ mark    | 00001000000
+ start   | 00010000000
+ delay   | 00100000000
+ shift   | 01000000000
+ stop    | 10000000000
+------------------------
+Reading core <MemVideo.ngc>.
+Loading core <MemVideo> for timing and area information for instance <InstMemVideo>.
+INFO:Xst:2261 - The FF/Latch <rxdata9600_1> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata19200_3> 
+INFO:Xst:2261 - The FF/Latch <rxdata460800_0> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata921600_1> 
+INFO:Xst:2261 - The FF/Latch <rxdata230400_0> in Unit <Inst_uart_rx> is equivalent to the following 2 FFs/Latches, which will be removed : <rxdata460800_1> <rxdata921600_3> 
+INFO:Xst:2261 - The FF/Latch <rxdata460800_2> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata921600_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata115200_0> in Unit <Inst_uart_rx> is equivalent to the following 3 FFs/Latches, which will be removed : <rxdata230400_1> <rxdata460800_3> <rxdata921600_7> 
+INFO:Xst:2261 - The FF/Latch <bit_time_14> in Unit <Inst_uart_rx> is equivalent to the following 4 FFs/Latches, which will be removed : <bit_time_15> <half_bit_time_13> <half_bit_time_14> <half_bit_time_15> 
+INFO:Xst:2261 - The FF/Latch <rxdata230400_2> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata460800_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_0> in Unit <Inst_uart_rx> is equivalent to the following 3 FFs/Latches, which will be removed : <rxdata115200_1> <rxdata230400_3> <rxdata460800_7> 
+INFO:Xst:2261 - The FF/Latch <rxdata115200_2> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata230400_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_1> in Unit <Inst_uart_rx> is equivalent to the following 2 FFs/Latches, which will be removed : <rxdata115200_3> <rxdata230400_7> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_2> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_3> in Unit <Inst_uart_rx> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_7> 
+WARNING:Xst:1426 - The value init of the FF/Latch start_flag hinder the constant cleaning in the block Inst_Timing_LCD.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <bit_time_14> has a constant value of 0 in block <Inst_uart_rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stNext_6> has a constant value of 0 in block <Inst_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stNext_18> has a constant value of 0 in block <Inst_MDTEXT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stCur_6> has a constant value of 0 in block <Inst_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stCur_18> has a constant value of 0 in block <Inst_MDTEXT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stNext_7> has a constant value of 0 in block <Inst_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stCur_7> has a constant value of 0 in block <Inst_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Mode_s_3> of sequential type is unconnected in block <Inst_Data_Ctrl>.
+
+Synthesizing (advanced) Unit <OLD_MDTEXT>.
+INFO:Xst:3044 - The ROM <InstFont/Mrom_data_rom0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <InstFont/data>.
+INFO:Xst:3225 - The RAM <InstFont/Mrom_data_rom0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <Clk_font>      | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr_font>     |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <data_font>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <OLD_MDTEXT> synthesized (advanced).
+WARNING:Xst:2677 - Node <Mode_s_3> of sequential type is unconnected in block <New_Data_Ctrl>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x8-bit single-port block RAM                      : 1
+# Multipliers                                          : 2
+ 9x10-bit multiplier                                   : 1
+ 9x7-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 20
+ 11-bit adder                                          : 1
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 1
+ 18-bit adder                                          : 1
+ 32-bit adder                                          : 5
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 9-bit subtractor                                      : 4
+# Counters                                             : 6
+ 14-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
+ 32-bit up counter                                     : 3
+# Registers                                            : 1341
+ Flip-Flops                                            : 1341
+# Latches                                              : 10
+ 1-bit latch                                           : 5
+ 13-bit latch                                          : 1
+ 8-bit latch                                           : 4
+# Comparators                                          : 9
+ 12-bit comparator less                                : 1
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greatequal                          : 4
+ 16-bit comparator not equal                           : 1
+ 5-bit comparator less                                 : 1
+ 8-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <bit_time_14> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bit_time_15> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <half_bit_time_13> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <half_bit_time_14> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <half_bit_time_15> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch start_flag hinder the constant cleaning in the block Timing_LCD.
+   You should achieve better results by setting this init to 1.
+INFO:Xst:2261 - The FF/Latch <rxdata57600_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_3> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_7> 
+INFO:Xst:2261 - The FF/Latch <bit_time_5> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_4> 
+INFO:Xst:2261 - The FF/Latch <bit_time_4> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_3> 
+INFO:Xst:2261 - The FF/Latch <bit_time_3> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_2> 
+INFO:Xst:2261 - The FF/Latch <rxdata230400_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata460800_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata9600_1> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata19200_3> 
+INFO:Xst:2261 - The FF/Latch <bit_time_11> in Unit <NEW_UART_RX> is equivalent to the following 3 FFs/Latches, which will be removed : <bit_time_13> <half_bit_time_10> <half_bit_time_12> 
+INFO:Xst:2261 - The FF/Latch <bit_time_12> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_11> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_0> in Unit <NEW_UART_RX> is equivalent to the following 3 FFs/Latches, which will be removed : <rxdata115200_1> <rxdata230400_3> <rxdata460800_7> 
+INFO:Xst:2261 - The FF/Latch <bit_time_10> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_9> 
+INFO:Xst:2261 - The FF/Latch <bit_time_9> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_8> 
+INFO:Xst:2261 - The FF/Latch <rxdata115200_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata230400_5> 
+INFO:Xst:2261 - The FF/Latch <bit_time_8> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_7> 
+INFO:Xst:2261 - The FF/Latch <bit_time_7> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_6> 
+INFO:Xst:2261 - The FF/Latch <bit_time_6> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata57600_1> in Unit <NEW_UART_RX> is equivalent to the following 2 FFs/Latches, which will be removed : <rxdata115200_3> <rxdata230400_7> 
+INFO:Xst:2261 - The FF/Latch <rxdata460800_0> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata921600_1> 
+INFO:Xst:2261 - The FF/Latch <rxdata230400_0> in Unit <NEW_UART_RX> is equivalent to the following 2 FFs/Latches, which will be removed : <rxdata460800_1> <rxdata921600_3> 
+INFO:Xst:2261 - The FF/Latch <rxdata460800_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata921600_5> 
+INFO:Xst:2261 - The FF/Latch <rxdata115200_0> in Unit <NEW_UART_RX> is equivalent to the following 3 FFs/Latches, which will be removed : <rxdata230400_1> <rxdata460800_3> <rxdata921600_7> 
+WARNING:Xst:1293 - FF/Latch <stNext_6> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stCur_6> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stNext_7> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stCur_7> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stNext_18> has a constant value of 0 in block <OLD_MDTEXT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stCur_18> has a constant value of 0 in block <OLD_MDTEXT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <adres_graph_14> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_15> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_16> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_17> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_18> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_19> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_20> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_21> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_22> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_23> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_24> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_25> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_26> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_27> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_28> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_29> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_30> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <adres_graph_31> of sequential type is unconnected in block <OLD_MDGRAPH>.
+WARNING:Xst:2677 - Node <addr_font_10> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_11> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_12> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_13> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_14> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_15> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_16> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_17> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_18> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_19> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_20> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_21> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_22> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_23> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_24> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_25> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_26> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_27> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_28> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_29> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_30> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <addr_font_31> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <data_in_7> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_14> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_15> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_16> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_17> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_18> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_19> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_20> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_21> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_22> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_23> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_24> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_25> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_26> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_27> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_28> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_29> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_30> of sequential type is unconnected in block <OLD_MDTEXT>.
+WARNING:Xst:2677 - Node <adres_text_31> of sequential type is unconnected in block <OLD_MDTEXT>.
+
+Optimizing unit <ParallelTest_Top> ...
+
+Optimizing unit <NEW_UART_RX> ...
+
+Optimizing unit <Mux_Comm> ...
+
+Optimizing unit <Timing_LCD> ...
+
+Optimizing unit <OLD_MDGRAPH> ...
+
+Optimizing unit <OLD_MDTEXT> ...
+
+Optimizing unit <New_Data_Ctrl> ...
+WARNING:Xst:2677 - Node <Inst_Data_Ctrl/Inst_MDTEXT/adres_text_13> of sequential type is unconnected in block <ParallelTest_Top>.
+WARNING:Xst:2677 - Node <Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_13> of sequential type is unconnected in block <ParallelTest_Top>.
+WARNING:Xst:2677 - Node <Inst_Data_Ctrl/DataIn_T_s_7> of sequential type is unconnected in block <ParallelTest_Top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <Inst_Data_Ctrl/Inst_MDTEXT/detect_0> in Unit <ParallelTest_Top> is equivalent to the following FF/Latch, which will be removed : <Inst_Data_Ctrl/Inst_MDGRAPH/detect_0> 
+Found area constraint ratio of 100 (+ 5) on block ParallelTest_Top, actual ratio is 113.
+Optimizing block <ParallelTest_Top> to meet ratio 100 (+ 5) of 960 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <ParallelTest_Top>, final ratio is 112.
+FlipFlop Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 has been replicated 1 time(s)
+FlipFlop Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 has been replicated 1 time(s)
+FlipFlop Inst_uart_rx/state_FSM_FFd8 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <ParallelTest_Top> :
+	Found 4-bit shift register for signal <Inst_uart_rx/rx0D_15>.
+	Found 4-bit shift register for signal <Inst_uart_rx/rx0D_19>.
+	Found 4-bit shift register for signal <Inst_uart_rx/rx0D_23>.
+	Found 4-bit shift register for signal <Inst_uart_rx/rx0D_27>.
+	Found 7-bit shift register for signal <Inst_uart_rx/rx0D_31>.
+	Found 8-bit shift register for signal <Inst_uart_rx/rx0D_38>.
+	Found 8-bit shift register for signal <Inst_uart_rx/rx0D_47>.
+	Found 8-bit shift register for signal <Inst_uart_rx/rx0D_55>.
+	Found 13-bit shift register for signal <Inst_uart_rx/rx0D_63>.
+	Found 17-bit shift register for signal <Inst_uart_rx/rx0D_76>.
+	Found 16-bit shift register for signal <Inst_uart_rx/rx0D_95>.
+	Found 16-bit shift register for signal <Inst_uart_rx/rx0D_111>.
+	Found 14-bit shift register for signal <Inst_uart_rx/rx0D_127>.
+	Found 48-bit shift register for signal <Inst_uart_rx/rx0D_141>.
+	Found 40-bit shift register for signal <Inst_uart_rx/rx0D_189>.
+	Found 54-bit shift register for signal <Inst_uart_rx/rx0D_229>.
+	Found 48-bit shift register for signal <Inst_uart_rx/rx0D_286>.
+	Found 45-bit shift register for signal <Inst_uart_rx/rx0D_334>.
+	Found 77-bit shift register for signal <Inst_uart_rx/rx0D_382>.
+	Found 114-bit shift register for signal <Inst_uart_rx/rx0D_459>.
+	Found 96-bit shift register for signal <Inst_uart_rx/rx0D_573>.
+	Found 96-bit shift register for signal <Inst_uart_rx/rx0D_669>.
+	Found 99-bit shift register for signal <Inst_uart_rx/rx0D_765>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_2>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_3>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_4>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_5>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_6>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_7>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_8>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_9>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_10>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_11>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_12>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_13>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_14>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_15>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_16>.
+	Found 2-bit shift register for signal <Inst_Data_Ctrl/Inst_MDTEXT/stCur_17>.
+Unit <ParallelTest_Top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 521
+ Flip-Flops                                            : 521
+# Shift Registers                                      : 39
+ 114-bit shift register                                : 1
+ 13-bit shift register                                 : 1
+ 14-bit shift register                                 : 1
+ 16-bit shift register                                 : 2
+ 17-bit shift register                                 : 1
+ 2-bit shift register                                  : 16
+ 4-bit shift register                                  : 4
+ 40-bit shift register                                 : 1
+ 45-bit shift register                                 : 1
+ 48-bit shift register                                 : 2
+ 54-bit shift register                                 : 1
+ 7-bit shift register                                  : 1
+ 77-bit shift register                                 : 1
+ 8-bit shift register                                  : 3
+ 96-bit shift register                                 : 2
+ 99-bit shift register                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ParallelTest_Top.ngr
+Top Level Output File Name         : ParallelTest_Top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 23
+
+Cell Usage :
+# BELS                             : 1936
+#      GND                         : 2
+#      INV                         : 68
+#      LUT1                        : 219
+#      LUT2                        : 219
+#      LUT2_L                      : 1
+#      LUT3                        : 131
+#      LUT3_D                      : 1
+#      LUT4                        : 444
+#      LUT4_D                      : 3
+#      LUT4_L                      : 1
+#      MULT_AND                    : 11
+#      MUXCY                       : 425
+#      MUXF5                       : 56
+#      VCC                         : 2
+#      XORCY                       : 353
+# FlipFlops/Latches                : 749
+#      FD                          : 32
+#      FD_1                        : 18
+#      FDC                         : 59
+#      FDCE                        : 168
+#      FDE                         : 253
+#      FDE_1                       : 32
+#      FDP                         : 1
+#      FDR                         : 69
+#      FDR_1                       : 1
+#      FDRE                        : 32
+#      FDS                         : 24
+#      FDS_1                       : 11
+#      LD                          : 49
+# RAMS                             : 4
+#      RAMB16_S4_S9                : 3
+#      RAMB16_S9                   : 1
+# Shift Registers                  : 76
+#      SRL16                       : 16
+#      SRL16E                      : 23
+#      SRLC16E                     : 37
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 22
+#      IBUF                        : 11
+#      OBUF                        : 11
+# MULTs                            : 2
+#      MULT18X18SIO                : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100etq144-4 
+
+ Number of Slices:                      706  out of    960    73%  
+ Number of Slice Flip Flops:            748  out of   1920    38%  
+ Number of 4 input LUTs:               1163  out of   1920    60%  
+    Number used as logic:              1087
+    Number used as Shift registers:      76
+ Number of IOs:                          23
+ Number of bonded IOBs:                  22  out of    108    20%  
+    IOB Flip Flops:                       1
+ Number of BRAMs:                         4  out of      4   100%  
+ Number of MULT18X18SIOs:                 2  out of      4    50%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------+---------------------------------------------------------------+-------+
+Clock Signal                                                                 | Clock buffer(FF name)                                         | Load  |
+-----------------------------------------------------------------------------+---------------------------------------------------------------+-------+
+CLK                                                                          | IBUF+BUFG                                                     | 692   |
+Inst_Timing_LCD/SHIFT1                                                       | BUFG                                                          | 85    |
+Inst_Data_Ctrl/CLKB                                                          | NONE(Inst_DualPort/InstMemVideo/BU69)                         | 5     |
+Inst_Data_Ctrl/Mode_s_01                                                     | BUFG                                                          | 49    |
+Inst_Data_Ctrl/Inst_MDTEXT/Clk_font(Inst_Data_Ctrl/Inst_MDTEXT/Clk_font_f5:O)| NONE(*)(Inst_Data_Ctrl/Inst_MDTEXT/InstFont/Mrom_data_rom0000)| 1     |
+-----------------------------------------------------------------------------+---------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+----------------------------------+-------+
+Control Signal                     | Buffer(FF name)                  | Load  |
+-----------------------------------+----------------------------------+-------+
+N0(XST_GND:G)                      | NONE(Inst_uart_rx/baud_count0D_0)| 228   |
+-----------------------------------+----------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 29.056ns (Maximum Frequency: 34.416MHz)
+   Minimum input arrival time before clock: 4.106ns
+   Maximum output required time after clock: 8.112ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 29.056ns (frequency: 34.416MHz)
+  Total number of paths / destination ports: 243232 / 1263
+-------------------------------------------------------------------------
+Delay:               14.528ns (Levels of Logic = 20)
+  Source:            Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 (FF)
+  Destination:       Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK falling
+
+  Data Path: Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 to Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             12   0.591   0.996  Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 (Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0)
+     LUT3_D:I2->O         16   0.704   1.069  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<0>21 (Inst_Data_Ctrl/Inst_MDGRAPH/N8)
+     LUT3:I2->O            1   0.704   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_not0000<4>1 (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_not0000<4>)
+     MUXCY:S->O            1   0.464   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<4> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<5> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<6> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<7> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<8> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<8>)
+     XORCY:CI->O          23   0.804   1.202  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_xor<9> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_add0000<9>)
+     INV:I->O              1   0.704   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_not0001<10>11_INV_0 (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_not0001<10>1)
+     MUXCY:S->O            1   0.464   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<6> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<7> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<8> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<9> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<10> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<10>)
+     XORCY:CI->O           1   0.804   0.499  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_xor<11> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_addsub0000<11>)
+     LUT2:I1->O            2   0.704   0.447  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<11>1 (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<11>_mand)
+     MULT_AND:I1->LO       0   0.741   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<11>_mand (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<11>_mand1)
+     MUXCY:DI->O           0   0.888   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<11> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<11>)
+     XORCY:CI->O           1   0.804   0.420  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_xor<12> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_share0000<12>)
+     MUXF5:S->O            1   0.739   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12>)
+     FD_1:D                    0.308          Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12
+    ----------------------------------------
+    Total                     14.528ns (9.895ns logic, 4.633ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_Timing_LCD/SHIFT1'
+  Clock period: 11.560ns (frequency: 86.505MHz)
+  Total number of paths / destination ports: 4570 / 200
+-------------------------------------------------------------------------
+Delay:               5.780ns (Levels of Logic = 9)
+  Source:            Inst_Timing_LCD/latch_counter_22 (FF)
+  Destination:       Inst_Timing_LCD/FRM (FF)
+  Source Clock:      Inst_Timing_LCD/SHIFT1 rising
+  Destination Clock: Inst_Timing_LCD/SHIFT1 falling
+
+  Data Path: Inst_Timing_LCD/latch_counter_22 to Inst_Timing_LCD/FRM
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   0.622  Inst_Timing_LCD/latch_counter_22 (Inst_Timing_LCD/latch_counter_22)
+     LUT4:I0->O            1   0.704   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_lut<1> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<1> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<2> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<3> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<4> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<5> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<6> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<6>)
+     MUXCY:CI->O           3   0.459   0.610  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<7> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<7>)
+     LUT4:I1->O            1   0.704   0.420  Inst_Timing_LCD/FRM_not00011 (Inst_Timing_LCD/FRM_not0001)
+     FDR_1:R                   0.911          Inst_Timing_LCD/FRM
+    ----------------------------------------
+    Total                      5.780ns (4.128ns logic, 1.652ns route)
+                                       (71.4% logic, 28.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_Data_Ctrl/Mode_s_01'
+  Clock period: 2.987ns (frequency: 334.808MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.987ns (Levels of Logic = 1)
+  Source:            Inst_Data_Ctrl/Dump_s (LATCH)
+  Destination:       Inst_Data_Ctrl/Dump_s (LATCH)
+  Source Clock:      Inst_Data_Ctrl/Mode_s_01 rising
+  Destination Clock: Inst_Data_Ctrl/Mode_s_01 rising
+
+  Data Path: Inst_Data_Ctrl/Dump_s to Inst_Data_Ctrl/Dump_s
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              37   0.676   1.299  Inst_Data_Ctrl/Dump_s (Inst_Data_Ctrl/Dump_s)
+     LUT3:I2->O            1   0.704   0.000  Inst_Data_Ctrl/Dump_s_mux00021 (Inst_Data_Ctrl/Dump_s_mux0002)
+     LD:D                      0.308          Inst_Data_Ctrl/Dump_s
+    ----------------------------------------
+    Total                      2.987ns (1.688ns logic, 1.299ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              4.106ns (Levels of Logic = 3)
+  Source:            RX (PAD)
+  Destination:       Inst_uart_rx/state_FSM_FFd5 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RX to Inst_uart_rx/state_FSM_FFd5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.218   0.748  RX_IBUF (RX_IBUF)
+     LUT3:I1->O            1   0.704   0.424  Inst_uart_rx/state_FSM_FFd5-In2 (Inst_uart_rx/state_FSM_FFd5-In2)
+     LUT4:I3->O            1   0.704   0.000  Inst_uart_rx/state_FSM_FFd5-In22 (Inst_uart_rx/state_FSM_FFd5-In)
+     FDC:D                     0.308          Inst_uart_rx/state_FSM_FFd5
+    ----------------------------------------
+    Total                      4.106ns (2.934ns logic, 1.172ns route)
+                                       (71.5% logic, 28.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.914ns (Levels of Logic = 1)
+  Source:            Inst_Mux_Comm/FLAG_COM (FF)
+  Destination:       SUPP (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: Inst_Mux_Comm/FLAG_COM to SUPP
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             17   0.591   1.051  Inst_Mux_Comm/FLAG_COM (Inst_Mux_Comm/FLAG_COM)
+     OBUF:I->O                 3.272          SUPP_OBUF (SUPP)
+    ----------------------------------------
+    Total                      4.914ns (3.863ns logic, 1.051ns route)
+                                       (78.6% logic, 21.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_Timing_LCD/SHIFT1'
+  Total number of paths / destination ports: 22 / 6
+-------------------------------------------------------------------------
+Offset:              8.112ns (Levels of Logic = 4)
+  Source:            Inst_DualPort/InstMemVideo/B6 (RAM)
+  Destination:       DATA_OUT<3> (PAD)
+  Source Clock:      Inst_Timing_LCD/SHIFT1 rising
+
+  Data Path: Inst_DualPort/InstMemVideo/B6 to DATA_OUT<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S4_S9:CLKA->DOA3    1   2.800   0.595  B6 (N420)
+     LUT4:I0->O            1   0.704   0.000  BU57 (N2935)
+     MUXF5:I0->O           1   0.321   0.420  BU63 (douta<3>)
+     end scope: 'Inst_DualPort/InstMemVideo'
+     OBUF:I->O                 3.272          DATA_OUT_3_OBUF (DATA_OUT<3>)
+    ----------------------------------------
+    Total                      8.112ns (7.097ns logic, 1.015ns route)
+                                       (87.5% logic, 12.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.92 secs
+ 
+--> 
+
+Total memory usage is 318696 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  120 (   0 filtered)
+Number of infos    :   44 (   0 filtered)
+
