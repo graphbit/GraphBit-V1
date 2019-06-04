@@ -9,7 +9,7 @@ Target Device  : xc3s100e
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Mon Jun 03 14:21:22 2019
+Mapped Date    : Tue Jun 04 14:28:58 2019
 
 Mapping design into LUTs...
 Running directed packing...
@@ -26,14 +26,14 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Total Number Slice Registers:         748 out of   1,920   38%
-    Number used as Flip Flops:          699
+  Total Number Slice Registers:         747 out of   1,920   38%
+    Number used as Flip Flops:          698
     Number used as Latches:              49
   Number of 4 input LUTs:               933 out of   1,920   48%
 Logic Distribution:
-  Number of occupied Slices:            751 out of     960   78%
-    Number of Slices containing only related logic:     751 out of     751 100%
-    Number of Slices containing unrelated logic:          0 out of     751   0%
+  Number of occupied Slices:            747 out of     960   77%
+    Number of Slices containing only related logic:     747 out of     747 100%
+    Number of Slices containing unrelated logic:          0 out of     747   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
   Total Number of 4 input LUTs:       1,165 out of   1,920   60%
     Number used as logic:               857
@@ -49,7 +49,7 @@ Logic Distribution:
   Number of BUFGMUXs:                     3 out of      24   12%
   Number of MULT18X18SIOs:                2 out of       4   50%
 
-Average Fanout of Non-Clock Nets:                2.71
+Average Fanout of Non-Clock Nets:                2.72
 
 Peak Memory Usage:  315 MB
 Total REAL time to MAP completion:  2 secs 

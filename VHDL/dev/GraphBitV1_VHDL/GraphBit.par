@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LQ2267-15::  Mon Jun 03 14:21:27 2019
+LQ2267-15::  Tue Jun 04 14:29:03 2019
 
 par -w -intstyle ise -ol high -t 1 GraphBit_map.ncd GraphBit.ncd GraphBit.pcf 
 
@@ -44,7 +44,7 @@ Design Summary Report:
    Number of BUFGMUXs                        3 out of 24     12%
    Number of MULT18X18SIOs                   2 out of 4      50%
    Number of RAMB16s                         4 out of 4     100%
-   Number of Slices                        751 out of 960    78%
+   Number of Slices                        747 out of 960    77%
       Number of SLICEMs                     44 out of 480     9%
 
 
@@ -64,41 +64,41 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:54c25ea3) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:54c25271) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:54c25ea3) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:54c25271) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:54c25ea3) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:54c25271) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:7938b88a) REAL time: 3 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:7938ac58) REAL time: 3 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:7938b88a) REAL time: 3 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:7938ac58) REAL time: 3 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:7938b88a) REAL time: 3 secs 
+Phase 6.36  Local Placement Optimization (Checksum:7938ac58) REAL time: 3 secs 
 
 Phase 7.8  Global Placement
 .................
-...............................................................................................................................
-.................
-...................................................................................................
-..............................................
-........................
-Phase 7.8  Global Placement (Checksum:75648d84) REAL time: 7 secs 
+...................................................................
+.......................
+.......................................................................................................................................................................
+....................................
+................................
+Phase 7.8  Global Placement (Checksum:8811be92) REAL time: 7 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:75648d84) REAL time: 7 secs 
+Phase 8.5  Local Placement Optimization (Checksum:8811be92) REAL time: 7 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:6ccd6790) REAL time: 8 secs 
+Phase 9.18  Placement Optimization (Checksum:16c8162f) REAL time: 8 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:6ccd6790) REAL time: 8 secs 
+Phase 10.5  Local Placement Optimization (Checksum:16c8162f) REAL time: 8 secs 
 
 Total REAL time to Placer completion: 8 secs 
 Total CPU  time to Placer completion: 7 secs 
@@ -109,36 +109,36 @@ Writing design to file GraphBit.ncd
 Starting Router
 
 
-Phase  1  : 4725 unrouted;      REAL time: 9 secs 
+Phase  1  : 4716 unrouted;      REAL time: 9 secs 
 
-Phase  2  : 4023 unrouted;      REAL time: 9 secs 
+Phase  2  : 4015 unrouted;      REAL time: 9 secs 
 
-Phase  3  : 985 unrouted;      REAL time: 9 secs 
+Phase  3  : 1020 unrouted;      REAL time: 9 secs 
 
-Phase  4  : 1009 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  4  : 1051 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
-
-Updating file: GraphBit.ncd with current fully routed design.
-
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
-
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
 Updating file: GraphBit.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
+
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
+
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 WARNING:Route:455 - CLK Net:Inst_Data_Ctrl/CLKB may have excessive skew because 
       3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 22 secs 
-Total CPU time to Router completion: 21 secs 
+Total REAL time to Router completion: 15 secs 
+Total CPU time to Router completion: 14 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -156,18 +156,18 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|            CLK_IBUF |  BUFGMUX_X1Y0| No   |  396 |  0.034     |  0.072      |
+|            CLK_IBUF |  BUFGMUX_X1Y0| No   |  392 |  0.036     |  0.073      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_Timing_LCD/SHIF |              |      |      |            |             |
-|                   T | BUFGMUX_X2Y11| No   |   46 |  0.022     |  0.061      |
+|                   T | BUFGMUX_X2Y11| No   |   46 |  0.023     |  0.060      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_Data_Ctrl/Mode_ |              |      |      |            |             |
 |                s<0> | BUFGMUX_X1Y10| No   |   26 |  0.027     |  0.064      |
 +---------------------+--------------+------+------+------------+-------------+
-| Inst_Data_Ctrl/CLKB |         Local|      |    4 |  0.168     |  1.944      |
+| Inst_Data_Ctrl/CLKB |         Local|      |    4 |  1.096     |  2.864      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_Data_Ctrl/Inst_ |              |      |      |            |             |
-|     MDTEXT/Clk_font |         Local|      |    1 |  0.000     |  1.678      |
+|     MDTEXT/Clk_font |         Local|      |    1 |  0.000     |  1.706      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -187,14 +187,14 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net CLK | SETUP       |         N/A|    26.352ns|     N/A|           0
-  _IBUF                                     | HOLD        |     0.731ns|            |       0|           0
+  Autotimespec constraint for clock net CLK | SETUP       |         N/A|    26.484ns|     N/A|           0
+  _IBUF                                     | HOLD        |     0.707ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Ins | SETUP       |         N/A|    11.396ns|     N/A|           0
-  t_Timing_LCD/SHIFT                        | HOLD        |     1.019ns|            |       0|           0
+  Autotimespec constraint for clock net Ins | SETUP       |         N/A|    11.564ns|     N/A|           0
+  t_Timing_LCD/SHIFT                        | HOLD        |     1.018ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     2.064ns|     N/A|           0
-  t_Data_Ctrl/Mode_s<0>                     | HOLD        |     1.498ns|            |       0|           0
+  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     1.917ns|     N/A|           0
+  t_Data_Ctrl/Mode_s<0>                     | HOLD        |     1.380ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -212,10 +212,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 22 secs 
-Total CPU time to PAR completion: 21 secs 
+Total REAL time to PAR completion: 15 secs 
+Total CPU time to PAR completion: 14 secs 
 
-Peak Memory Usage:  340 MB
+Peak Memory Usage:  339 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

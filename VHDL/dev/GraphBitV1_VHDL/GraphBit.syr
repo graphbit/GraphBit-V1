@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: GraphBit.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -125,13 +125,12 @@ Architecture behavioral of Entity timing_lcd is up to date.
 Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/DualPort.vhd" in Library work.
 Architecture dualport of Entity dualport is up to date.
 Compiling vhdl file "C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd" in Library work.
-Entity <GraphBit> compiled.
-Entity <GraphBit> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity graphbit is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <GraphBit> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <GraphBit> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <PARALLELE> in library <work> (architecture <parallele>).
 
@@ -155,7 +154,7 @@ Analyzing hierarchy for entity <rom_1024_8> in library <work> (architecture <imp
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <GraphBit> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <GraphBit> in library <work> (Architecture <behavioral>).
     Set user-defined property "LOC =  P2  P3  P4  P5  P14  P15  P16  P17" for signal <DATA_FROM_CPU> in unit <GraphBit>.
     Set user-defined property "LOC =  P126" for signal <RX> in unit <GraphBit>.
     Set user-defined property "LOC =  P22" for signal <CS_CPU> in unit <GraphBit>.
@@ -743,7 +742,6 @@ Optimizing block <GraphBit> to meet ratio 100 (+ 5) of 960 slices :
 WARNING:Xst:2254 - Area constraint could not be met for block <GraphBit>, final ratio is 112.
 FlipFlop Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 has been replicated 1 time(s)
 FlipFlop Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 has been replicated 1 time(s)
-FlipFlop Inst_uart_rx/state_FSM_FFd8 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -793,8 +791,8 @@ Unit <GraphBit> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 521
- Flip-Flops                                            : 521
+# Registers                                            : 520
+ Flip-Flops                                            : 520
 # Shift Registers                                      : 39
  114-bit shift register                                : 1
  13-bit shift register                                 : 1
@@ -856,10 +854,10 @@ Cell Usage :
 #      MUXF5                       : 56
 #      VCC                         : 2
 #      XORCY                       : 353
-# FlipFlops/Latches                : 749
+# FlipFlops/Latches                : 748
 #      FD                          : 32
 #      FD_1                        : 18
-#      FDC                         : 59
+#      FDC                         : 58
 #      FDCE                        : 168
 #      FDE                         : 253
 #      FDE_1                       : 32
@@ -891,8 +889,8 @@ Device utilization summary:
 
 Selected Device : 3s100etq144-4 
 
- Number of Slices:                      706  out of    960    73%  
- Number of Slice Flip Flops:            748  out of   1920    38%  
+ Number of Slices:                      705  out of    960    73%  
+ Number of Slice Flip Flops:            747  out of   1920    38%  
  Number of 4 input LUTs:               1163  out of   1920    60%  
     Number used as logic:              1087
     Number used as Shift registers:      76
@@ -924,7 +922,7 @@ Clock Information:
 -----------------------------------------------------------------------------+---------------------------------------------------------------+-------+
 Clock Signal                                                                 | Clock buffer(FF name)                                         | Load  |
 -----------------------------------------------------------------------------+---------------------------------------------------------------+-------+
-CLK                                                                          | IBUF+BUFG                                                     | 692   |
+CLK                                                                          | IBUF+BUFG                                                     | 691   |
 Inst_Timing_LCD/SHIFT1                                                       | BUFG                                                          | 85    |
 Inst_Data_Ctrl/CLKB                                                          | NONE(Inst_DualPort/InstMemVideo/BU69)                         | 5     |
 Inst_Data_Ctrl/Mode_s_01                                                     | BUFG                                                          | 49    |
@@ -940,7 +938,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+----------------------------------+-------+
 Control Signal                     | Buffer(FF name)                  | Load  |
 -----------------------------------+----------------------------------+-------+
-N0(XST_GND:G)                      | NONE(Inst_uart_rx/baud_count0D_0)| 228   |
+N0(XST_GND:G)                      | NONE(Inst_uart_rx/baud_count0D_0)| 227   |
 -----------------------------------+----------------------------------+-------+
 
 Timing Summary:
@@ -959,7 +957,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 29.056ns (frequency: 34.416MHz)
-  Total number of paths / destination ports: 243232 / 1263
+  Total number of paths / destination ports: 243211 / 1262
 -------------------------------------------------------------------------
 Delay:               14.528ns (Levels of Logic = 20)
   Source:            Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 (FF)
@@ -1114,8 +1112,8 @@ Offset:              8.112ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.49 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.54 secs
  
 --> 
 

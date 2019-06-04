@@ -26,7 +26,10 @@ namespace GraphBit_LCD_Plotter
         Int16 StatusUpdate = 0;
         byte[] rawImage = null;  // to store the image as byte
         SaveFileDialog saveFile = new SaveFileDialog();
-        bool clic = false;
+        List<Byte[]> serialArray;
+        bool sending = false;
+        int tickCount = 0;
+
 
         private byte[] RawImg;
         public byte[] rawImg
@@ -92,9 +95,16 @@ namespace GraphBit_LCD_Plotter
                 pictureBox1.Height = Convert.ToInt32(tbHeight.Text);
                 _Imagefile.Width = Convert.ToInt32(tbWidth.Text);
                 _Imagefile.Height = Convert.ToInt32(tbHeight.Text);
-                pictureBox1.Image = target_image;   // resized 
-                _Imagefile.ConvertBMP();
-               
+                if(target_image != null)
+                {
+                    pictureBox1.Image = target_image;   // resized 
+                    _Imagefile.ConvertBMP();
+                }
+                if (target_gif != null)
+                {
+                    pictureBox1.Image = target_gif;   // resized 
+                    convertGif();
+                }
             }
             else
             {
@@ -119,25 +129,15 @@ namespace GraphBit_LCD_Plotter
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            //byte[] first = { 0x0D };
-            serialPort1.PortName = serial.cbbCOM.Text;
-            serialPort1.BaudRate = Convert.ToInt32(serial.cbbBaudRate.Text);
-            serialPort1.StopBits = StopBits.One;
-            serialPort1.DataBits = Convert.ToInt32(serial.cbbData.Text);
-            serialPort1.Handshake = Handshake.None;
-            serialPort1.Parity = Parity.None;
-            if (serialPort1.IsOpen == true)
+            if(serial.portOpened == true)
             {
-                MessageBox.Show("The port is already opened!");
+                serialPort1.Write(_Imagefile.SerialArray, 0, _Imagefile.SerialArray.Length);
             }
-            else
+            if (timer1.Enabled == true)
             {
-                serialPort1.Open();
+                btnStopSend.Enabled = true;
             }
-            serialPort1.Write("\r");
-            serialPort1.Write(_Imagefile.SerialArray, 0, _Imagefile.SerialArray.Length); 
-            //serialPort1.Close();
-           // serial.Dispose(); 
+            sending = true;
         }
 
         private void importGifToolStripMenuItem_Click(object sender, EventArgs e)
@@ -152,28 +152,46 @@ namespace GraphBit_LCD_Plotter
                 _Imagefile.Filepath = OpenFile1.FileName;   /* Getting the path of the specified file */
                 target_gif = Image.FromFile(_Imagefile.Filepath);
             }
+        }
+
+        private void convertGif()
+        {
             Image[] ImgArray = _Imagefile.getFrames(target_gif);
-            List<Byte[]> serialArray = _Imagefile.ConvertGif(ImgArray,ImgArray.Length);
-            clic = false;
-           
-                _Imagefile.SerialArray = serialArray[0];
-                btnSend_Click(sender, e);
-            bool entered = false;
-            do
-            {
-                for (int i = ((entered == false)? 1 : 0); i < serialArray.Count; i++)
-                {
-                    entered = true;
-                    //serialPort1.Write(serialArray[i], 0, serialArray[i].Length);
-                    _Imagefile.SerialArray = serialArray[i];
-                    serialPort1.Write(_Imagefile.SerialArray, 0, _Imagefile.SerialArray.Length);
-                }
-            } while (clic == false);
+            serialArray = _Imagefile.ConvertGif(ImgArray, ImgArray.Length);
+
+            _Imagefile.SerialArray = serialArray[0];
+            timer1.Enabled = true;
+            btnStopSend.Enabled = true;
         }
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            clic = true;
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        { 
+            if (sending == true)
+            {
+                serialPort1.Write(serialArray[tickCount], 0, serialArray[tickCount].Length);
+                tickCount++;
+                if (tickCount == serialArray.Count)
+                {
+                    tickCount = 0;
+                }
+            }
+        }
+
+        private void btnStopSend_Click(object sender, EventArgs e)
+        {
+            //timer1.Enabled = false;
+            sending = false;
+            btnStopSend.Enabled = false;
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            timer1.Interval = trackBar1.Value;
         }
     }
 }

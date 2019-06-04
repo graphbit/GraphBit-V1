@@ -15,7 +15,11 @@ namespace GraphBit_LCD_Plotter
     {
         string[] portList = SerialPort.GetPortNames();
         string portSelected = "";
-        int baudSelected = 0, dataSelected = 0,StopSelected = 0,i = 0;
+        int baudSelected = 0;
+        int dataSelected = 0;
+        int StopSelected = 0;
+        int i = 0;
+        public bool portOpened = false;
         SerialPort serial = new SerialPort();
         
         Form1 parent;
@@ -39,6 +43,7 @@ namespace GraphBit_LCD_Plotter
         private void Serial_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
+
             this.Hide();
         }
 
@@ -49,6 +54,23 @@ namespace GraphBit_LCD_Plotter
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            parent.serialPort1.PortName = cbbCOM.Text;
+            parent.serialPort1.BaudRate = Convert.ToInt32(cbbBaudRate.Text);
+            parent.serialPort1.StopBits = StopBits.One;
+            parent.serialPort1.DataBits = Convert.ToInt32(cbbData.Text);
+            parent.serialPort1.Handshake = Handshake.None;
+            parent.serialPort1.Parity = Parity.None;
+            if(parent.serialPort1.IsOpen == true)
+            {
+                MessageBox.Show("The port is already opened!");
+            }
+            else
+            {
+                parent.serialPort1.Open();
+                portOpened = true;
+            }
+            parent.serialPort1.Write("\r");
+
             this.Hide();
         }
 
