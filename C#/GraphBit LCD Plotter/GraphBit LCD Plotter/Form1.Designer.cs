@@ -34,6 +34,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serialPortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importGifToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripPeasant = new System.Windows.Forms.ToolStripMenuItem();
             this.darkThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.btnCopy = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.btnSend = new System.Windows.Forms.Button();
-            this.importGifToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +95,14 @@
             this.serialPortToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.serialPortToolStripMenuItem.Text = "Serial Port ";
             this.serialPortToolStripMenuItem.Click += new System.EventHandler(this.serialPortToolStripMenuItem_Click);
+            // 
+            // importGifToolStripMenuItem
+            // 
+            this.importGifToolStripMenuItem.Name = "importGifToolStripMenuItem";
+            this.importGifToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.importGifToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.importGifToolStripMenuItem.Text = "Import Gif";
+            this.importGifToolStripMenuItem.Click += new System.EventHandler(this.importGifToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -151,6 +159,7 @@
             this.tbHeight.Name = "tbHeight";
             this.tbHeight.Size = new System.Drawing.Size(60, 20);
             this.tbHeight.TabIndex = 3;
+            this.tbHeight.Text = "160";
             // 
             // tbWidth
             // 
@@ -158,6 +167,7 @@
             this.tbWidth.Name = "tbWidth";
             this.tbWidth.Size = new System.Drawing.Size(60, 20);
             this.tbWidth.TabIndex = 2;
+            this.tbWidth.Text = "240";
             // 
             // lblHeight
             // 
@@ -238,14 +248,6 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // importGifToolStripMenuItem
-            // 
-            this.importGifToolStripMenuItem.Name = "importGifToolStripMenuItem";
-            this.importGifToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.importGifToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.importGifToolStripMenuItem.Text = "Import Gif";
-            this.importGifToolStripMenuItem.Click += new System.EventHandler(this.importGifToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +269,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "GraphBit LCD Plotter";
+            this.Click += new System.EventHandler(this.Form1_Click);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

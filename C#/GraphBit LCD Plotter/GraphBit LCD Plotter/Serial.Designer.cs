@@ -85,6 +85,7 @@
             this.cbbBaudRate.Name = "cbbBaudRate";
             this.cbbBaudRate.Size = new System.Drawing.Size(76, 21);
             this.cbbBaudRate.TabIndex = 2;
+            this.cbbBaudRate.Text = "921600";
             // 
             // label2
             // 
@@ -114,6 +115,7 @@
             this.cbbData.Name = "cbbData";
             this.cbbData.Size = new System.Drawing.Size(76, 21);
             this.cbbData.TabIndex = 6;
+            this.cbbData.Text = "8";
             // 
             // label3
             // 
@@ -135,6 +137,7 @@
             this.cbbStop.Name = "cbbStop";
             this.cbbStop.Size = new System.Drawing.Size(73, 21);
             this.cbbStop.TabIndex = 8;
+            this.cbbStop.Text = "1";
             // 
             // label4
             // 

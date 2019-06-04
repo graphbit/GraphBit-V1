@@ -26,6 +26,7 @@ namespace GraphBit_LCD_Plotter
         Int16 StatusUpdate = 0;
         byte[] rawImage = null;  // to store the image as byte
         SaveFileDialog saveFile = new SaveFileDialog();
+        bool clic = false;
 
         private byte[] RawImg;
         public byte[] rawImg
@@ -118,6 +119,7 @@ namespace GraphBit_LCD_Plotter
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            //byte[] first = { 0x0D };
             serialPort1.PortName = serial.cbbCOM.Text;
             serialPort1.BaudRate = Convert.ToInt32(serial.cbbBaudRate.Text);
             serialPort1.StopBits = StopBits.One;
@@ -132,9 +134,10 @@ namespace GraphBit_LCD_Plotter
             {
                 serialPort1.Open();
             }
+            serialPort1.Write("\r");
             serialPort1.Write(_Imagefile.SerialArray, 0, _Imagefile.SerialArray.Length); 
-            serialPort1.Close();
-            serial.Dispose(); 
+            //serialPort1.Close();
+           // serial.Dispose(); 
         }
 
         private void importGifToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,13 +154,26 @@ namespace GraphBit_LCD_Plotter
             }
             Image[] ImgArray = _Imagefile.getFrames(target_gif);
             List<Byte[]> serialArray = _Imagefile.ConvertGif(ImgArray,ImgArray.Length);
-
-            for (int i = 0; i < serialArray.Count; i++)
-            {
-                //serialPort1.Write(serialArray[i], 0, serialArray[i].Length);
-                _Imagefile.SerialArray = serialArray[i];
+            clic = false;
+           
+                _Imagefile.SerialArray = serialArray[0];
                 btnSend_Click(sender, e);
-            }
+            bool entered = false;
+            do
+            {
+                for (int i = ((entered == false)? 1 : 0); i < serialArray.Count; i++)
+                {
+                    entered = true;
+                    //serialPort1.Write(serialArray[i], 0, serialArray[i].Length);
+                    _Imagefile.SerialArray = serialArray[i];
+                    serialPort1.Write(_Imagefile.SerialArray, 0, _Imagefile.SerialArray.Length);
+                }
+            } while (clic == false);
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            clic = true;
         }
     }
 }

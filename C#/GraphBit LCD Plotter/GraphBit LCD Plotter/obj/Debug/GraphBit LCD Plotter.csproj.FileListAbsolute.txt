@@ -30,3 +30,15 @@ C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\C#\GraphBit LCD Plott
 C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\C#\GraphBit LCD Plotter-20190517T170008Z-001\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.pdb
 C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\C#\GraphBit LCD Plotter-20190517T170008Z-001\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit_LCD_Plotter.Serial.resources
 C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\C#\GraphBit LCD Plotter-20190517T170008Z-001\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit_LCD_Plotter.ProgressBar.resources
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\bin\Debug\GraphBit LCD Plotter.exe.config
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\bin\Debug\GraphBit LCD Plotter.exe
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\bin\Debug\GraphBit LCD Plotter.pdb
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.csprojAssemblyReference.cache
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit_LCD_Plotter.Form1.resources
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit_LCD_Plotter.ProgressBar.resources
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit_LCD_Plotter.Properties.Resources.resources
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit_LCD_Plotter.Serial.resources
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.csproj.GenerateResource.cache
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.csproj.CoreCompileInputs.cache
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.exe
+C:\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.pdb
