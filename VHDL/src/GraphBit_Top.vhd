@@ -52,7 +52,7 @@ entity GraphBit is
     --attribute loc of A0_CPU: signal is "P86"; 
 		attribute loc of DATA_FROM_CPU: signal is "P2, P3, P4, P5, P14, P15, P16, P17";
     --attribute loc of DATA_FROM_CPU: signal is "P81, P91, P82, P92, P87, P93, P88, P94";
-	   attribute loc of RX : signal is "P126";
+	   attribute loc of RX : signal is "P125";
     attribute loc of CS_CPU: signal is "P22";
 		attribute loc of DATA_OUT : signal is "P94, P93, P92, P91";
 		attribute loc of SHIFT : signal is "P98";
