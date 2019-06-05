@@ -52,8 +52,12 @@
             this.btnCopy = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.btnSend = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnStopSend = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -191,7 +195,7 @@
             // 
             this.rtbOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbOutput.Location = new System.Drawing.Point(48, 353);
+            this.rtbOutput.Location = new System.Drawing.Point(48, 338);
             this.rtbOutput.Name = "rtbOutput";
             this.rtbOutput.Size = new System.Drawing.Size(449, 97);
             this.rtbOutput.TabIndex = 5;
@@ -200,7 +204,7 @@
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.Location = new System.Drawing.Point(503, 366);
+            this.btnClear.Location = new System.Drawing.Point(504, 360);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(60, 20);
             this.btnClear.TabIndex = 6;
@@ -212,7 +216,7 @@
             // 
             this.lblArray.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblArray.AutoSize = true;
-            this.lblArray.Location = new System.Drawing.Point(45, 335);
+            this.lblArray.Location = new System.Drawing.Point(45, 320);
             this.lblArray.Name = "lblArray";
             this.lblArray.Size = new System.Drawing.Size(69, 13);
             this.lblArray.TabIndex = 7;
@@ -230,7 +234,7 @@
             // btnCopy
             // 
             this.btnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopy.Location = new System.Drawing.Point(503, 392);
+            this.btnCopy.Location = new System.Drawing.Point(504, 386);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(60, 20);
             this.btnCopy.TabIndex = 9;
@@ -240,7 +244,7 @@
             // btnSend
             // 
             this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSend.Location = new System.Drawing.Point(503, 418);
+            this.btnSend.Location = new System.Drawing.Point(504, 412);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(60, 23);
             this.btnSend.TabIndex = 10;
@@ -248,11 +252,41 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 80;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnStopSend
+            // 
+            this.btnStopSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnStopSend.Enabled = false;
+            this.btnStopSend.Location = new System.Drawing.Point(571, 412);
+            this.btnStopSend.Name = "btnStopSend";
+            this.btnStopSend.Size = new System.Drawing.Size(85, 23);
+            this.btnStopSend.TabIndex = 11;
+            this.btnStopSend.Text = "Stop Sending";
+            this.btnStopSend.UseVisualStyleBackColor = true;
+            this.btnStopSend.Click += new System.EventHandler(this.btnStopSend_Click);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(48, 441);
+            this.trackBar1.Maximum = 320;
+            this.trackBar1.Minimum = 80;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(449, 45);
+            this.trackBar1.TabIndex = 12;
+            this.trackBar1.Value = 80;
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.ClientSize = new System.Drawing.Size(800, 469);
+            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.btnStopSend);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.pictureBox1);
@@ -273,6 +307,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,9 +334,12 @@
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.ToolStripMenuItem peasantThemeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serialPortToolStripMenuItem;
-        private System.IO.Ports.SerialPort serialPort1;
+        public System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.ToolStripMenuItem importGifToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnStopSend;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 
