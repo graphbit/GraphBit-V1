@@ -43,6 +43,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="GraphBit.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="GraphBit.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="GraphBit.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="GraphBit_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="GraphBit_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="GraphBit_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="GraphBit_map.mrp" xil_pn:subbranch="Map"/>
@@ -53,6 +54,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="GraphBit_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="GraphBit_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="GraphBit_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="GraphBit_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="GraphBit_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="GraphBit_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="GraphBit_vhdl.prj"/>
@@ -106,6 +108,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1559585828" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1559585828">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1559586059" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7211144722805826678" xil_pn:start_ts="1559586059">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -131,7 +134,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1559586076" xil_pn:in_ck="-6075567835212088258" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4584537711640440165" xil_pn:start_ts="1559586059">
+    <transform xil_pn:end_ts="1559672932" xil_pn:in_ck="-6075567835212088258" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="9141877988847279729" xil_pn:start_ts="1559672916">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -155,7 +158,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1559586081" xil_pn:in_ck="-9170607599658137828" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-957041959753693887" xil_pn:start_ts="1559586076">
+    <transform xil_pn:end_ts="1559672937" xil_pn:in_ck="-9170607599658137828" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-957041959753693887" xil_pn:start_ts="1559672932">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="GraphBit.bld"/>
@@ -164,12 +167,10 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1559586086" xil_pn:in_ck="5153283242109829534" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="7557559725430926307" xil_pn:start_ts="1559586081">
+    <transform xil_pn:end_ts="1559672942" xil_pn:in_ck="5153283242109829534" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="7557559725430926307" xil_pn:start_ts="1559672937">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="GraphBit.pcf"/>
       <outfile xil_pn:name="GraphBit_map.map"/>
       <outfile xil_pn:name="GraphBit_map.mrp"/>
@@ -180,7 +181,7 @@
       <outfile xil_pn:name="GraphBit_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1559586114" xil_pn:in_ck="-8887787927011633712" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1559586086">
+    <transform xil_pn:end_ts="1559672963" xil_pn:in_ck="-8887787927011633712" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1559672942">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -195,7 +196,7 @@
       <outfile xil_pn:name="GraphBit_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1559586123" xil_pn:in_ck="-4032412352887597418" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="287829442711806529" xil_pn:start_ts="1559586114">
+    <transform xil_pn:end_ts="1559672973" xil_pn:in_ck="-4032412352887597418" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1559672963">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -208,7 +209,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1559586114" xil_pn:in_ck="-4032412352887597418" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1559586110">
+    <transform xil_pn:end_ts="1559672963" xil_pn:in_ck="-4032412352887597418" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1559672960">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="GraphBit.twr"/>

@@ -5,22 +5,22 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">216</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">SUPP</arg>&apos; of component &apos;<arg fmt="%s" index="4">New_Data_Ctrl</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">216</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">SUPP</arg>&apos; of component &apos;<arg fmt="%s" index="4">New_Data_Ctrl</arg>&apos;.
 </msg>
 
-<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">28</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+<msg type="info" file="Xst" num="1739" delta="old" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">28</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 </msg>
 
-<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">29</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+<msg type="info" file="Xst" num="1739" delta="old" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">29</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 </msg>
 
-<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">33</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+<msg type="info" file="Xst" num="1739" delta="old" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">33</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 </msg>
 
-<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">34</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+<msg type="info" file="Xst" num="1739" delta="old" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">34</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 </msg>
 
-<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">35</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+<msg type="info" file="Xst" num="1739" delta="old" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/GraphBit_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">35</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 </msg>
 
 <msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">C:/GitHub/GraphBitV1/VHDL/src/New_Data_Ctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">301</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
@@ -483,19 +483,19 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">adres_text_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">OLD_MDTEXT</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDTEXT/adres_text_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GraphBit</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDTEXT/adres_text_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GraphBit</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GraphBit</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GraphBit</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/DataIn_T_s_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GraphBit</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/DataIn_T_s_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GraphBit</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDTEXT/detect_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GraphBit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Inst_Data_Ctrl/Inst_MDGRAPH/detect_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDTEXT/detect_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GraphBit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Inst_Data_Ctrl/Inst_MDGRAPH/detect_0&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2254" delta="new" >Area constraint could not be met for block &lt;<arg fmt="%s" index="1">GraphBit</arg>&gt;, final ratio is <arg fmt="%i" index="2">112</arg>.
+<msg type="warning" file="Xst" num="2254" delta="old" >Area constraint could not be met for block &lt;<arg fmt="%s" index="1">GraphBit</arg>&gt;, final ratio is <arg fmt="%i" index="2">112</arg>.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

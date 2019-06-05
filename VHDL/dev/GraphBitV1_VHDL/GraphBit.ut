@@ -18,5 +18,5 @@
 -g GWE_cycle:6
 -g LCK_cycle:NoWait
 -g Security:None
--g DonePipe:No
+-g DonePipe:Yes
 -g DriveDone:No
