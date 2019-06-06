@@ -16,7 +16,7 @@
       </Build>
       <Workspace>
         <ColumnWidths>
-          <Column0>189</Column0>
+          <Column0>107</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -29,39 +29,41 @@
       <TerminalIO/>
     </Static>
     <Windows>
-      <Wnd0>
+      <Wnd2>
         <Tabs>
           <Tab>
-            <Identity>TabID-13980-16296</Identity>
+            <Identity>TabID-25210-7542</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
           </Tab>
           <Tab>
-            <Identity>TabID-20546-16377</Identity>
+            <Identity>TabID-10802-7608</Identity>
             <TabName>Debug Log</TabName>
             <Factory>Debug-Log</Factory>
             <Session/>
           </Tab>
         </Tabs>
         <SelectedTab>1</SelectedTab>
-      </Wnd0>
-      <Wnd1>
+      </Wnd2>
+      <Wnd3>
         <Tabs>
           <Tab>
-            <Identity>TabID-24728-16299</Identity>
+            <Identity>TabID-3190-7546</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
               <NodeDict>
                 <ExpandedNode>SupportSTM32F407</ExpandedNode>
                 <ExpandedNode>SupportSTM32F407/Application</ExpandedNode>
+                <ExpandedNode>SupportSTM32F407/Application/User</ExpandedNode>
+                <ExpandedNode>SupportSTM32F407/Application/User/main.c</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd1>
+      </Wnd3>
     </Windows>
     <Editor>
       <Pane>
@@ -73,35 +75,11 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>149</YPos2>
-          <SelStart2>5223</SelStart2>
-          <SelEnd2>5237</SelEnd2>
+          <YPos2>174</YPos2>
+          <SelStart2>5815</SelStart2>
+          <SelEnd2>5815</SelEnd2>
         </Tab>
         <ActiveTab>0</ActiveTab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\Src\LCD.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>586</YPos2>
-          <SelStart2>22531</SelStart2>
-          <SelEnd2>22531</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\Inc\StarWarsText.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>7</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>85981</SelStart2>
-          <SelEnd2>85981</SelEnd2>
-        </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -116,31 +94,31 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-00FEEF38>
+            <Toolbar-00E4DEB0>
               <key>iaridepm.enu1</key>
-            </Toolbar-00FEEF38>
+            </Toolbar-00E4DEB0>
           </Sizes>
         </Row0>
       </Top>
       <Left>
         <Row0>
           <Sizes>
-            <Wnd1>
+            <Wnd3>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
                 <Bottom>755</Bottom>
-                <Right>263</Right>
+                <Right>198</Right>
                 <x>-2</x>
                 <y>-2</y>
                 <xscreen>200</xscreen>
                 <yscreen>200</yscreen>
                 <sizeHorzCX>104167</sizeHorzCX>
                 <sizeHorzCY>200401</sizeHorzCY>
-                <sizeVertCX>138021</sizeVertCX>
+                <sizeVertCX>104167</sizeVertCX>
                 <sizeVertCY>758517</sizeVertCY>
               </Rect>
-            </Wnd1>
+            </Wnd3>
           </Sizes>
         </Row0>
       </Left>
@@ -152,7 +130,7 @@
       <Bottom>
         <Row0>
           <Sizes>
-            <Wnd0>
+            <Wnd2>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -167,7 +145,7 @@
                 <sizeVertCX>104167</sizeVertCX>
                 <sizeVertCY>200401</sizeVertCY>
               </Rect>
-            </Wnd0>
+            </Wnd2>
           </Sizes>
         </Row0>
       </Bottom>

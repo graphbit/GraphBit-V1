@@ -1,20 +1,20 @@
-"C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Src\main.c"
+"C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\Src\main.c"
 -std=c99
 -ferror-limit=100
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM/../Inc
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM/../Inc
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM/../Drivers/STM32F4xx_HAL_Driver/Inc
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM/../Drivers/STM32F4xx_HAL_Driver/Inc
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM/../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM/../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM/../Middlewares/ST/STM32_USB_Device_Library/Core/Inc
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM/../Middlewares/ST/STM32_USB_Device_Library/Core/Inc
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM/../Drivers/CMSIS/Device/ST/STM32F4xx/Include
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM/../Drivers/CMSIS/Device/ST/STM32F4xx/Include
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM/../Drivers/CMSIS/Include
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM/../Drivers/CMSIS/Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CMSIS\Include
 -I
@@ -22,19 +22,19 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc\c
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Inc
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\Inc
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Drivers\STM32F4xx_HAL_Driver\Inc
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\Drivers\STM32F4xx_HAL_Driver\Inc
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Middlewares\ST\STM32_USB_Device_Library\Core\Inc
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\Middlewares\ST\STM32_USB_Device_Library\Core\Inc
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 -I
-C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\Drivers\CMSIS\Include
+C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\Drivers\CMSIS\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CMSIS\Include
 -DUSE_HAL_DRIVER=1
