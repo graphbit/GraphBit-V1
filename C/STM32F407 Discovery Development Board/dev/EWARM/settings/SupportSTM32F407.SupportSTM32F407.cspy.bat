@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM\settings\SupportSTM32F407.SupportSTM32F407.general.xcl" --backend -f "C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM\settings\SupportSTM32F407.SupportSTM32F407.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM\settings\SupportSTM32F407.SupportSTM32F407.general.xcl" --backend -f "C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM\settings\SupportSTM32F407.SupportSTM32F407.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM\settings\SupportSTM32F407.SupportSTM32F407.general.xcl" "--debug_file=%~1" --backend -f "C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM\settings\SupportSTM32F407.SupportSTM32F407.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM\settings\SupportSTM32F407.SupportSTM32F407.general.xcl" "--debug_file=%~1" --backend -f "C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM\settings\SupportSTM32F407.SupportSTM32F407.driver.xcl" 
 
 @echo off 
 :end

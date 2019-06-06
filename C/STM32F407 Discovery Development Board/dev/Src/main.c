@@ -51,7 +51,8 @@ MISRAC_ENABLE
 #include "Beer.h"
 #include "Beer2.h"
 #include "Chat1v2.c"
-#include "Poisson.h"
+#include "GraphBit.h"
+#include "MISRA.h"
 	
 I2C_HandleTypeDef hi2c1;
 
@@ -76,12 +77,11 @@ static void MX_TIM2_Init(void);
 
 void fnChatStill(void);
 void fnChatText(void);
-void fnScrollingText(void);
+void fnMISRA(void);
 void fnTunnel(void);
 void fnCopyPasta(void);
 void fnStarWars(void);
 void fnGraphBit(void);
-void fnPoisson(void);
 void fnBeer(void);
 void fnTSO(void);
 
@@ -99,24 +99,21 @@ void fnTSO(void);
   *
   * @retval None
   */
-
+#define SIZEOF_FNARRAY  8
 static uint8_t clear[4800];
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  void (*fnArray[9])(void);
-  void (*fnPtr)(void);
+  void (*fnArray[SIZEOF_FNARRAY])(void);
   
   fnArray[0] = fnGraphBit;
-  fnArray[1] = fnTSO;
+  fnArray[1] = fnMISRA;
   fnArray[2] = fnChatStill;
   fnArray[3] = fnChatText;
-  fnArray[4] = fnCopyPasta;
-  fnArray[5] = fnTunnel;
+  fnArray[4] = fnTunnel;
+  fnArray[5] = fnCopyPasta;
   fnArray[6] = fnStarWars;
-  fnArray[7] = fnScrollingText;
-  fnArray[8] = fnBeer;
-  fnPtr = fnArray[0];
+  fnArray[7] = fnBeer;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -156,13 +153,32 @@ int main(void)
 //   LCD_Write(LCD_GRAPH, Beer2, sizeof(Beer2));
 //   LCD_Write(LCD_GRAPH, &StarWarsText[1][0], (sizeof(StarWarsText)) / NOMBRE_STARWARSTEXT);
 //   LCD_Write(LCD_GRAPH, &StarWarsLogo[0], sizeof(StarWarsLogo));
+   uint8_t button = 0;
+   uint8_t oldButton = 0;
+   int i = 0;
+   
+#define COUNT 2000
   while (1)
   {
   /* USER CODE END WHILE */
-//    fnPtr();
   /* USER CODE BEGIN 3 */
-
+    button = HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin == 1);
+    if (oldButton != button)
+    {
+      oldButton = button;
+      if (button == 1)
+      {
+        i++;
+        HAL_Delay(100);
+        if (i == SIZEOF_FNARRAY)
+        {
+          break;
+        }
+      }
+    }
+    fnArray[i]();
   }
+  while(1);
   /* USER CODE END 3 */
 
 }
@@ -174,7 +190,7 @@ void fnChatStill(void)
   static bool written = false;
   if (written == false)
   {
-        LCD_Write(LCD_GRAPH, Chat1v2, (sizeof(Chat1v2) - 600));
+        LCD_Write(LCD_GRAPH, Chat1v2, sizeof(Chat1v2));
         written = true;
   }
 }
@@ -184,37 +200,37 @@ void fnChatText(void)
   static char charArray[] = "This is a cat!";
   static char chatArray[] = "Meow";
   HAL_Delay(200);
-  LCD_Write(LCD_GRAPH, &Chat1[0], (sizeof(Chat1) - 600));
+  LCD_Write(LCD_GRAPH, &Chat1[0], sizeof(Chat1));
   HAL_Delay(5);
   LCD_WriteText(chatArray, strlen(chatArray), 0x01U, 0x05U);
   HAL_Delay(5);
   LCD_WriteText(charArray, strlen(charArray), 15U, 0x00U);
   HAL_Delay(200);
-  LCD_Write(LCD_GRAPH, &Chat2[0], (sizeof(Chat2) - 600));
+  LCD_Write(LCD_GRAPH, &Chat2[0], sizeof(Chat2));
   HAL_Delay(5);
   LCD_WriteText(chatArray, strlen(chatArray), 0x01U, 0x05U);
   HAL_Delay(5);
   LCD_WriteText(charArray, strlen(charArray), 15U, 0x00U);
   HAL_Delay(200);
-  LCD_Write(LCD_GRAPH, &chat3[0], (sizeof(chat3) - 600));
+  LCD_Write(LCD_GRAPH, &chat3[0], sizeof(chat3));
   HAL_Delay(5);
   LCD_WriteText(chatArray, strlen(chatArray), 0x01U, 0x05U);
   HAL_Delay(5);
   LCD_WriteText(charArray, strlen(charArray), 15U, 0x00U);
   HAL_Delay(200);
-  LCD_Write(LCD_GRAPH, &chat4[0], (sizeof(chat4) - 600));
+  LCD_Write(LCD_GRAPH, &chat4[0], sizeof(chat4));
   HAL_Delay(5);
   LCD_WriteText(chatArray, strlen(chatArray), 0x01U, 0x05U);
   HAL_Delay(5);
   LCD_WriteText(charArray, strlen(charArray), 15U, 0x00U);
   HAL_Delay(200);
-  LCD_Write(LCD_GRAPH, &chat5[0], (sizeof(chat5) - 600));
+  LCD_Write(LCD_GRAPH, &chat5[0], sizeof(chat5));
   HAL_Delay(5);
   LCD_WriteText(chatArray, strlen(chatArray), 0x01U, 0x05U);
   HAL_Delay(5);
   LCD_WriteText(charArray, strlen(charArray), 15U, 0x00U);
   HAL_Delay(200);
-  LCD_Write(LCD_GRAPH, &chat6[0], (sizeof(chat6) - 600));
+  LCD_Write(LCD_GRAPH, &chat6[0], sizeof(chat6));
   HAL_Delay(5);
   LCD_WriteText(chatArray, strlen(chatArray), 0x01U, 0x05U);
   HAL_Delay(5);
@@ -232,7 +248,7 @@ void fnTunnel(void)
 
 void fnCopyPasta(void)
 {
-  static char copyPasta[] = "What the fuck did you just fucking say about me, you little bitch?\nI'll have you know I graduated top of my class in the Navy Seals, and I've been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills.\nI am trained in gorilla warfare and I'm the top sniper in the entire US armed forces.\nYou are nothing to me but just another target.\n.";
+  static char copyPasta[] = " The FitnessGram Pacer Test is a multistage aerobic capacity test that gets more difficult as it continues.\nThe 20 meter pacer test will begin in 30 seconds. Line up at the start.\nThe running speed starts slowly, but gets faster each minute after you hear this signal.\n[beep] A single lap should be completed each time you hear this sound. [ding]\nRemember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over.";
   static bool written = false;
   if (written == false)
   {
@@ -252,33 +268,36 @@ void fnStarWars(void)
   if (i >= NOMBREIMAGE_STARS) i = 0;
 }
 
-void fnScrollingText(void)
+void fnMISRA(void)
 {
-  
+  static bool written = false;
+  if (written == false)
+  {
+        LCD_Write(LCD_GRAPH, MISRA, sizeof(MISRA));
+        written = true;
+  }
 }
 
 void fnGraphBit(void)
 {
-  
-}
-
-void fnPoisson(void)
-{
-  static int i = 0;
-  LCD_Write(LCD_GRAPH, &Poisson[i][0], (sizeof(Poisson)/ NOMBREIMAGE_FISH));
-  HAL_Delay(250);
-  i++;
-  if (i >= NOMBREIMAGE_FISH) i = 0;
+  static bool written = false;
+  if (written == false)
+  {
+        LCD_Write(LCD_GRAPH, GraphBit, sizeof(GraphBit));
+        written = true;
+  }
 }
 
 void fnBeer(void)
 {
-  
-}
-
-void fnTSO(void)
-{
-  
+  static bool written = false;
+  static char retraite[] = "BONNE\nRETRAITE\nDANIEL!";
+  if (written == false)
+  {
+        LCD_Write(LCD_GRAPH, Beer2, sizeof(Beer2));
+        written = true;
+        LCD_WriteText(retraite, strlen(retraite), 0x01U, 0x15U);
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////////

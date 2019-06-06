@@ -2,7 +2,7 @@
 
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armstlink2.dll" 
 
-"C:\Google_Drive\Projet_Session_6-Controleur_Ecran\Logiciel\TestI2C\EWARM\SupportSTM32F407\Exe\SupportSTM32F407.out" 
+"C:\GitHub\GraphBitV1\C\STM32F407 Discovery Development Board\dev\EWARM\SupportSTM32F407\Exe\SupportSTM32F407.out" 
 
 --plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armbat.dll" 
 
