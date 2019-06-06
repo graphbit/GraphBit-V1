@@ -53,3 +53,14 @@ C:\GitHub\GraphBitV1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\Grap
 C:\GitHub\GraphBitV1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.csproj.CoreCompileInputs.cache
 C:\GitHub\GraphBitV1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.exe
 C:\GitHub\GraphBitV1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.pdb
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\bin\Debug\GraphBit LCD Plotter.exe.config
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\bin\Debug\GraphBit LCD Plotter.exe
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\bin\Debug\GraphBit LCD Plotter.pdb
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.csprojAssemblyReference.cache
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit_LCD_Plotter.Form1.resources
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit_LCD_Plotter.Properties.Resources.resources
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit_LCD_Plotter.Serial.resources
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.csproj.GenerateResource.cache
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.csproj.CoreCompileInputs.cache
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.exe
+C:\Travail\GitHub\GraphBit-V1\C#\GraphBit LCD Plotter\GraphBit LCD Plotter\obj\Debug\GraphBit LCD Plotter.pdb
