@@ -1,10 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Jun 04 14:29:00 2019
+// Written by: Map P.20131013 on Wed Jun 05 11:45:39 2019
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "DF" LOCATE = SITE "P104" LEVEL 1;
-COMP "RX" LOCATE = SITE "P126" LEVEL 1;
+COMP "RX" LOCATE = SITE "P125" LEVEL 1;
 COMP "CLK" LOCATE = SITE "P54" LEVEL 1;
 COMP "FRM" LOCATE = SITE "P106" LEVEL 1;
 COMP "DISP" LOCATE = SITE "P103" LEVEL 1;

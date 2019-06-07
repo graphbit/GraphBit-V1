@@ -21,6 +21,7 @@ namespace GraphBit_LCD_Plotter
     {
         Image target_image;
         Image target_gif;
+        Bitmap Inverted;
         imageFile _Imagefile;
         Serial serial;
         Int16 StatusUpdate = 0;
@@ -28,6 +29,7 @@ namespace GraphBit_LCD_Plotter
         SaveFileDialog saveFile = new SaveFileDialog();
         List<Byte[]> serialArray;
         bool sending = false;
+        bool Invert = false;
         int tickCount = 0;
 
 
@@ -104,6 +106,12 @@ namespace GraphBit_LCD_Plotter
                 {
                     pictureBox1.Image = target_gif;   // resized 
                     convertGif();
+                }
+                if(Invert == true)
+                {
+                    pictureBox1.Image = Inverted;
+                    _Imagefile.ConvertBMP();
+                    
                 }
             }
             else
@@ -192,6 +200,22 @@ namespace GraphBit_LCD_Plotter
         private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
             timer1.Interval = trackBar1.Value;
+        }
+
+        private void invertColorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Invert = true;
+             Inverted = new Bitmap(pictureBox1.Image);
+            for(int y = 0; y < Inverted.Height; y ++)
+            {
+                for(int x = 0; x < Inverted.Width; x ++)
+                {
+                    Color inv = Inverted.GetPixel(x, y);
+                    inv = Color.FromArgb(255, (255 - inv.R), (255 - inv.G), (255 - inv.B));
+                    Inverted.SetPixel(x, y, inv);
+                }
+            }
+            pictureBox1.Image = Inverted;
         }
     }
 }

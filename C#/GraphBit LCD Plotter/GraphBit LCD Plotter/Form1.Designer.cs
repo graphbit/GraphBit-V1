@@ -55,6 +55,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnStopSend = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.invertColorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -110,6 +111,8 @@
             // 
             // editToolStripMenuItem
             // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.invertColorsToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
@@ -280,6 +283,13 @@
             this.trackBar1.Value = 80;
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
+            // invertColorsToolStripMenuItem
+            // 
+            this.invertColorsToolStripMenuItem.Name = "invertColorsToolStripMenuItem";
+            this.invertColorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.invertColorsToolStripMenuItem.Text = "Invert colors";
+            this.invertColorsToolStripMenuItem.Click += new System.EventHandler(this.invertColorsToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,6 +350,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnStopSend;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.ToolStripMenuItem invertColorsToolStripMenuItem;
     }
 }
 

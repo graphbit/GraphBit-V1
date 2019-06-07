@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: GraphBit.prj
 
@@ -64,24 +64,26 @@ Mux Extraction                     : Yes
 Resource Sharing                   : YES
 Asynchronous To Synchronous        : NO
 Multiplier Style                   : Auto
-Automatic Register Balancing       : No
+Automatic Register Balancing       : Yes
 
 ---- Target Options
 Add IO Buffers                     : YES
 Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
+Move First FlipFlop Stage          : YES
+Move Last FlipFlop Stage           : YES
 Slice Packing                      : YES
 Optimize Instantiated Primitives   : NO
 Use Clock Enable                   : Yes
 Use Synchronous Set                : Yes
 Use Synchronous Reset              : Yes
-Pack IO Registers into IOBs        : Auto
+Pack IO Registers into IOBs        : True
 Equivalent register Removal        : YES
 
 ---- General Options
 Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Effort                : 2
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
@@ -156,7 +158,7 @@ Analyzing hierarchy for entity <rom_1024_8> in library <work> (architecture <imp
 =========================================================================
 Analyzing Entity <GraphBit> in library <work> (Architecture <behavioral>).
     Set user-defined property "LOC =  P2  P3  P4  P5  P14  P15  P16  P17" for signal <DATA_FROM_CPU> in unit <GraphBit>.
-    Set user-defined property "LOC =  P126" for signal <RX> in unit <GraphBit>.
+    Set user-defined property "LOC =  P125" for signal <RX> in unit <GraphBit>.
     Set user-defined property "LOC =  P22" for signal <CS_CPU> in unit <GraphBit>.
     Set user-defined property "LOC =  P54" for signal <CLK> in unit <GraphBit>.
     Set user-defined property "LOC =  P94  P93  P92  P91" for signal <DATA_OUT> in unit <GraphBit>.
@@ -290,9 +292,9 @@ Unit <Mux_Comm> synthesized.
 
 Synthesizing Unit <Timing_LCD>.
     Related source file is "C:/GitHub/GraphBitV1/VHDL/src/Timing_LCD.vhd".
-    Register <VEE_ON> equivalent to <start_flag> has been removed
     Found 1-bit register for signal <SHIFT>.
     Found 1-bit register for signal <LATCH>.
+    Found 1-bit register for signal <VEE_ON>.
     Found 1-bit register for signal <FRM>.
     Found 14-bit up counter for signal <addra>.
     Found 32-bit up counter for signal <clkDiv>.
@@ -304,7 +306,7 @@ Synthesizing Unit <Timing_LCD>.
     Found 1-bit register for signal <start_flag>.
     Summary:
 	inferred   6 Counter(s).
-	inferred   5 D-type flip-flop(s).
+	inferred   6 D-type flip-flop(s).
 Unit <Timing_LCD> synthesized.
 
 
@@ -479,8 +481,8 @@ Macro Statistics
  18-bit up counter                                     : 1
  23-bit up counter                                     : 1
  32-bit up counter                                     : 4
-# Registers                                            : 949
- 1-bit register                                        : 916
+# Registers                                            : 950
+ 1-bit register                                        : 917
  11-bit register                                       : 1
  16-bit register                                       : 5
  19-bit register                                       : 2
@@ -604,8 +606,8 @@ Macro Statistics
  18-bit up counter                                     : 1
  23-bit up counter                                     : 1
  32-bit up counter                                     : 3
-# Registers                                            : 1341
- Flip-Flops                                            : 1341
+# Registers                                            : 1342
+ Flip-Flops                                            : 1342
 # Latches                                              : 10
  1-bit latch                                           : 5
  13-bit latch                                          : 1
@@ -630,6 +632,8 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <half_bit_time_14> h
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <half_bit_time_15> has a constant value of 0 in block <NEW_UART_RX>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1426 - The value init of the FF/Latch start_flag hinder the constant cleaning in the block Timing_LCD.
    You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch VEE_ON hinder the constant cleaning in the block Timing_LCD.
+   You should achieve better results by setting this init to 1.
 INFO:Xst:2261 - The FF/Latch <rxdata57600_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_5> 
 INFO:Xst:2261 - The FF/Latch <rxdata57600_3> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata115200_7> 
 INFO:Xst:2261 - The FF/Latch <bit_time_5> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <half_bit_time_4> 
@@ -651,6 +655,7 @@ INFO:Xst:2261 - The FF/Latch <rxdata460800_0> in Unit <NEW_UART_RX> is equivalen
 INFO:Xst:2261 - The FF/Latch <rxdata230400_0> in Unit <NEW_UART_RX> is equivalent to the following 2 FFs/Latches, which will be removed : <rxdata460800_1> <rxdata921600_3> 
 INFO:Xst:2261 - The FF/Latch <rxdata460800_2> in Unit <NEW_UART_RX> is equivalent to the following FF/Latch, which will be removed : <rxdata921600_5> 
 INFO:Xst:2261 - The FF/Latch <rxdata115200_0> in Unit <NEW_UART_RX> is equivalent to the following 3 FFs/Latches, which will be removed : <rxdata230400_1> <rxdata460800_3> <rxdata921600_7> 
+INFO:Xst:2261 - The FF/Latch <start_flag> in Unit <Timing_LCD> is equivalent to the following FF/Latch, which will be removed : <VEE_ON> 
 WARNING:Xst:1293 - FF/Latch <stNext_6> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stCur_6> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stNext_7> has a constant value of 0 in block <OLD_MDGRAPH>. This FF/Latch will be trimmed during the optimization process.
@@ -737,11 +742,59 @@ WARNING:Xst:2677 - Node <Inst_Data_Ctrl/DataIn_T_s_7> of sequential type is unco
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <Inst_Data_Ctrl/Inst_MDTEXT/detect_0> in Unit <GraphBit> is equivalent to the following FF/Latch, which will be removed : <Inst_Data_Ctrl/Inst_MDGRAPH/detect_0> 
-Found area constraint ratio of 100 (+ 5) on block GraphBit, actual ratio is 113.
+Found area constraint ratio of 100 (+ 5) on block GraphBit, actual ratio is 112.
 Optimizing block <GraphBit> to meet ratio 100 (+ 5) of 960 slices :
 WARNING:Xst:2254 - Area constraint could not be met for block <GraphBit>, final ratio is 112.
-FlipFlop Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 has been replicated 1 time(s)
-FlipFlop Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 has been replicated 1 time(s)
+Forward register balancing over carry chain Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<0>
+Forward register balancing over carry chain Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<0>
+Forward register balancing over carry chain Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<0>
+INFO:Xst:2261 - The FF/Latch <Inst_Data_Ctrl/Inst_MDGRAPH/stNext_3> in Unit <GraphBit> is equivalent to the following FF/Latch, which will be removed : <Inst_Data_Ctrl/Inst_MDGRAPH/stNext_0_BRB2> 
+
+Pipelining and Register Balancing Report ...
+
+Processing Unit <GraphBit> :
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<3>111_FRB Inst_Data_Ctrl/Inst_MDGRAPH/ligne_6 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_5 Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<8>1_SW0_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<8>1_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_1 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_2 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<0>21_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_1 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_3 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_2 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub__sub0000_xor<3>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_3 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_5 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_4 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<0>21_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub__sub0000_xor<5>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_3 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<4>2_SW0_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_4 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_3 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<0>21_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub__sub0000_xor<4>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_5 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_3 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<0>21_FRB Inst_Data_Ctrl/Inst_MDGRAPH/colonne_4 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<3>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_5 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_4 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<0>_SW0_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_5 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<1>5_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<3>11_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub__sub0000_xor<6>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<2>6_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<3>11_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub__sub0000_xor<8>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/colonne_7 Inst_Data_Ctrl/Inst_MDGRAPH/colonne_6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<3>11_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub__sub0000_xor<7>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/ligne_0 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<0>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/ligne_1 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_0 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<1>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/ligne_1 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_3 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_2 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_0 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<3>12_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/ligne_2 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_1 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_0 has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<2>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/ligne_4 Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<3>111_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<4>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/ligne_4 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_6 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_5 Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<3>111_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<6>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/ligne_5 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_4 Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<3>111_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<5>11_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/ligne_7 Inst_Data_Ctrl/Inst_MDGRAPH/ligne_6 Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<7>1_SW0_FRB Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<8>1_FRB has(ve) been forward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<7>1_FRB.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_0 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_0_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_0_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_0_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_1 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_1_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_1_BRB1 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_1_BRB4 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_1_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_1_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_10 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_10_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_10_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_10_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_11 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_11_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_11_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_11_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_2 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_2_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_2_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_2_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_3 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_3_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_3_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_3_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_4 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_4_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_4_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_4_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_5 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_5_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_5_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_5_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_6 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_6_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_6_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_6_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_7 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_7_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_7_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_7_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_8 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_8_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_8_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_8_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_9 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_9_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_9_BRB6 Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_9_BRB7 .
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/stNext_0 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/stNext_0_BRB0 Inst_Data_Ctrl/Inst_MDGRAPH/stNext_0_BRB1 Inst_Data_Ctrl/Inst_MDGRAPH/stNext_0_BRB3.
+	Register(s) Inst_Data_Ctrl/Inst_MDGRAPH/stNext_1 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDGRAPH/stNext_1_BRB0 .
+	Register(s) Inst_Data_Ctrl/Inst_MDTEXT/stNext_0 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDTEXT/stNext_0_BRB0 Inst_Data_Ctrl/Inst_MDTEXT/stNext_0_BRB1 Inst_Data_Ctrl/Inst_MDTEXT/stNext_0_BRB2 Inst_Data_Ctrl/Inst_MDTEXT/stNext_0_BRB3.
+	Register(s) Inst_Data_Ctrl/Inst_MDTEXT/stNext_1 has(ve) been backward balanced into : Inst_Data_Ctrl/Inst_MDTEXT/stNext_1_BRB0 Inst_Data_Ctrl/Inst_MDTEXT/stNext_1_BRB1.
+Unit <GraphBit> processed.
+Replicating register Inst_Timing_LCD/DF_s to handle IOB=TRUE attribute
+Replicating register Inst_Mux_Comm/FLAG_COM to handle IOB=TRUE attribute
+
 
 Final Macro Processing ...
 
@@ -791,8 +844,8 @@ Unit <GraphBit> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 520
- Flip-Flops                                            : 520
+# Registers                                            : 599
+ Flip-Flops                                            : 599
 # Shift Registers                                      : 39
  114-bit shift register                                : 1
  13-bit shift register                                 : 1
@@ -838,34 +891,34 @@ Design Statistics
 # IOs                              : 23
 
 Cell Usage :
-# BELS                             : 1936
+# BELS                             : 1932
 #      GND                         : 2
-#      INV                         : 68
+#      INV                         : 67
 #      LUT1                        : 219
 #      LUT2                        : 219
 #      LUT2_L                      : 1
-#      LUT3                        : 131
-#      LUT3_D                      : 1
-#      LUT4                        : 444
-#      LUT4_D                      : 3
-#      LUT4_L                      : 1
+#      LUT3                        : 130
+#      LUT3_L                      : 10
+#      LUT4                        : 418
+#      LUT4_D                      : 8
+#      LUT4_L                      : 11
 #      MULT_AND                    : 11
 #      MUXCY                       : 425
 #      MUXF5                       : 56
 #      VCC                         : 2
 #      XORCY                       : 353
-# FlipFlops/Latches                : 748
-#      FD                          : 32
-#      FD_1                        : 18
+# FlipFlops/Latches                : 827
+#      FD                          : 33
+#      FD_1                        : 48
 #      FDC                         : 58
 #      FDCE                        : 168
-#      FDE                         : 253
+#      FDE                         : 297
 #      FDE_1                       : 32
 #      FDP                         : 1
-#      FDR                         : 69
+#      FDR                         : 70
 #      FDR_1                       : 1
 #      FDRE                        : 32
-#      FDS                         : 24
+#      FDS                         : 27
 #      FDS_1                       : 11
 #      LD                          : 49
 # RAMS                             : 4
@@ -889,14 +942,14 @@ Device utilization summary:
 
 Selected Device : 3s100etq144-4 
 
- Number of Slices:                      705  out of    960    73%  
- Number of Slice Flip Flops:            747  out of   1920    38%  
- Number of 4 input LUTs:               1163  out of   1920    60%  
-    Number used as logic:              1087
+ Number of Slices:                      725  out of    960    75%  
+ Number of Slice Flip Flops:            822  out of   1920    42%  
+ Number of 4 input LUTs:               1159  out of   1920    60%  
+    Number used as logic:              1083
     Number used as Shift registers:      76
  Number of IOs:                          23
  Number of bonded IOBs:                  22  out of    108    20%  
-    IOB Flip Flops:                       1
+    IOB Flip Flops:                       5
  Number of BRAMs:                         4  out of      4   100%  
  Number of MULT18X18SIOs:                 2  out of      4    50%  
  Number of GCLKs:                         3  out of     24    12%  
@@ -922,8 +975,8 @@ Clock Information:
 -----------------------------------------------------------------------------+---------------------------------------------------------------+-------+
 Clock Signal                                                                 | Clock buffer(FF name)                                         | Load  |
 -----------------------------------------------------------------------------+---------------------------------------------------------------+-------+
-CLK                                                                          | IBUF+BUFG                                                     | 691   |
-Inst_Timing_LCD/SHIFT1                                                       | BUFG                                                          | 85    |
+CLK                                                                          | IBUF+BUFG                                                     | 768   |
+Inst_Timing_LCD/SHIFT1                                                       | BUFG                                                          | 87    |
 Inst_Data_Ctrl/CLKB                                                          | NONE(Inst_DualPort/InstMemVideo/BU69)                         | 5     |
 Inst_Data_Ctrl/Mode_s_01                                                     | BUFG                                                          | 49    |
 Inst_Data_Ctrl/Inst_MDTEXT/Clk_font(Inst_Data_Ctrl/Inst_MDTEXT/Clk_font_f5:O)| NONE(*)(Inst_Data_Ctrl/Inst_MDTEXT/InstFont/Mrom_data_rom0000)| 1     |
@@ -945,7 +998,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 29.056ns (Maximum Frequency: 34.416MHz)
+   Minimum period: 17.730ns (Maximum Frequency: 56.402MHz)
    Minimum input arrival time before clock: 4.106ns
    Maximum output required time after clock: 8.112ns
    Maximum combinational path delay: No path found
@@ -956,81 +1009,93 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 29.056ns (frequency: 34.416MHz)
-  Total number of paths / destination ports: 243211 / 1262
+  Clock period: 17.730ns (frequency: 56.402MHz)
+  Total number of paths / destination ports: 52502 / 1384
 -------------------------------------------------------------------------
-Delay:               14.528ns (Levels of Logic = 20)
-  Source:            Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 (FF)
-  Destination:       Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12 (FF)
+Delay:               8.865ns (Levels of Logic = 5)
+  Source:            Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<8>1_FRB (FF)
+  Destination:       Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12_BRB0 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK falling
 
-  Data Path: Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 to Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12
+  Data Path: Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<8>1_FRB to Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12_BRB0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             12   0.591   0.996  Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0 (Inst_Data_Ctrl/Inst_MDGRAPH/colonne_0)
-     LUT3_D:I2->O         16   0.704   1.069  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<0>21 (Inst_Data_Ctrl/Inst_MDGRAPH/N8)
-     LUT3:I2->O            1   0.704   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_not0000<4>1 (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_not0000<4>)
-     MUXCY:S->O            1   0.464   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<4> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<5> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<6> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<7> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<7>)
-     MUXCY:CI->O           0   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<8> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_cy<8>)
-     XORCY:CI->O          23   0.804   1.202  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_add0000_xor<9> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_add0000<9>)
-     INV:I->O              1   0.704   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_not0001<10>11_INV_0 (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_not0001<10>1)
-     MUXCY:S->O            1   0.464   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<6> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<7> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<8> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<9> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<10> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_cy<10>)
-     XORCY:CI->O           1   0.804   0.499  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_addsub0000_xor<11> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_addsub0000<11>)
-     LUT2:I1->O            2   0.704   0.447  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0000<11>1 (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<11>_mand)
-     MULT_AND:I1->LO       0   0.741   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<11>_mand (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0002<11>_mand1)
-     MUXCY:DI->O           0   0.888   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<11> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<11>)
-     XORCY:CI->O           1   0.804   0.420  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_xor<12> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_share0000<12>)
-     MUXF5:S->O            1   0.739   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_mux0001<12>)
-     FD_1:D                    0.308          Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12
+     FDE:C->Q             10   0.591   0.882  Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<8>1_FRB (Inst_Data_Ctrl/Inst_MDGRAPH/Msub_mult0000_addsub0000_xor<8>1_FRB)
+     MULT18X18SIO:A8->P10    2   4.602   0.451  Inst_Data_Ctrl/Inst_MDGRAPH/Mmult__mult0000 (Inst_Data_Ctrl/Inst_MDGRAPH/_mult0000<10>)
+     LUT4:I3->O            1   0.704   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_lut<10> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<10> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<10>)
+     MUXCY:CI->O           0   0.059   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<11> (Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_cy<11>)
+     XORCY:CI->O           1   0.804   0.000  Inst_Data_Ctrl/Inst_MDGRAPH/Madd_adres_graph_share0000_xor<12> (Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_share0000<12>)
+     FD_1:D                    0.308          Inst_Data_Ctrl/Inst_MDGRAPH/adres_graph_12_BRB0
     ----------------------------------------
-    Total                     14.528ns (9.895ns logic, 4.633ns route)
-                                       (68.1% logic, 31.9% route)
+    Total                      8.865ns (7.532ns logic, 1.333ns route)
+                                       (85.0% logic, 15.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_Timing_LCD/SHIFT1'
-  Clock period: 11.560ns (frequency: 86.505MHz)
-  Total number of paths / destination ports: 4570 / 200
+  Clock period: 8.589ns (frequency: 116.428MHz)
+  Total number of paths / destination ports: 4316 / 204
 -------------------------------------------------------------------------
-Delay:               5.780ns (Levels of Logic = 9)
-  Source:            Inst_Timing_LCD/latch_counter_22 (FF)
-  Destination:       Inst_Timing_LCD/FRM (FF)
+Delay:               8.589ns (Levels of Logic = 36)
+  Source:            Inst_Timing_LCD/latch_counter_0 (FF)
+  Destination:       Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<7>_FRB (FF)
   Source Clock:      Inst_Timing_LCD/SHIFT1 rising
-  Destination Clock: Inst_Timing_LCD/SHIFT1 falling
+  Destination Clock: Inst_Timing_LCD/SHIFT1 rising
 
-  Data Path: Inst_Timing_LCD/latch_counter_22 to Inst_Timing_LCD/FRM
+  Data Path: Inst_Timing_LCD/latch_counter_0 to Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<7>_FRB
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              2   0.591   0.622  Inst_Timing_LCD/latch_counter_22 (Inst_Timing_LCD/latch_counter_22)
-     LUT4:I0->O            1   0.704   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_lut<1> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_lut<1>)
-     MUXCY:S->O            1   0.464   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<1> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<2> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<3> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<4> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<5> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<6> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<6>)
-     MUXCY:CI->O           3   0.459   0.610  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<7> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<7>)
-     LUT4:I1->O            1   0.704   0.420  Inst_Timing_LCD/FRM_not00011 (Inst_Timing_LCD/FRM_not0001)
-     FDR_1:R                   0.911          Inst_Timing_LCD/FRM
+     FDE:C->Q              4   0.591   0.587  Inst_Timing_LCD/latch_counter_0 (Inst_Timing_LCD/latch_counter_0)
+     INV:I->O              1   0.704   0.000  Inst_Timing_LCD/Mcount_latch_counter_lut<0>_INV_0 (Inst_Timing_LCD/Mcount_latch_counter_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<0> (Inst_Timing_LCD/Mcount_latch_counter_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<1> (Inst_Timing_LCD/Mcount_latch_counter_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<2> (Inst_Timing_LCD/Mcount_latch_counter_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<3> (Inst_Timing_LCD/Mcount_latch_counter_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<4> (Inst_Timing_LCD/Mcount_latch_counter_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<5> (Inst_Timing_LCD/Mcount_latch_counter_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<6> (Inst_Timing_LCD/Mcount_latch_counter_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<7> (Inst_Timing_LCD/Mcount_latch_counter_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<8> (Inst_Timing_LCD/Mcount_latch_counter_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<9> (Inst_Timing_LCD/Mcount_latch_counter_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<10> (Inst_Timing_LCD/Mcount_latch_counter_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<11> (Inst_Timing_LCD/Mcount_latch_counter_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<12> (Inst_Timing_LCD/Mcount_latch_counter_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<13> (Inst_Timing_LCD/Mcount_latch_counter_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<14> (Inst_Timing_LCD/Mcount_latch_counter_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<15> (Inst_Timing_LCD/Mcount_latch_counter_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<16> (Inst_Timing_LCD/Mcount_latch_counter_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<17> (Inst_Timing_LCD/Mcount_latch_counter_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<18> (Inst_Timing_LCD/Mcount_latch_counter_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<19> (Inst_Timing_LCD/Mcount_latch_counter_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<20> (Inst_Timing_LCD/Mcount_latch_counter_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<21> (Inst_Timing_LCD/Mcount_latch_counter_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<22> (Inst_Timing_LCD/Mcount_latch_counter_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<23> (Inst_Timing_LCD/Mcount_latch_counter_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<24> (Inst_Timing_LCD/Mcount_latch_counter_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<25> (Inst_Timing_LCD/Mcount_latch_counter_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<26> (Inst_Timing_LCD/Mcount_latch_counter_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<27> (Inst_Timing_LCD/Mcount_latch_counter_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<28> (Inst_Timing_LCD/Mcount_latch_counter_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<29> (Inst_Timing_LCD/Mcount_latch_counter_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Inst_Timing_LCD/Mcount_latch_counter_cy<30> (Inst_Timing_LCD/Mcount_latch_counter_cy<30>)
+     XORCY:CI->O           1   0.804   0.595  Inst_Timing_LCD/Mcount_latch_counter_xor<31> (Inst_Timing_LCD/Result<31>1)
+     LUT2:I0->O            2   0.704   0.622  Inst_Timing_LCD/Mcount_latch_counter_eqn_311 (Inst_Timing_LCD/Mcount_latch_counter_eqn_31)
+     LUT4:I0->O            1   0.704   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_lut<7> (Inst_Timing_LCD/DF_s_cmp_eq00001_wg_lut<7>)
+     MUXCY:S->O            1   0.736   0.000  Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<7> (N329)
+     FDE:D                     0.308          Inst_Timing_LCD/DF_s_cmp_eq00001_wg_cy<7>_FRB
     ----------------------------------------
-    Total                      5.780ns (4.128ns logic, 1.652ns route)
-                                       (71.4% logic, 28.6% route)
+    Total                      8.589ns (6.785ns logic, 1.804ns route)
+                                       (79.0% logic, 21.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_Data_Ctrl/Mode_s_01'
-  Clock period: 2.987ns (frequency: 334.808MHz)
+  Clock period: 2.684ns (frequency: 372.578MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.987ns (Levels of Logic = 1)
+Delay:               2.684ns (Levels of Logic = 1)
   Source:            Inst_Data_Ctrl/Dump_s (LATCH)
   Destination:       Inst_Data_Ctrl/Dump_s (LATCH)
   Source Clock:      Inst_Data_Ctrl/Mode_s_01 rising
@@ -1040,12 +1105,12 @@ Delay:               2.987ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q              37   0.676   1.299  Inst_Data_Ctrl/Dump_s (Inst_Data_Ctrl/Dump_s)
+     LD:G->Q              12   0.676   0.996  Inst_Data_Ctrl/Dump_s (Inst_Data_Ctrl/Dump_s)
      LUT3:I2->O            1   0.704   0.000  Inst_Data_Ctrl/Dump_s_mux00021 (Inst_Data_Ctrl/Dump_s_mux0002)
      LD:D                      0.308          Inst_Data_Ctrl/Dump_s
     ----------------------------------------
-    Total                      2.987ns (1.688ns logic, 1.299ns route)
-                                       (56.5% logic, 43.5% route)
+    Total                      2.684ns (1.688ns logic, 0.996ns route)
+                                       (62.9% logic, 37.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
@@ -1072,20 +1137,20 @@ Offset:              4.106ns (Levels of Logic = 3)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              4.914ns (Levels of Logic = 1)
-  Source:            Inst_Mux_Comm/FLAG_COM (FF)
-  Destination:       SUPP (PAD)
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            Inst_Timing_LCD/SHIFT (FF)
+  Destination:       SHIFT (PAD)
   Source Clock:      CLK rising
 
-  Data Path: Inst_Mux_Comm/FLAG_COM to SUPP
+  Data Path: Inst_Timing_LCD/SHIFT to SHIFT
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             17   0.591   1.051  Inst_Mux_Comm/FLAG_COM (Inst_Mux_Comm/FLAG_COM)
-     OBUF:I->O                 3.272          SUPP_OBUF (SUPP)
+     FDE:C->Q              3   0.591   0.531  Inst_Timing_LCD/SHIFT (Inst_Timing_LCD/SHIFT1)
+     OBUF:I->O                 3.272          SHIFT_OBUF (SHIFT)
     ----------------------------------------
-    Total                      4.914ns (3.863ns logic, 1.051ns route)
-                                       (78.6% logic, 21.4% route)
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_Timing_LCD/SHIFT1'
@@ -1110,16 +1175,17 @@ Offset:              8.112ns (Levels of Logic = 4)
                                        (87.5% logic, 12.5% route)
 
 =========================================================================
+WARNING:Xst:615 - Flip flop associated with net Inst_Timing_LCD/SHIFT not found, property IOB not attached.
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.54 secs
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.98 secs
  
 --> 
 
-Total memory usage is 318632 kilobytes
+Total memory usage is 318696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  120 (   0 filtered)
-Number of infos    :   44 (   0 filtered)
+Number of warnings :  122 (   0 filtered)
+Number of infos    :   46 (   0 filtered)
 

@@ -225,6 +225,10 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">VEE_ON</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Timing_LCD</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">rxdata57600_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">NEW_UART_RX</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rxdata115200_5&gt; </arg>
 </msg>
 
@@ -286,6 +290,9 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">rxdata115200_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">NEW_UART_RX</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rxdata230400_1&gt; &lt;rxdata460800_3&gt; &lt;rxdata921600_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">start_flag</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Timing_LCD</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VEE_ON&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">stNext_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">OLD_MDGRAPH</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -498,7 +505,13 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2254" delta="old" >Area constraint could not be met for block &lt;<arg fmt="%s" index="1">GraphBit</arg>&gt;, final ratio is <arg fmt="%i" index="2">112</arg>.
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Inst_Data_Ctrl/Inst_MDGRAPH/stNext_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GraphBit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Inst_Data_Ctrl/Inst_MDGRAPH/stNext_0_BRB2&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+<msg type="warning" file="Xst" num="615" delta="new" ><arg fmt="%s" index="1">Flip flop associated with net</arg> <arg fmt="%s" index="2">Inst_Timing_LCD/SHIFT</arg> not found, property <arg fmt="%s" index="3">IOB</arg> not attached.
 </msg>
 
 </messages>
