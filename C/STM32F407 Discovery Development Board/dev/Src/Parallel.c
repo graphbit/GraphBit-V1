@@ -82,7 +82,7 @@ static void Parallel_WriteIO(GPIO_T* GPIO, bool state);
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_InitData                                               
 * P_ERROR_T Parallel_InitData(size_t num, ...)
-* Author : Pascal-Emmanuel Lachance  & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * This function is a variadic function, meaning it can take a variable number of parameters.
@@ -196,7 +196,7 @@ P_ERROR_T Parallel_InitData(size_t num, ...)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_InitAdress                                               
 * P_ERROR_T Parallel_InitAdress(size_t num, ...)
-* Author : Pascal-Emmanuel Lachance  & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * This function is a variadic function, meaning it can take a variable number of parameters.
@@ -317,7 +317,7 @@ P_ERROR_T Parallel_InitAdress(size_t num, ...)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_InitChipSelect                                               
 * P_ERROR_T Parallel_InitChipSelect(size_t num, ...)
-* Author : Pascal-Emmanuel Lachance  & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * This function is a variadic function, meaning it can take a variable number of parameters.
@@ -474,7 +474,7 @@ P_ERROR_T Parallel_InitReadWrite(GPIO_TypeDef* ReadPort, uint32_t ReadPin, GPIO_
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_Init                                               
 * P_ERROR_T Parallel_Init(void)
-* Author : Pascal-Emmanuel Lachance  & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * This function must be called after Parallel_InitData, Parallel_InitAdress & Parallel_InitChipSelect
@@ -646,7 +646,7 @@ P_ERROR_T Parallel_Init(void)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_WriteIO
 * static void Parallel_WriteIO(GPIO_T* GPIO, bool state)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * Places a specific pin to the specified state.
@@ -680,7 +680,7 @@ static void Parallel_WriteIO(GPIO_T* GPIO, bool state)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_CS
 * P_ERROR_T Parallel_CS(uint8_t ChipSelect, bool state)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * Places a specific chip select to a chosen state and puts all other chip selects low
@@ -747,7 +747,7 @@ P_ERROR_T Parallel_CS(P_CS_T ChipSelect, bool state)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_Write
 * P_ERROR_T Parallel_Write(uint8_t Data, uint16_t Adress, uint8_t ChipSelect)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * Write Data and Adress to a specified Chip Select on the parallel bus.
@@ -829,7 +829,7 @@ P_ERROR_T Parallel_Write(uint8_t Data, uint16_t Adress, P_CS_T ChipSelect)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_ResetData
 * static void Parallel_ResetData(void)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * Reset the Data array within the Parallel_Struct structure.
@@ -858,7 +858,7 @@ static void Parallel_ResetData(void)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_ResetAdress
 * static void Parallel_ResetAdress(void)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * Reset the Adress array within the Parallel_Struct structure.
@@ -886,7 +886,7 @@ static void Parallel_ResetAdress(void)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      Parallel_ResetChipSelect
 * static void Parallel_ResetChipSelect(void)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-25
 * 
 * Reset the Chip Select array within the Parallel_Struct structure.

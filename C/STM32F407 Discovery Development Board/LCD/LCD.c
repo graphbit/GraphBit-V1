@@ -984,6 +984,33 @@ static LCD_ERROR_T LCD_Write_SPI(const LCD_COMMAND_T Command, const uint8_t pDat
 	return (SPI_Error);
 }
 
+/* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
+/*                                      LCD_Write_Parallel                                               
+* LCD_ERROR_T LCD_Write_Parallel(const LCD_COMMAND_T Command, const uint8_t pData[], const size_t dataSize)
+* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Date : 2019-05-12
+* 
+* Writes on the parallel bus.
+* 
+* Called by : none
+* Function calls : 
+*			- Parallel_Write()
+*     - Parallel_CS()
+*			
+* Parameters : 
+      - Command : Command to send to the parallel bus
+      - pData : Pointer to the array to send. Can be null if there is no data to send, however, dataSize must be 0 in that case.
+      - dataSize : Size of the array pointed by pData
+      
+* Returns: LCD_ERROR_T P_Error
+*			- E_PARALLEL_WRITE_S_BUSY: The module is currently busy doing another operation.
+*     - E_PARALLEL_WRITE_S_FAILURE : The module is in a critical failure state.
+*     - E_WRITE_SIZE : Data exceeds the size limit.
+*     - E_WRITE_ARRAY : Array pointer is invalid.
+*     - E_PARALLEL : Error during parallel operations.
+*			
+* Example call : LCD_Write(LCD_MODE_GRAPH, pBuffer, sizeof(pBuffer));
+* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /* MISRA-C : 2004 prohibits the multiple break statement within a loop (Rule 14.6)
  * We're creating a specific deviation for this function, LCD_Write_Parallel, that can exit the data transfer loop
  * if an error arises either while transmitting data on the parallel bus.
@@ -1199,7 +1226,7 @@ LCD_ERROR_T LCD_WriteText(char* pText, size_t textSize, uint8_t line, uint8_t co
 				{
 					size_t RemainingText = textSize;
 					uint8_t currentLine = line;
-					/* Replace all accentuated letters with their non-accentuated counterparts */
+          
 					do
 					{
 						size_t lenght;
@@ -1715,7 +1742,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HANDLER *htim)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      LCD_Create_Array_Struct                                               
 static LCD_ERROR_T LCD_Create_Array_Struct(LCD_ARRAY_T* structArray, uint8_t lines, uint8_t columns, uint8_t coordX, uint8_t coordY)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-23
 * 
 * Creates a structure containing a bidimentional array by dynamically allocating heap memory.
@@ -1852,7 +1879,7 @@ static LCD_ERROR_T LCD_Create_Array_Struct(LCD_ARRAY_T* structArray, uint8_t lin
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      LCD_Create_Array                                               
 static LCD_ERROR_T LCD_Create_Array(LCD_ARRAY_T* structArray)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-23
 * 
 * Creates a bidimentional array by dynamically allocating heap memory.
@@ -1969,7 +1996,7 @@ static LCD_ERROR_T LCD_Create_Array(LCD_ARRAY_T* structArray)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      LCD_Free_Array                                               
 static LCD_ERROR_T LCD_Free_Array(LCD_ARRAY_T* structArray)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-23
 * 
 * Frees the bidirectionnal array created in function LCD_Create_Array()
@@ -2053,7 +2080,7 @@ static LCD_ERROR_T LCD_Free_Array(LCD_ARRAY_T* structArray)
 /* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . */
 /*                                      LCD_Delete_Array_Struct                                               
 static LCD_ERROR_T LCD_Delete_Array_Struct(LCD_ARRAY_T* structArray)
-* Author : Pascal-Emmanuel Lachance & Charles Lévesque-Matte
+* Author : Pascal-Emmanuel Lachance
 * Date : 2019-04-23
 * 
 * Destroy the struct Created in LCD_Create_Array_Struct()

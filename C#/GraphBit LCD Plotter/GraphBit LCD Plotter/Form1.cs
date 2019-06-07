@@ -36,7 +36,7 @@ namespace GraphBit_LCD_Plotter
         private byte[] RawImg;
         public byte[] rawImg
         {
-            get => RawImg;
+            get => RawImg; 
             set => RawImg = value;
         }
         
